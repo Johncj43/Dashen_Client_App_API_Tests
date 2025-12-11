@@ -1,0 +1,383 @@
+[{
+  "id": "Valid header",
+  "appversion": "1.0.2",
+  "deviceuuid":"a5945452d5acd31d2678",
+  "installationdate":"1759934922805",
+  "platform": "ios",
+  "sourceapp": "memberapp"
+},
+  {
+    "id": "empty device uuid",
+    "appversion": "1.0.2",
+    "deviceuuid":"",
+    "installationdate":"1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp"
+  }
+,
+  {
+    "id": "missing installation date",
+    "appversion": "1.0.2",
+    "deviceuuid":"a5945452d5acd31i",
+    "installationdate":"",
+    "platform": "ios",
+    "sourceapp": "memberapp"
+  },
+  {
+    "id": "New device uuid",
+    "appversion": "1.0.2",
+    "deviceuuid":"a5945452d5acd31dd",
+    "installationdate":"1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp"
+  },
+  {
+    "id": "valid device uuid",
+    "appversion": "1.0.2",
+    "installationdate":"1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp"
+  }
+,
+  {
+    "id": "Already registered device uuid",
+    "appversion": "1.0.2",
+    "deviceuuid":"a5945452d5acd31d2678",
+    "installationdate":"1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp"
+  }
+,
+  {
+    "id": "missing device uuid",
+    "appversion": "1.0.2",
+    "deviceuuid":"",
+    "installationdate":"1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp"
+  },{
+  "id": "missing token for otp verification",
+  "appversion": "1.0.2",
+  "deviceuuid":"a5945452d5acd31d2678",
+  "installationdate":"1759934922805",
+  "platform": "ios",
+  "sourceapp": "memberapp"
+}
+,{
+  "id": "invalid OTP",
+  "appversion": "1.0.2",
+  "deviceuuid":"a5945452d5acd31d2678",
+  "installationdate":"1759934922805",
+  "platform": "ios",
+  "sourceapp": "memberapp"
+},
+
+
+  {
+    "id": "login"
+  },
+  {
+    "id": "registered device uuid and PIN",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660cK",
+    "installationdate":"1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "333322"
+  },
+  {
+    "id":"unregistered device UUID",
+    "appversion": "1.0.2",
+    "deviceuuid":"a5945452d5acd31d2678789UH",
+    "installationdate":"1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "333322"
+  },
+
+  {
+    "id": "Wrong PIN",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660cK",
+    "installationdate":"1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "222200"
+  }
+,
+  {
+    "id": "Empty PIN",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660cK",
+    "installationdate":"1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": ""
+  }
+,
+  {
+    "id": "Missing device UUID",
+    "appversion": "1.0.2",
+    "deviceuuid":"",
+    "installationdate":"1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "333322"
+  }
+,
+
+  {
+    "id": "change pin"
+  },
+
+
+  {
+    "id": "Registered device UUID and old PIN",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660cjjj",
+    "installationdate":"1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "434343"
+  },
+  {
+    "id": "old PIN",
+    "appversion": "1.0.2",
+    "deviceuuid":"a5945452d5acd31d2676",
+    "installationdate":"1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "oldpin":"222277"
+  },
+
+  {
+    "id": "Registered device UUIDs",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660cjjj",
+    "installationdate":"1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "718939"
+  }
+,
+
+  {
+    "id": "Weak PIN",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660cjjj",
+    "installationdate":"1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "434343"
+  }
+,
+  {
+    "id": "incorrect old PIN",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660cjjj",
+    "installationdate":"1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "434343"
+  }
+,
+  {
+    "id": "missing token",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660cjjj",
+    "installationdate":"1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "434343"
+  }
+,
+  {
+    "id": "none device UUID",
+    "appversion": "1.0.2",
+    "deviceuuid":"",
+    "installationdate":"1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "434343"
+  },
+
+  {
+    "id": "chech pin strength"
+  },
+
+
+  {
+    "id": "Strong PIN",
+    "appversion": "1.0.2",
+    "deviceuuid": "john43285660ckk",
+    "installationdate": "1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "newpin": "132114"
+  },
+
+  {
+    "id": "valid user",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660cKkk",
+    "installationdate":"1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "112211"
+  }
+,
+
+  {
+    "id": "Weak PIN",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660cKkk",
+    "installationdate":"1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "newpin": "123456"
+  }
+,
+  {
+    "id": "PIN below the required length",
+    "appversion": "1.0.2",
+    "deviceuuid": "john43285660ckk",
+    "installationdate": "1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "newpin": "4536"
+  },
+
+  {
+    "id": "pin reset"
+  },
+
+  {
+    "id":"registered deviceUUID",
+    "phonenumber":"+251943285672",
+    "appversion": "1.0.2",
+    "deviceuuid": "john43285660john24568",
+    "installationdate": "1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "230000",
+    "otpfor": "pinreset"
+
+  }
+,
+  {
+    "id": "unregistered deviceUUID",
+    "phonenumber":"+251900000043",
+    "appversion": "1.0.2",
+    "deviceuuid": "john43285660john24568",
+    "installationdate": "1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "230000",
+    "otpfor": "pinreset"
+
+  },
+  {
+    "id": "invalid  OTP",
+    "phonenumber":"+251943285672",
+    "appversion": "1.0.2",
+    "deviceuuid": "john43285660john24568",
+    "installationdate": "1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "230000"
+
+  }
+,
+  {
+    "id": "weak password",
+    "phonenumber":"+251943285672",
+    "appversion": "1.0.2",
+    "deviceuuid": "john43285660john24568",
+    "installationdate": "1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "123456",
+    "otpfor": "pinreset"
+
+
+  },
+  {
+    "id": "pin Set"
+  }
+
+
+,
+
+  {
+    "id":"New deviceUUID",
+    "phonenumber":"+251943285672",
+    "appversion": "1.0.2",
+    "installationdate": "1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "230000",
+    "otpfor": "pinset"
+
+  }
+,
+  {
+    "id":"unregister phone number",
+    "phonenumber":"+251943285876",
+    "appversion": "1.0.2",
+    "deviceuuid": "john43285660john24568",
+    "installationdate": "1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "230000",
+    "otpfor": "pinset"
+
+  }
+,
+  {
+    "id":"New deviceUUID",
+    "phonenumber":"+251943285672",
+    "appversion": "1.0.2",
+    "installationdate": "1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "230000",
+    "otpfor": "pinset"
+
+  }
+, {
+    "id":"Wrong OTP",
+    "phonenumber":"+251943285672",
+    "appversion": "1.0.2",
+    "installationdate": "1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "230000",
+    "otpfor": "pinset"
+
+  }
+, {
+  "id":"Weak Password",
+  "phonenumber":"+251943285672",
+  "appversion": "1.0.2",
+  "installationdate": "1759934922805",
+  "platform": "ios",
+  "sourceapp": "memberapp",
+  "pincode": "123456",
+  "otpfor": "pinset"
+
+}
+, {
+  "id":"invalid token",
+  "phonenumber":"+251943285672",
+  "appversion": "1.0.2",
+  "installationdate": "1759934922805",
+  "platform": "ios",
+  "sourceapp": "memberapp",
+  "pincode": "232332",
+  "otpfor": "pinset",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9."
+
+}
+
+
+]

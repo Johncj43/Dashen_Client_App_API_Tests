@@ -1,0 +1,30 @@
+[{
+  "id": "user_02",
+  "appversion": "1.0.2",
+  "deviceuuid":"john43285660john24",
+  "installationdate":"1759934922805",
+  "platform":"ios",
+  "sourceapp":"memberapp",
+  "pincode":"430000"
+},
+  {
+    "id": "user_03",
+    "appversion": "1.0.2",
+    "deviceuuid":"",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "pincode":"430000"
+  }
+,
+  {
+    "id": "user_04",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "pincode":"430000",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+  }
+]
