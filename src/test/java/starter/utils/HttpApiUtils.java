@@ -506,7 +506,7 @@ public class HttpApiUtils {
                     .contentType(ContentType.MULTIPART);
 
             // file goes into form-data
-            req.multiPart("avatar", file);
+            req.multiPart("profilepic", file);
 
             Response response = switch (method.toUpperCase()) {
                 case "POST" -> req.post();
@@ -524,10 +524,11 @@ public class HttpApiUtils {
         List<Header> headers = new ArrayList<>();
 
         headers.add(new Header("Authorization", "Bearer " + token));
-        headers.add(new Header("platform", EnvConfig.getPlatformType()));
-        headers.add(new Header("app_version", EnvConfig.getAppVersion()));
-        headers.add(new Header("device_uuid", deviceUUID));
-        headers.add(new Header("installation_date", installationDate));
+        headers.add(new Header("platform", "ios"));
+        headers.add(new Header("appversion", "1.0.2"));
+        headers.add(new Header("deviceuuid", deviceUUID));
+        headers.add(new Header("installationdate", installationDate));
+
 
         return new Headers(headers);
     }
