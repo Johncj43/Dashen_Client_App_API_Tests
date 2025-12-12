@@ -12,5 +12,9 @@ public class LoginData {
     private String sourceapp;
     private String pincode;
     private String token;
+    private String emailOrPhone;
+    private String account_number;
+    private String email;
+
 
 }

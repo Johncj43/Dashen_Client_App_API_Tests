@@ -253,6 +253,8 @@ public class HttpApiUtils {
     }
 
 
+
+
     public static Response requestWithStandardHeaderst(String method,
                                                       String token,
                                                       String path,
@@ -485,43 +487,30 @@ public class HttpApiUtils {
             return response.then().log().all().extract().response();
         });
     }
-    public static Response MultiRequest(String method,
-                                        String path,
-                                        String token,
-                                        File file,
-                                        String deviceUUID,
-                                        String formFieldName,
-                                        Map<String, String> pathParams,
-                                        Map<String, Object> extraParams) {
-
-        // Resolve placeholders in the path template
-        String resolvedPath = path;
-        if (pathParams != null) {
-            for (Map.Entry<String, String> entry : pathParams.entrySet()) {
-                resolvedPath = resolvedPath.replace("{" + entry.getKey() + "}", entry.getValue());
-            }
-        }
-        String finalResolvedPath = resolvedPath;
+    public static Response uploadMultipart(
+            String method,
+            String path,
+            String token,
+            File file,
+            String deviceUUID,
+            String installationDate
+    ) {
 
         return sendWithRetry(() -> {
+
             RequestSpecification req = given()
                     .baseUri(BASE_API_URL)
-                    .basePath(finalResolvedPath)
-                    .headers(buildHeaders(token, deviceUUID))
+                    .basePath(path)
+                    .headers(buildHeaders(token, deviceUUID, installationDate))
                     .relaxedHTTPSValidation()
                     .contentType(ContentType.MULTIPART);
 
-            // file part
-            req.multiPart(formFieldName, file);
-
-            // extra form-data fields
-            if (extraParams != null && !extraParams.isEmpty()) {
-                extraParams.forEach(req::multiPart);
-            }
+            // file goes into form-data
+            req.multiPart("avatar", file);
 
             Response response = switch (method.toUpperCase()) {
                 case "POST" -> req.post();
-                case "PUT" -> req.put();
+                case "PUT"  -> req.put();
                 case "PATCH" -> req.patch();
                 default -> throw new IllegalArgumentException("Unsupported multipart method: " + method);
             };
@@ -529,6 +518,20 @@ public class HttpApiUtils {
             return response.then().log().all().extract().response();
         });
     }
+
+
+    private static Headers buildHeaders(String token, String deviceUUID, String installationDate) {
+        List<Header> headers = new ArrayList<>();
+
+        headers.add(new Header("Authorization", "Bearer " + token));
+        headers.add(new Header("platform", EnvConfig.getPlatformType()));
+        headers.add(new Header("app_version", EnvConfig.getAppVersion()));
+        headers.add(new Header("device_uuid", deviceUUID));
+        headers.add(new Header("installation_date", installationDate));
+
+        return new Headers(headers);
+    }
+
 
 
     // -------------------- Retry Wrapper -------------------- //
@@ -610,6 +613,8 @@ public class HttpApiUtils {
 
         return new Headers(headers);
     }
+
+
     private static Headers buildCoreHeaders(String deviceUUID,
                                             String installationDate) {
 

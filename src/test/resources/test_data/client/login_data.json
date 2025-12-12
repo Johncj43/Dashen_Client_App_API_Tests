@@ -5,7 +5,11 @@
   "installationdate":"1759934922805",
   "platform":"ios",
   "sourceapp":"memberapp",
-  "pincode":"430000"
+  "pincode":"430000",
+  "emailOrPhone": "phone",
+  "account_number": "5001001008007",
+  "email": "yohannesfekadumos@gmail.com"
+
 },
   {
     "id": "user_03",
@@ -14,7 +18,12 @@
     "installationdate":"1759934922805",
     "platform":"ios",
     "sourceapp":"memberapp",
-    "pincode":"430000"
+    "pincode":"430000",
+    "emailOrPhone": "email",
+    "account_number": "5001001008007",
+    "email": "yohannesfekadumos@gmail.com"
+
+
   }
 ,
   {
@@ -25,6 +34,84 @@
     "platform":"ios",
     "sourceapp":"memberapp",
     "pincode":"430000",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
+    "emailOrPhone": "email",
+    "account_number": "5001001008007",
+    "email": "yohannesfekadumos@gmail.com"
+
+
+
+  },
+  {
+    "id": "user_05",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "pincode":"430000",
+    "emailOrPhone": "email",
+    "account_number": "5001001008007"
+
+  }
+,
+  {
+    "id": "user_06",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "pincode":"430000",
+    "emailOrPhone": "both"
+  }
+,
+  {
+    "id": "user_07",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "pincode":"430000",
+    "emailOrPhone": ""
+  },
+  {
+  "id": "user_08",
+  "appversion": "1.0.2",
+  "deviceuuid":"john43285660john24",
+  "installationdate":"1759934922805",
+  "platform":"ios",
+  "sourceapp":"memberapp",
+  "pincode":"430000",
+  "emailOrPhone": "phone",
+  "account_number": ""
+
+}
+,
+  {
+    "id": "user_09",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "pincode":"430000",
+    "emailOrPhone": "phone",
+    "account_number": "500100100800709"
+
+  },
+  {
+    "id": "user_10",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "pincode":"430000",
+    "emailOrPhone": "phone",
+    "account_number": "5001001008007",
+    "email": ""
+
   }
 ]
