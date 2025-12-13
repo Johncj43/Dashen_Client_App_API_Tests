@@ -270,6 +270,8 @@ public void theResponseShouldContainNamedWithTheValue(String filed, String jsonf
         );
         String accessToken=response.jsonPath().getString("data.accessToken");
         setContext(ACCESS_TOKEN.name(),accessToken);
+        String session= response.jsonPath().getString("data.sessionID");
+        setContext("SESSION_ID",session);
 
     }
 

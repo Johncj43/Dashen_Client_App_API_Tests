@@ -1,4 +1,4 @@
-package starter.step_definitions.client;
+package starter.step_definitions.client.users;
 
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
