@@ -1,5 +1,7 @@
 package starter.step_definitions.client.users;
 
+import io.cucumber.java.PendingException;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import starter.utils.HttpApiUtils;
@@ -141,7 +143,7 @@ public class ClientUserStepDef {
 
     private Response performUploadRequest(String endpoint, String id) {
         LoginData user = TestDataLoader.getLoginData(id);
-        File profilepic = new File("src/test/resources/test_data/images/images.png");
+        File profilepic = new File("src/test/resources/test_data/images/download.png");
         return HttpApiUtils.uploadMultipart(
                 "POST",
                 getParameterProperties(endpoint),
@@ -151,4 +153,22 @@ public class ClientUserStepDef {
                 user.getInstallationdate()
         );
     }
+    private Response performUploadRequests(String endpoint, String id) {
+        LoginData user = TestDataLoader.getLoginData(id);
+        String token ="efgvhdkflmeiodfsmd";
+        File profilepic = new File("src/test/resources/test_data/images/download.png");
+        return HttpApiUtils.uploadMultipart(
+                "POST",
+                getParameterProperties(endpoint),
+                token,
+                profilepic,
+                user.getDeviceuuid(),
+                user.getInstallationdate()
+        );
+    }
+    @When("I send a POST request to {string} with a {string} to upload the profile avatar with an invalid access token")
+    public void iSendAPOSTRequestToWithAToUploadTheProfileAvatarWithAnInvalidAccessToken(String endpoint, String id) {
+       Response response = performUploadRequests(endpoint, id);
+    }
+
 }

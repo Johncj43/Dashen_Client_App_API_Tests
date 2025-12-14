@@ -83,6 +83,7 @@ public class TestGlobalVariables {
         INVALID_LONG,
         otp_for,
         ACCESS_TOKEN,
+        DATA_TOKEN,
         HTTP_RESPONSE,
         USER_ID,
         USER_CODE,

@@ -36,6 +36,7 @@
     "appversion": "1.0.2",
     "installationdate":"1759934922805",
     "platform": "ios",
+    "otpfor": "pinset",
     "sourceapp": "memberapp"
   }
 ,
@@ -377,7 +378,29 @@
   "otpfor": "pinset",
   "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9."
 
-}
+},
+  {
+    "id": "change expired pin"
+  },
+
+  {
+    "id": "valid header data",
+    "appversion": "1.0.2",
+    "installationdate":"1759934922805",
+    "platform": "ios",
+    "otpfor": "presignup",
+    "sourceapp": "memberapp"
+  },
+  {
+    "id": "remove device",
+    "appversion": "1.0.2",
+    "installationdate":"1759934922805",
+    "platform": "ios",
+    "otpfor": "presignup",
+    "sourceapp": "memberapp"
+  }
+
+
 
 
 ]

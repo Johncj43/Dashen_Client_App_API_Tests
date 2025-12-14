@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static starter.utils.HelperUtils.convertObjectToJson;
+import static starter.utils.HelperUtils.generateRandomPIN;
 import static starter.utils.PropertiesReader.getParameterProperties;
 import static starter.utils.TestGlobalVariables.ContextEnum.*;
 import static starter.utils.TestGlobalVariables.getContext;
@@ -50,7 +51,6 @@ public class ClientAuthStepDef {
 
         String deviceUUID = HelperUtils.generateRandomDeviceUUID();
         setContext("DEVICE_UUID", deviceUUID);
-//        System.out.println("Device uuid:"+deviceUUID);
         Map<String, Object> body = new HashMap<>();
         String phoneNumber = HelperUtils.randomPhoneNumber();
         body.put("phonenumber",phoneNumber);
@@ -94,7 +94,7 @@ public class ClientAuthStepDef {
 
         );
         String accesstoken = response.jsonPath().getString("data.accessToken");
-        setContext("ACCESS_TOKEN", accesstoken);
+        setContext("ACCESS_TOKENNN", accesstoken);
 
 
 
@@ -105,19 +105,26 @@ public class ClientAuthStepDef {
         HeaderData userData=TestDataLoader.getDeviceLookData(id);
         String installationDate=userData.getInstallationdate();
         String deviceUUID=(String)getContext("DEVICE_UUID");
+        String otpFor=userData.getOtpfor();
         Map<String, Object>setBody=new HashMap<>();
         setBody.put("pincode","434353");
-        Response response=HttpApiUtils.requestWithStandardHeaders(
+        Response response=HttpApiUtils.requestWithStandardHeaderst(
                 "POST",
-                getContext("ACCESS_TOKEN"),
+                getContext("ACCESS_TOKENNN"),
                 getParameterProperties(endpoint),
                 deviceUUID,
                 installationDate,
-                null,
-                null,
-                convertObjectToJson(setBody)
+                convertObjectToJson(setBody),
+                otpFor
+
+
 
         );
+        setContext(HTTP_RESPONSE.name(),response);
+        String token=response.jsonPath().getString("data.accessToken");
+        String session=response.jsonPath().getString("data.sessionID");
+        setContext("SESSION_ID",session);
+        setContext("ACCESS_TOKEN",token);
 
 
 
@@ -594,6 +601,109 @@ public class ClientAuthStepDef {
                 convertObjectToJson(body),
                 otpFor
 
+        );
+
+    }
+
+    @And("I send a POST request to {string} with a {string} to change expired pin")
+    public void iSendAPOSTRequestToWithAToChangeExpiredPin(String endpoint, String id) {
+      HeaderData user=TestDataLoader.getDeviceLookData(id);
+      String installationdate =user.getInstallationdate();
+      String otpFor= user.getOtpfor();
+      String newPin=HelperUtils.generateRandomPIN();
+      String deviceuuid=getContext("DEVICE_UUID");
+      Map<String,Object>body=Map.of("oldpin","434353",
+                                         "newpin",newPin);
+      Response response = HttpApiUtils.requestWithStandardHeaderst(
+              "POST",
+              null,
+              getParameterProperties(endpoint),
+              deviceuuid,
+              installationdate,
+              convertObjectToJson(body),
+              otpFor
+      );
+
+
+    }
+
+    @And("I send a POST request to {string} with a {string} to change expired pin with weak password")
+    public void iSendAPOSTRequestToWithAToChangeExpiredPinWithWeakPassword(String endpoint, String id) {
+    HeaderData user=TestDataLoader.getDeviceLookData(id);
+    String installationdate =user.getInstallationdate();
+    String otpFor= user.getOtpfor();
+    String deviceuuid=getContext("DEVICE_UUID");
+        Map<String,Object>body=Map.of("oldpin","434353",
+                "newpin","123456");
+        Response response = HttpApiUtils.requestWithStandardHeaderst(
+                "POST",
+                null,
+                getParameterProperties(endpoint),
+                deviceuuid,
+                installationdate,
+                convertObjectToJson(body),
+                otpFor
+        );
+
+
+    }
+    @And("I send a POST request to {string} with a {string} to change expired pin with empty field pin set")
+    public void iSendAPOSTRequestToWithAToChangeExpiredPinWithEmptyFieldPinSet(String endpoint, String id) {
+        HeaderData user=TestDataLoader.getDeviceLookData(id);
+        String installationdate=user.getInstallationdate();
+        String otpFor= user.getOtpfor();
+        String deviceuuid=getContext("DEVICE_UUID");
+        Map<String,Object>body=Map.of("oldpin","434353",
+                                       "newpin","");
+        Response response = HttpApiUtils.requestWithStandardHeaderst(
+                "POST",
+                null,
+                getParameterProperties(endpoint),
+                deviceuuid,
+                installationdate,
+                convertObjectToJson(body),
+                otpFor
+        );
+
+
+
+    }
+
+    @And("I send a POST request to {string} with a {string} to change expired pin without deviceUUID")
+    public void iSendAPOSTRequestToWithAToChangeExpiredPinWithoutDeviceUUID(String endpoint, String id) {
+        HeaderData user=TestDataLoader.getDeviceLookData(id);
+        String installationdate=user.getInstallationdate();
+        String otpFor= user.getOtpfor();
+        String newPin=HelperUtils.generateRandomPIN();
+        Map<String,Object>body=Map.of("oldpin","434353",
+                "newpin",generateRandomPIN());
+        Response response = HttpApiUtils.requestWithStandardHeaderst(
+                "POST",
+                null,
+                getParameterProperties(endpoint),
+                null,
+                installationdate,
+                convertObjectToJson(body),
+                otpFor
+        );
+    }
+
+    @And("I send a POST request to {string} with a {string} with access token")
+    public void iSendAPOSTRequestToWithAWithAccessToken(String endpoint, String id) {
+        HeaderData user=TestDataLoader.getDeviceLookData(id);
+        String installationdate=user.getInstallationdate();
+        String otpFor= user.getOtpfor();
+        String newPin=HelperUtils.generateRandomPIN();
+        String xRequestId=getContext("SESSION_ID");
+        String deviceuuid = getContext("DEVICE_UUID");
+        Response response = HttpApiUtils.requestWithStandardHeadersSimples(
+                "DELETE",
+                getContext("ACCESS_TOKEN"),
+                getParameterProperties(endpoint),
+                deviceuuid,
+                installationdate,
+                xRequestId,
+                null
         );
 
     }

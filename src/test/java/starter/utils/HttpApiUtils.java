@@ -207,10 +207,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Supplier;
 import java.io.File;
 
@@ -230,6 +227,43 @@ public class HttpApiUtils {
     private static String cachedDeviceUUID;
 
     // -------------------- Public API -------------------- //
+    public static Response requestWithHeaders(String method,
+                                              String path,
+                                              String accessToken,
+                                              String deviceUUID,
+                                              String installationDate,
+                                              Object body,
+                                              boolean pinRequired,
+                                              String dataToken,
+                                              boolean ignoredService,
+                                              boolean transferFlag,
+                                              String requestId) {
+
+        String uuidToUse = (deviceUUID != null) ? deviceUUID : HelperUtils.getDeviceUUID();
+        String installationToUse = (installationDate != null)
+                ? installationDate
+                : EnvConfig.getInstallationDate();
+
+        return sendWithRetry(() ->
+                sendRequest(
+                        method,
+                        path,
+                        buildCoreHeaders(
+                                accessToken,
+                                uuidToUse,
+                                installationToUse,
+                                pinRequired,
+                                dataToken,
+                                ignoredService,
+                                transferFlag,
+                                requestId
+                        ),
+                        null,
+                        body
+                )
+        );
+    }
+
     public static Response requestWithCoresHeaders(String method,
                                                   String path,
                                                   String deviceUUID,
@@ -506,7 +540,7 @@ public class HttpApiUtils {
                     .contentType(ContentType.MULTIPART);
 
             // file goes into form-data
-            req.multiPart("profilepic", file);
+            req.multiPart("profilepic", file,"image/png");
 
             Response response = switch (method.toUpperCase()) {
                 case "POST" -> req.post();
@@ -570,6 +604,40 @@ public class HttpApiUtils {
     }
 
     // -------------------- Headers -------------------- //
+    private static Headers buildCoreHeaders(String accessToken,
+                                            String deviceUUID,
+                                            String installationDate,
+                                            boolean pinRequired,
+                                            String dataToken,
+                                            boolean ignoredService,
+                                            boolean transferFlag,
+                                            String requestId) {
+
+        List<Header> headers = new ArrayList<>();
+
+        headers.add(new Header("platform", "ios"));
+        headers.add(new Header("appversion", "1.0.2"));
+        headers.add(new Header("deviceuuid", deviceUUID));
+        headers.add(new Header("installationdate", installationDate));
+        headers.add(new Header("sourceapp", "memberapp"));
+        headers.add(new Header("Content-Type", "application/json"));
+
+        // 🔐 Access token
+        headers.add(new Header("Authorization", "Bearer " + accessToken));
+
+        // 🔹 Dynamic headers
+        headers.add(new Header("x-pin-required", String.valueOf(pinRequired)));
+        headers.add(new Header("datatoken", dataToken));
+        headers.add(new Header("x-ignored-service", String.valueOf(ignoredService)));
+        headers.add(new Header("x-transfer-flag", String.valueOf(transferFlag)));
+        headers.add(new Header(
+                "x-request-id",
+                requestId != null ? requestId : UUID.randomUUID().toString()
+        ));
+
+        return new Headers(headers);
+    }
+
     private static Headers buildStandardHeaderss(String token,
                                                String deviceUUID,
                                                String installationDate,

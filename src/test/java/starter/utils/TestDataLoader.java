@@ -5,6 +5,7 @@ import starter.utils.model.requestModel.auth.HeaderData;
 import starter.utils.model.requestModel.auth.PinStrength;
 import starter.utils.model.requestModel.client.*;
 import starter.utils.model.requestModel.client.services.GetFees;
+import starter.utils.model.requestModel.client.transaction.VerifyTransaction;
 import starter.utils.model.requestModel.client.users.LoginData;
 
 import java.io.File;
@@ -54,6 +55,9 @@ public class TestDataLoader {
     }
     public static GetFees getGetFeesData(String id){
         return loadTestData("get_fees_data.json",id,GetFees[].class);
+    }
+    public static VerifyTransaction getVerifyTransactionData(String id){
+        return loadTestData("verify_transaction_data.json",id, VerifyTransaction[].class);
     }
 
 

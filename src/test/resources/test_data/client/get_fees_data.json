@@ -1,6 +1,6 @@
 [{
 
-    "id": "user_02",
+    "id": "linked account",
     "appversion": "1.0.2",
     "deviceuuid":"john43285660john24",
     "installationdate":"1759934922805",
@@ -11,4 +11,47 @@
      "debit_accountnumber": "5001001008007",
     "credit_accountnumber": "+251943285660"
 
-}]
+},
+  {
+
+    "id": "empty debit account field",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 100,
+    "service_name": "EthioTelecom Topup",
+    "debit_accountnumber": "",
+    "credit_accountnumber": "+251943285660"
+
+  },
+  {
+
+    "id": "empty credit account field",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 100,
+    "service_name": "EthioTelecom Topup",
+    "debit_accountnumber": "5001001008007",
+    "credit_accountnumber": ""
+
+  },
+  {
+
+    "id": "empty service name",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 100,
+    "service_name": "",
+    "debit_accountnumber": "5001001008007",
+    "credit_accountnumber": "+251943285660"
+
+  }
+]
