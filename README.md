@@ -1,2 +1,3 @@
 # Dashen_Client_App_API_Tests
-This repository contains a comprehensive automated API testing framework for the Dashen Client App. The project is designed to validate key authentication and user-related endpoints, ensuring reliability, accuracy, and consistency across different client scenarios.
+This repository hosts a comprehensive API Test Automation Framework developed to validate the backend services of the Dashen Bank Client Mobile Application. The framework ensures that all client-facing APIs operate securely, reliably, and in full compliance with functional and business requirements.
+The project focuses on end-to-end API validation, covering both positive and negative scenarios to guarantee system stability across different customer journeys. It is built with maintainability, scalability, and clarity in mind, enabling efficient collaboration between QA engineers, backend developers, and DevOps teams.
