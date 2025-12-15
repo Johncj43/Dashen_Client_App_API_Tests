@@ -18,23 +18,36 @@ Feature: Service API
     Then the response status code should be 401
     And the response should contain a field named "message" with the value "invalid request"
 
- Scenario:User attempts to fetch fees for an empty account field
-   Given the "user_02" user logs in and obtains an access token
-   When I send a POST request to "GET_FEES_URL" with a "empty debit account field" to create get fees
-   Then the response status code should be 400
-   And the response should contain a field named "message" with the value "invalid request"
-
-  Scenario:User attempts to fetch fees for an empty credit account field
+  Scenario Outline: User attempts to fetch fees with an empty required field – returns 400 Bad Request
     Given the "user_02" user logs in and obtains an access token
-    When I send a POST request to "GET_FEES_URL" with a "empty credit account field" to create get fees
+    When I send a POST request to "GET_FEES_URL" with a "<empty_field>" to create get fees
     Then the response status code should be 400
     And the response should contain a field named "message" with the value "invalid request"
 
-  Scenario:User attempts to fetch fees for an empty service name
-    Given the "user_02" user logs in and obtains an access token
-    When I send a POST request to "GET_FEES_URL" with a "empty service name" to create get fees
-    Then the response status code should be 400
-    And the response should contain a field named "message" with the value "invalid request"
+    @fee_validation
+    Examples:
+      | empty_field                   |
+      | empty debit account field     |
+      | empty credit account field    |
+      | empty service name            |
+
+# Scenario:User attempts to fetch fees for an empty account field
+#   Given the "user_02" user logs in and obtains an access token
+#   When I send a POST request to "GET_FEES_URL" with a "empty debit account field" to create get fees
+#   Then the response status code should be 400
+#   And the response should contain a field named "message" with the value "invalid request"
+#
+#  Scenario:User attempts to fetch fees for an empty credit account field
+#    Given the "user_02" user logs in and obtains an access token
+#    When I send a POST request to "GET_FEES_URL" with a "empty credit account field" to create get fees
+#    Then the response status code should be 400
+#    And the response should contain a field named "message" with the value "invalid request"
+#
+#  Scenario:User attempts to fetch fees for an empty service name
+#    Given the "user_02" user logs in and obtains an access token
+#    When I send a POST request to "GET_FEES_URL" with a "empty service name" to create get fees
+#    Then the response status code should be 400
+#    And the response should contain a field named "message" with the value "invalid request"
 
 
 

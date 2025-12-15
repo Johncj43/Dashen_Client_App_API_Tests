@@ -123,7 +123,7 @@ public class ClientAuthStepDef {
         setContext(HTTP_RESPONSE.name(),response);
         String token=response.jsonPath().getString("data.accessToken");
         String session=response.jsonPath().getString("data.sessionID");
-        setContext("SESSION_ID",session);
+        setContext(SESSION_ID.name(), session);
         setContext("ACCESS_TOKEN",token);
 
 
@@ -262,7 +262,7 @@ public class ClientAuthStepDef {
         String accessToken= response.jsonPath().getString("data.accessToken");
         String sessionID= response.jsonPath().getString("data.sessionID");
         if (accessToken != null) setContext("ACCESS_TOKEN", accessToken);
-        if (sessionID != null) setContext("SESSION_ID", sessionID);
+        if (sessionID != null) setContext(SESSION_ID.name(), sessionID);
     }
 
     @And("I send a POST request to {string} with a {string} payload")
@@ -281,7 +281,7 @@ public class ClientAuthStepDef {
               getParameterProperties(endpoint),
               deviceuuid,
               installationDate,
-              getContext("SESSION_ID"),
+              getContext(SESSION_ID.name()),
               convertObjectToJson(body)
 
 
@@ -309,7 +309,7 @@ public class ClientAuthStepDef {
                 getParameterProperties(endpoint),
                 deviceuuid,
                 installationDate,
-                getContext("SESSION_ID"),
+                getContext(SESSION_ID.name()),
                 convertObjectToJson(body)
 
 
@@ -333,7 +333,7 @@ public class ClientAuthStepDef {
                 getParameterProperties(endpoint),
                 deviceuuid,
                 installationDate,
-                getContext("SESSION_ID"),
+                getContext(SESSION_ID.name()),
                 convertObjectToJson(body)
 
 
@@ -357,7 +357,7 @@ public class ClientAuthStepDef {
                 getParameterProperties(endpoint),
                 deviceuuid,
                 installationDate,
-                getContext("SESSION_ID"),
+                getContext(SESSION_ID.name()),
                 convertObjectToJson(body)
 
 
@@ -382,7 +382,7 @@ public class ClientAuthStepDef {
                 getParameterProperties(endpoint),
                 deviceuuid,
                 installationDate,
-                getContext("SESSION_ID"),
+                getContext(SESSION_ID.name()),
                 convertObjectToJson(body)
 
 
@@ -694,7 +694,7 @@ public class ClientAuthStepDef {
         String installationdate=user.getInstallationdate();
         String otpFor= user.getOtpfor();
         String newPin=HelperUtils.generateRandomPIN();
-        String xRequestId=getContext("SESSION_ID");
+        String xRequestId=getContext(SESSION_ID.name());
         String deviceuuid = getContext("DEVICE_UUID");
         Response response = HttpApiUtils.requestWithStandardHeadersSimples(
                 "DELETE",
@@ -707,4 +707,5 @@ public class ClientAuthStepDef {
         );
 
     }
+
 }

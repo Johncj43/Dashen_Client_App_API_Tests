@@ -4,7 +4,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import starter.utils.model.requestModel.auth.HeaderData;
 import starter.utils.model.requestModel.auth.PinStrength;
 import starter.utils.model.requestModel.client.*;
+import starter.utils.model.requestModel.client.core.AccountLookup;
 import starter.utils.model.requestModel.client.services.GetFees;
+import starter.utils.model.requestModel.client.topup.Topup;
 import starter.utils.model.requestModel.client.transaction.VerifyTransaction;
 import starter.utils.model.requestModel.client.users.LoginData;
 
@@ -59,6 +61,12 @@ public class TestDataLoader {
     public static VerifyTransaction getVerifyTransactionData(String id){
         return loadTestData("verify_transaction_data.json",id, VerifyTransaction[].class);
     }
+public static Topup getTopupData(String id){
+        return loadTestData("topup_data.json",id,Topup[].class);
+}
+public static AccountLookup getAccountLookupData(String id){
+        return loadTestData("account_lookup_data.json",id, AccountLookup[].class);
+}
 
 
 

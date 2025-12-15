@@ -38,6 +38,6 @@ public class TransactionVerifyMethodStepDef {
         VerifyTransaction data = TestDataLoader.getVerifyTransactionData(id);
         String installationdate = data.getInstallationdate();
         String deviceuuid = data.getDeviceuuid();
-        return HttpApiUtils.requestWithHeaders("POST", getParameterProperties(endpoint), accessToken, deviceuuid, installationdate, null, false, dataToken, true, false, getContext("SESSION_ID"));
+        return HttpApiUtils.requestWithHeaders("POST", getParameterProperties(endpoint), accessToken, deviceuuid, installationdate, null, false, dataToken, true, false, getContext(SESSION_ID.name()));
     }
 }

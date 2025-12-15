@@ -1,0 +1,76 @@
+[{
+  "id": "Active Account",
+  "appversion":"1.0.2",
+  "deviceuuid":"john43285660john24",
+  "installationdate":"1759934922805",
+  "platform":"ios",
+  "sourceapp":"memberapp",
+  "account_number": "5001001008007"
+},
+  {
+    "id": "Dormant Account",
+    "appversion":"1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "5004004509007"
+  },
+  {
+    "id": "Frozen Account",
+    "appversion":"1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "5408159189011"
+  }
+,
+  {
+    "id": "Frozen and Dormant Account",
+    "appversion":"1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "5382159057011"
+  },
+
+
+
+  {
+    "id": "balance enquiry"
+  },
+
+  {
+    "id": "Balance_enquiry_active_account",
+    "appversion":"1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "5001001008007"
+  }
+,
+
+  {
+    "id": "Balance_enquiry_frozen_account",
+    "appversion":"1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "5408178430011"
+  }
+,
+
+  {
+    "id": "Balance_enquiry_dormant_account",
+    "appversion":"1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "0002770250011"
+  }
+]
