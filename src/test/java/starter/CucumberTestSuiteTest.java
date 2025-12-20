@@ -23,5 +23,5 @@ import static io.cucumber.junit.platform.engine.Constants.PLUGIN_PROPERTY_NAME;
         value = "io.cucumber.core.plugin.SerenityReporterParallel,pretty,html:target/cucumber-reports.html,json:target/cucumber.json,rerun:target/rerun.txt"
 )
 @ConfigurationParameter(key = FILTER_TAGS_PROPERTY_NAME, value = "not @ignore")
-public class CucumberTestSuite {
+public class CucumberTestSuiteTest {
 }

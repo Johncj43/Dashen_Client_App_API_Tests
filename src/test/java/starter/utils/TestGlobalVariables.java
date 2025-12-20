@@ -122,8 +122,12 @@ public class TestGlobalVariables {
         SINGLE_MEMBER_ID,
         ACCOUNT_NUMBER,
         GROUP_ID,
+        BUDGET_ID,
         BENEFICIARY_IDS,
-        accessToken
+        accessToken,
+        INSTALLATION_DATE,
+        CATEGORY_ID,
+        EXPENSE_ID
         ;
 
 

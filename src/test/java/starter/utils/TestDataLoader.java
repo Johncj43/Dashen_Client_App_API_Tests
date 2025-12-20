@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import starter.utils.model.requestModel.auth.HeaderData;
 import starter.utils.model.requestModel.auth.PinStrength;
 import starter.utils.model.requestModel.client.*;
+import starter.utils.model.requestModel.client.budget.BudgetData;
 import starter.utils.model.requestModel.client.users.LoginData;
 
 import java.io.File;
@@ -49,6 +50,9 @@ public class TestDataLoader {
     }
     public static LoginData getLoginData(String id){
         return loadTestData("login_data.json",id, LoginData[].class);
+    }
+    public static BudgetData getBudgetData(String id){
+        return loadTestData("budget_data.json",id, BudgetData[].class);
     }
 
 

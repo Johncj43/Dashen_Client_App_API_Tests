@@ -1,17 +1,17 @@
 package starter.step_definitions.client;
 
-import io.cucumber.java.PendingException;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
-import org.junit.Test;
 import starter.utils.HttpApiUtils;
 import starter.utils.TestDataLoader;
+import starter.utils.model.requestModel.auth.HeaderData;
 import starter.utils.model.requestModel.client.users.LoginData;
 
 import static starter.utils.PropertiesReader.getParameterProperties;
 import static starter.utils.TestGlobalVariables.ContextEnum.ACCESS_TOKEN;
 import static starter.utils.TestGlobalVariables.ContextEnum.HTTP_RESPONSE;
 import static starter.utils.TestGlobalVariables.getContext;
+import static starter.utils.TestGlobalVariables.setContext;
 
 
 public class ClientUser {
@@ -116,4 +116,34 @@ public class ClientUser {
         );
 
     }
+
+
+
+
+//    public static class budgetStepDef {
+//        @When("I send a POST request to {string} with {string} Type")
+//        public void iSendAPostRequestToWithType(String endpoint, String budgetType) {
+//            // Load test data based on budget type (e.g., "custom")
+//            HeaderData budgetPayload = TestDataLoader.getDeviceLookData(budgetType);
+//
+//            // Convert payload to JSON (assuming your model has a toJson() or similar method)
+//            String requestBody = budgetPayload.toJson();
+//
+//            // Perform POST request
+//            Response response = HttpApiUtils.requestWithStandardHeaders(
+//                    "POST",
+//                    requestBody,
+//                    getParameterProperties(endpoint),
+//                    null,
+//                    null,
+//                    null,
+//                    null,
+//                    null
+//            );
+//
+//            // Save response into test context for later validation
+//            setContext(HTTP_RESPONSE.name(), response);
+
+
+
 }
