@@ -132,6 +132,13 @@ Feature:Chat send_money API
     Then the response status code should be 400
     And the response should contain a field named "message" with the value "FAILED???????"
 
+  Scenario: Fail chat send money from no debit to no credit account
+    Given the "Sender_user_no_debit" user logs in and obtains an access token
+    When the client sends a POST request to "GET_FEES_URL" using test data "no_debit_to_no_credit_account_chat_send_money"
+    And the client sends a POST request to "TRANSACTION_VERIFY_METHOD_URL" using test data "no_credit_receiver_account_chat_send_money_03" to verify the transaction for chat send money
+    And the client sends a POST request to "PIN_VERIFY_METHOD_URL" with "no_debit_account_correct_pin" to verify the PIN for the transaction
+    And the client sends "CHAT_SEND_MONEY_URL" request with "no_credit_chat_send_money_03" to perform chat send money
+
 
 
 
