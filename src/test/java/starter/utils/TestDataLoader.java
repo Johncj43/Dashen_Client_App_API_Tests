@@ -4,11 +4,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import starter.utils.model.requestModel.auth.HeaderData;
 import starter.utils.model.requestModel.auth.PinStrength;
 import starter.utils.model.requestModel.client.*;
+import starter.utils.model.requestModel.client.chat.Chat;
+import starter.utils.model.requestModel.client.chat.ChatMoneyRequest;
 import starter.utils.model.requestModel.client.core.AccountLookup;
 import starter.utils.model.requestModel.client.services.GetFees;
 import starter.utils.model.requestModel.client.topup.Topup;
 import starter.utils.model.requestModel.client.transaction.VerifyTransaction;
 import starter.utils.model.requestModel.client.users.LoginData;
+import starter.utils.model.requestModel.client.wallet.Wallet;
 
 import java.io.File;
 import java.security.PublicKey;
@@ -67,6 +70,16 @@ public static Topup getTopupData(String id){
 public static AccountLookup getAccountLookupData(String id){
         return loadTestData("account_lookup_data.json",id, AccountLookup[].class);
 }
+public static Wallet getWalletData(String id){
+        return loadTestData("wallet_data.json",id, Wallet[].class);
+}
+public static Chat getChatData(String id){
+        return loadTestData("chat_data.json",id, Chat[].class);
+}
+public static ChatMoneyRequest getChatMoneyRequestData(String id){
+        return loadTestData("chat_money_request.json",id,ChatMoneyRequest[].class);
+}
+
 
 
 
@@ -152,9 +165,6 @@ public static AccountLookup getAccountLookupData(String id){
 //        return loadTestData("cbe_to_wallet_agent_txn_data.json", wallet_id, CBEToWalletAgentTxn[].class);
 //    }
 //
-//    public static MoneyRequest getMoneyRequestData(String id) {
-//        return loadTestData("money_request_data.json", id, MoneyRequest[].class);
-//    }
 //
 //    public static ChatMoneyRequest getChatMoneyRequestData(String id) {
 //        return loadTestData("chat_money_request_data.json", id, ChatMoneyRequest[].class);

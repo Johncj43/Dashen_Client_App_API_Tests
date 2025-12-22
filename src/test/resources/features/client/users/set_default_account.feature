@@ -1,4 +1,7 @@
 Feature: Set default account API
+  As an authenticated client application
+  Users can designate one of their linked bank accounts as the default account
+  To enable automatic use of the preferred account for subsequent transactions (e.g., transfers, bill payments, top-ups) and improve user convenience
 
   Scenario: Client successfully sets a default account
     Given the "user_02" user logs in and obtains an access token

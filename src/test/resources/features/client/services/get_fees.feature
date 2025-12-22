@@ -1,4 +1,7 @@
 Feature: Service API
+  As an authenticated client application
+  Users can retrieve a list of available services (e.g., airtime top-up, bill payments, transfers)
+  To display supported services and enable selection for performing transactions
 
   Scenario: User create successfully get fees with access token
     Given the "user_02" user logs in and obtains an access token
@@ -36,7 +39,7 @@ Feature: Service API
 #   When I send a POST request to "GET_FEES_URL" with a "empty debit account field" to create get fees
 #   Then the response status code should be 400
 #   And the response should contain a field named "message" with the value "invalid request"
-#
+
 #  Scenario:User attempts to fetch fees for an empty credit account field
 #    Given the "user_02" user logs in and obtains an access token
 #    When I send a POST request to "GET_FEES_URL" with a "empty credit account field" to create get fees

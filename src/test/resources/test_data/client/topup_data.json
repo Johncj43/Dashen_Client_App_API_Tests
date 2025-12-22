@@ -1,5 +1,5 @@
 [{
-  "id": "",
+  "id": "topup_self_01",
   "appversion": "1.0.2",
   "deviceuuid":"john43285660john24",
   "installationdate":"1759934922805",
@@ -7,6 +7,49 @@
   "sourceapp":"memberapp"
 },
   {
+    "id": "frozen_account",
+    "appversion": "1.0.2",
+    "deviceuuid":"frozen43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp"
+  },
+  {
+    "id": "no_debit_account",
+    "appversion": "1.0.2",
+    "deviceuuid":"nodebit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp"
+  },
+  {
+    "id": "no_credit_account",
+    "appversion": "1.0.2",
+    "deviceuuid":"nocredit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp"
+  },
+  {
+    "id": "dormant_account",
+    "appversion": "1.0.2",
+    "deviceuuid":"dormant43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp"
+  },
 
+
+
+
+
+
+  {
+    "id": "topup_safaricom",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp"
   }
 ]

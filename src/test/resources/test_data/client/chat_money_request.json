@@ -1,0 +1,52 @@
+[{
+  "id": "valid_chat_money_request",
+  "deviceuuid":"john43285660john24",
+  "platform": "ios",
+  "appversion": "1.0.2",
+  "sourceapp": "memberapp",
+  "installationdate": "1759934922805",
+  "phone_number": "+251911516427",
+  "account_number": "5001001008007",
+  "amount": "120",
+  "reason": "good"
+},
+  {
+    "id": "valid_chat_money_request_data",
+    "deviceuuid":"michael123",
+    "platform": "ios",
+    "appversion": "1.0.2",
+    "sourceapp": "memberapp",
+    "installationdate": "1759934922805",
+    "phone_number": "+251911516427",
+    "account_number": "5001001008007",
+    "amount": "100",
+    "reason": "good"
+  },
+
+  {
+    "id": "reject_money_request",
+    "deviceuuid":"michael123",
+    "platform": "ios",
+    "appversion": "1.0.2",
+    "sourceapp": "memberapp",
+    "installationdate": "1759934922805",
+    "phone_number": "+251911516427",
+    "account_number": "5001001008007",
+    "amount": "100",
+    "reason": "good"
+
+  },
+  {
+    "id": "cancel_pending_money_request",
+    "deviceuuid":"john43285660john24",
+    "platform": "ios",
+    "appversion": "1.0.2",
+    "sourceapp": "memberapp",
+    "installationdate": "1759934922805",
+    "phone_number": "+251911516427",
+    "account_number": "5001001008007",
+    "amount": "120",
+    "reason": "good"
+
+  }
+]

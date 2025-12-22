@@ -10,5 +10,7 @@ public class VerifyTransaction {
     private String sourceapp;
     private String appversion;
     private String platform;
+    private String pincode;
+    private String credit_accountnumber;
 
 }

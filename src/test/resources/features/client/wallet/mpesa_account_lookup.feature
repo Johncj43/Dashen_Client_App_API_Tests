@@ -1,0 +1,5 @@
+Feature: Mpesa wallet API
+  Background:
+    Given the "user_B" user logs in and obtains an access token
+  Scenario: Successful account lookup for Tele Birr
+    When the client sends a POST request to "MPESA_ACCOUNT_LOOKUP_URL" with "valid_Mpesa_wallet" to perform account lookup for Mpesa wallet

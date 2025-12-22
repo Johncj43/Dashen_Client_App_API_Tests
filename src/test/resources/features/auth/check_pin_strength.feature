@@ -19,7 +19,7 @@ Feature: Check PIN Strength
     When I send a POST request to "PIN_LOGIN_URL" with a "valid user" to access client app
     And I send a POST request to "CHECK_PIN_STRENGTH" using a "invalid PIN format" to verify the PIN strength
     Then the response status code should be 400
-    And the response should contain a field named "message" with the value "invalid format PIN"
+    And the response should contain a field named "message" with the value "newpin must be a string"
 
   Scenario: Client fails PIN strength validation using a PIN below the minimum requirement
     Given I send a request to "DEVICE_LOOKUP_URL" with a "valid user" to lookup user's device

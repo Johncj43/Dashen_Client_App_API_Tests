@@ -1,4 +1,7 @@
 Feature: Remove avatar API
+  As an authenticated client application
+  Users can remove their current profile avatar
+  To revert to a default placeholder image and maintain control over their account appearance
 
   Scenario: Client Successfully remove an upload avatar
     Given the "user_02" user logs in and obtains an access token

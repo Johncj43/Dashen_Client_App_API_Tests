@@ -134,9 +134,9 @@ public class ClientUserStepDef {
                 getParameterProperties(endpoint),
                 user.getDeviceuuid(),
                 user.getInstallationdate(),
-                (Map<String, String>) body,  // Cast to String if needed, assuming the method expects String
+                null,
                 queryParams,
-                null
+                body
         );
     }
 

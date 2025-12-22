@@ -1,4 +1,7 @@
-Feature: ACCOUNT LOOKUP API
+Feature: Account Lookup API
+  As an authenticated client application
+  Users can perform an account lookup by providing a bank account number and bank code
+  To validate account details and determine the current state (active, dormant, frozen, debit/credit permissions) before proceeding with financial transactions such as transfers or payments
 
   Scenario Outline: Successful validation of an account number via account lookup for different account states
     Given the "user_02" user logs in and obtains an access token
@@ -17,7 +20,6 @@ Feature: ACCOUNT LOOKUP API
       | "Dormant Account"          | "true"        | "true"         | "true"          | "false"        | "true"         |
       | "Frozen Account"           | "true"        | "true"         | "false"         | "true"         | "true"         |
       | "Frozen and Dormant Account" | "true"      | "true"         | "true"          | "true"         | "true"         |
-
     #  Scenario: Successful validation of an account number via account lookup:ACTIVE ACCOUNT
 #    Given the "user_02" user logs in and obtains an access token
 #    When the client sends "ACCOUNT_LOOKUP_URL" request with "Active Account" to perform an account lookup
@@ -73,8 +75,6 @@ Feature: ACCOUNT LOOKUP API
 #    And the response should contain a field named "data.account_dormant" with the value "true"
 #    And the response should contain a field named "data.account_frozen" with the value "true"
 #    And the response should contain a field named "data.active_account" with the value "true"
-
-
 
 
 

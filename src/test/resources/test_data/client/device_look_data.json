@@ -229,13 +229,22 @@
 ,
 
   {
+    "id": "invalid PIN format",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660cKkk",
+    "installationdate":"1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp"
+  },
+
+  {
     "id": "Weak PIN",
     "appversion": "1.0.2",
     "deviceuuid":"john43285660cKkk",
     "installationdate":"1759934922805",
     "platform": "ios",
     "sourceapp": "memberapp",
-    "newpin": "123456"
+    "newpin": "111111"
   }
 ,
   {
@@ -254,13 +263,13 @@
 
   {
     "id":"registered deviceUUID",
-    "phonenumber":"+251943285674",
+    "phonenumber":"+251943285677",
     "appversion": "1.0.2",
-    "deviceuuid": "john4328",
+    "deviceuuid": "john43277",
     "installationdate": "1759934922805",
     "platform": "ios",
     "sourceapp": "memberapp",
-    "pincode": "233000",
+    "pincode": "232300",
     "otpfor": "pinreset"
 
   }
@@ -269,35 +278,35 @@
     "id": "unregistered deviceUUID",
     "phonenumber":"+251900000043",
     "appversion": "1.0.2",
-    "deviceuuid": "john4328",
+    "deviceuuid": "john4327799",
     "installationdate": "1759934922805",
     "platform": "ios",
     "sourceapp": "memberapp",
-    "pincode": "233000",
+    "pincode": "232300",
     "otpfor": "pinreset"
 
   },
   {
     "id": "invalid  OTP",
-    "phonenumber":"+251943285674",
+    "phonenumber":"+251943285677",
     "appversion": "1.0.2",
-    "deviceuuid": "john4328",
+    "deviceuuid": "john43277",
     "installationdate": "1759934922805",
     "platform": "ios",
     "sourceapp": "memberapp",
-    "pincode": "233000"
-
+    "pincode": "232300",
+    "otpfor": "pinreset"
   }
 ,
   {
     "id": "weak password",
-    "phonenumber":"+251943285674",
+    "phonenumber":"+251943285677",
     "appversion": "1.0.2",
-    "deviceuuid": "john4328",
+    "deviceuuid": "john43277",
     "installationdate": "1759934922805",
     "platform": "ios",
     "sourceapp": "memberapp",
-    "pincode": "123456",
+    "pincode": "111111",
     "otpfor": "pinreset"
 
 

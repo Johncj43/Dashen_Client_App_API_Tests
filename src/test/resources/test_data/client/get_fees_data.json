@@ -6,12 +6,125 @@
     "installationdate":"1759934922805",
     "platform":"ios",
     "sourceapp":"memberapp",
-    "amount": 100,
+    "amount": 10,
      "service_name": "EthioTelecom Topup",
      "debit_accountnumber": "5001001008007",
     "credit_accountnumber": "+251943285660"
 
 },
+  {
+
+    "id": "frozen_account",
+    "appversion": "1.0.2",
+    "deviceuuid":"frozen43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "EthioTelecom Topup",
+    "debit_accountnumber": "5417116996011",
+    "credit_accountnumber": "+251943285660"
+
+  },
+  {
+
+    "id": "frozen_accounts",
+    "appversion": "1.0.2",
+    "deviceuuid":"frozen43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "Safaricom Topup",
+    "debit_accountnumber": "5417116996011",
+    "credit_accountnumber": "+251700424112"
+
+  },
+  {
+
+    "id": "no_debit_account",
+    "appversion": "1.0.2",
+    "deviceuuid":"nodebit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "EthioTelecom Topup",
+    "debit_accountnumber": "5035907582011",
+    "credit_accountnumber": "+251943285660"
+
+  },
+  {
+
+    "id": "no_debit_accounts",
+    "appversion": "1.0.2",
+    "deviceuuid":"nodebit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "Safaricom Topup",
+    "debit_accountnumber": "5035907582011",
+    "credit_accountnumber": "+251700424112"
+
+  },
+  {
+
+    "id": "no_credit_account",
+    "appversion": "1.0.2",
+    "deviceuuid":"nocredit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "EthioTelecom Topup",
+    "debit_accountnumber": "5047782142002",
+    "credit_accountnumber": "+251943285660"
+
+  },
+  {
+
+    "id": "no_credit_accounts",
+    "appversion": "1.0.2",
+    "deviceuuid":"nocredit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "Safaricom Topup",
+    "debit_accountnumber": "5047782142002",
+    "credit_accountnumber": "+251700424112"
+
+  },
+  {
+
+    "id": "dormant_account",
+    "appversion": "1.0.2",
+    "deviceuuid":"dormant43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "EthioTelecom Topup",
+    "debit_accountnumber": "0518343016011",
+    "credit_accountnumber": "+251943285660"
+
+  },
+  {
+
+    "id": "dormant_accounts",
+    "appversion": "1.0.2",
+    "deviceuuid":"dormant43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "Safaricom Topup",
+    "debit_accountnumber": "0518343016011",
+    "credit_accountnumber": "+251700424112"
+
+  },
+
   {
 
     "id": "empty debit account field",
@@ -53,5 +166,318 @@
     "debit_accountnumber": "5001001008007",
     "credit_accountnumber": "+251943285660"
 
+  },
+
+
+  {
+    "id": "ethiotelecom_topup"
+  },
+
+  {
+
+    "id": "active_account",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "EthioTelecom Topup",
+    "debit_accountnumber": "5001001008007",
+    "credit_accountnumber": "+251943285660"
+
+  },
+
+  {
+    "id": "Safaricom_topup"
+  },
+
+  {
+
+    "id": "Saraficom_phone_number",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "Safaricom Topup",
+    "debit_accountnumber": "5001001008007",
+    "credit_accountnumber": "+251700424112"
+
+  },
+
+  {
+    "id": "wallet for telebirr"
+  },
+
+  {
+    "id": "tele_birr_load_data",
+    "appversion": "1.0.2",
+    "deviceuuid":"michael123",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 100,
+    "service_name": "telebirr",
+    "debit_accountnumber": "5015903528001",
+    "credit_accountnumber": "+251911516427"
+  },
+
+
+
+
+
+  {
+    "id": "chat topup"
+  },
+  {
+
+    "id": "ethio_topup_with_active_account",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "EthioTelecom Topup",
+    "debit_accountnumber": "5001001008007",
+    "credit_accountnumber": "+251911516427"
+
   }
+,
+  {
+
+    "id": "chat_topup_super_user_to_non_super_user",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "EthioTelecom Topup",
+    "debit_accountnumber": "5001001008007",
+    "credit_accountnumber": "+251911516429"
+
+  }
+,
+  {
+
+    "id": "chat_topup_to_non_super_user",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "Safaricom Topup",
+    "debit_accountnumber": "5001001008007",
+    "credit_accountnumber": "+251700424114"
+
+  },
+  {
+
+    "id": "safari_topup_with_active_account",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "Safaricom Topup",
+    "debit_accountnumber": "5001001008007",
+    "credit_accountnumber": "+251700424112"
+
+  },
+
+
+
+  {
+    "id": "active to other account status chat send money"
+  },
+
+
+  {
+    "id": "active_to_active_account_chat_send_money",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 100,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5001001008007",
+    "credit_accountnumber": "+251911516427"
+  },
+  {
+    "id": "active_to_frozen_account_chat_send_money",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 100,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5001001008007",
+    "credit_accountnumber": "+251932948548"
+  },
+
+  {
+    "id": "active_to_no_debit_account_chat_send_money",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 100,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5001001008007",
+    "credit_accountnumber": "+251972589256"
+  },
+  {
+    "id": "active_to_dormant_account_chat_send_money",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 100,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5001001008007",
+    "credit_accountnumber": "+251953420185"
+  },
+  {
+    "id": "active_to_no_credit_account_chat_send_money",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 100,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5001001008007",
+    "credit_accountnumber": "+251948272126"
+  },
+
+  {
+    "id": "frozen to other chat send money"
+  },
+  {
+    "id": "frozen_to_active_account_chat_send_money",
+    "appversion": "1.0.2",
+    "deviceuuid":"frozen43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 100,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5417116996011",
+    "credit_accountnumber": "+251911516427"
+  },
+  {
+    "id": "frozen_to_no_debit_account_chat_send_money",
+    "appversion": "1.0.2",
+    "deviceuuid":"frozen43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 100,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5417116996011",
+    "credit_accountnumber": "+251972589256"
+  },
+
+  {
+    "id": "frozen_to_dormant_account_chat_send_money",
+    "appversion": "1.0.2",
+    "deviceuuid":"frozen43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 100,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5417116996011",
+    "credit_accountnumber": "+251953420185"
+  },
+  {
+    "id": "frozen_to_no_credit_account_chat_send_money",
+    "appversion": "1.0.2",
+    "deviceuuid":"frozen43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 100,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5417116996011",
+    "credit_accountnumber": "+251948272126"
+  },
+
+
+  {
+    "id": "no debit to other account status chat send money"
+  },
+  {
+    "id": "no_debit_to_active_account_chat_send_money",
+    "appversion": "1.0.2",
+    "deviceuuid":"nodebit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 100,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5035907582011",
+    "credit_accountnumber": "+251911516427"
+  },
+  {
+    "id": "no_debit_to_frozen_account_chat_send_money",
+    "appversion": "1.0.2",
+    "deviceuuid":"nodebit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 100,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5035907582011",
+    "credit_accountnumber": "+251932948548"
+  },
+  {
+    "id": "no_debit_to_dormant_account_chat_send_money",
+    "appversion": "1.0.2",
+    "deviceuuid":"nodebit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 100,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5035907582011",
+    "credit_accountnumber": "+251953420185"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "id": "money request"
+  },
+  {
+    "id": "accept_valid_money_request",
+    "appversion": "1.0.2",
+    "deviceuuid":"michael123",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 100,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5015903528001",
+    "credit_accountnumber": "5344395"
+  }
+
 ]

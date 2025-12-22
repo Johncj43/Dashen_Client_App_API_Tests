@@ -1,0 +1,68 @@
+[{
+  "id": "valid_telebirr_wallet",
+  "deviceuuid":"michael123",
+  "sourceapp":"memberapp",
+  "appversion":"1.0.2",
+  "installationdate":"1759934922805",
+  "platform":"ios",
+  "phone_number": "+251911516427",
+  "token": "entyvsfgjkdslfmeoid"
+},
+  {
+    "id": "non_existent_wallet",
+    "deviceuuid":"michael123",
+    "sourceapp":"memberapp",
+    "appversion":"1.0.2",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "phone_number": "+251912516427"
+  }
+,
+  {
+    "id": "invalid_wallet_format",
+    "deviceuuid":"michael123",
+    "sourceapp":"memberapp",
+    "appversion":"1.0.2",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "phone_number": "11516427"
+  }
+,
+  {
+    "id": "missing_wallet_number",
+    "deviceuuid":"michael123",
+    "sourceapp":"memberapp",
+    "appversion":"1.0.2",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "phone_number": ""
+  },
+
+  {
+    "id": "telebirr load to phone"
+  }
+
+,
+
+  {
+    "id": "tele_birr_load_to_self",
+    "appversion": "1.0.2",
+    "deviceuuid":"michael123",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp"
+  },
+  {
+    "id": "valid_Mpesa_wallet",
+    "deviceuuid":"michael123",
+    "sourceapp":"memberapp",
+    "appversion":"1.0.2",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "phone_number": "0700990124",
+    "token": "entyvsfgjkdslfmeoid"
+  }
+
+
+
+]

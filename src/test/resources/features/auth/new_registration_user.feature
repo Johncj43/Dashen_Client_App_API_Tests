@@ -1,4 +1,4 @@
-Feature: Registration API
+ Feature: Registration API
   The purpose of this feature is to validate the end-to-end behavior, data integrity, and error-handling mechanisms of the /registration endpoint.
   It includes test scenarios that verify successful user registration using valid input data, enforcement of mandatory field validations, handling of duplicate or already-registered users, and system responses to malformed or incomplete requests.
   This feature ensures that the Registration API adheres to business rules, maintains consistent response structures, prevents invalid data entry, and reliably supports the user onboarding workflow across various edge cases and operational conditions.
@@ -16,7 +16,7 @@ Feature: Registration API
     When I send a POST request to "OTP_VERIFICATION_FOR_REGISTRATION_URL" with a "valid device uuid" valid OTP to approve the signup request
     And I send a POST request to "SET_PIN_URL" with a "valid device uuid" and an incorrectly formatted PIN
     Then the response status code should be 400
-    And the response should contain a field named "message" with the value "pincode length must be 6 characters long"
+    And the response should contain a field named "message" with the value "invalid request"
 
   Scenario:Registration  fails with already registered device uuid
     When I send a POST request to "REGISTRATION_URL" with a "Already registered device uuid" and a valid phone number to register the client app

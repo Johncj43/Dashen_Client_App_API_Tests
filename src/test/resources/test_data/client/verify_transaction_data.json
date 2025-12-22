@@ -4,5 +4,361 @@
   "sourceapp":"memberapp",
   "installationdate":"1759934922805",
   "appversion":"1.0.2",
-  "platform":"ios"
-}]
+  "platform":"ios",
+  "pincode":"430000"
+
+},
+
+  {
+    "id": "frozen_account_data",
+    "deviceuuid":"frozen43",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"232300"
+
+  },
+
+  {
+    "id": "no_debit_account_data",
+    "deviceuuid":"nodebit43",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"232300"
+
+  },  {
+  "id": "no_credit_account_data",
+  "deviceuuid":"nocredit43",
+  "sourceapp":"memberapp",
+  "installationdate":"1759934922805",
+  "appversion":"1.0.2",
+  "platform":"ios",
+  "pincode":"232300"
+
+},
+  {
+    "id": "dormant_account_data",
+    "deviceuuid":"dormant43",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"232300"
+
+  },
+
+
+
+
+  {"id": "verify pin"
+  },
+
+  {
+    "id": "correct pin",
+    "deviceuuid":"john43285660john24",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"430000"
+  }
+,
+
+  {
+    "id": "frozen_account_correct_pin",
+    "deviceuuid":"frozen43",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"232300"
+  }
+,
+
+  {
+    "id": "no_debit_account_correct_pin",
+    "deviceuuid":"nodebit43",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"232300"
+  }
+,
+  {
+    "id": "no_credit_account_correct_pin",
+    "deviceuuid": "nocredit43",
+    "sourceapp": "memberapp",
+    "installationdate": "1759934922805",
+    "appversion": "1.0.2",
+    "platform": "ios",
+    "pincode": "232300"
+  },
+  {
+    "id": "dormant_account_correct_pin",
+    "deviceuuid":"dormant43",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"232300"
+  }
+,
+
+
+
+
+  {
+    "id": "incorrect pin",
+    "deviceuuid":"john43285660john24",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"430001"
+  }
+,
+
+  {
+    "id": "empty field pin",
+    "deviceuuid":"john43285660john24",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"430001"
+  },
+  {
+    "id": "wallet for telebirr"
+  },
+  {
+    "id": "telebirr_valid_data",
+    "deviceuuid":"michael123",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"191826"
+
+  },
+
+  {
+    "id": "correct_pin",
+    "deviceuuid":"michael123",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"191826"
+  },
+
+  {
+    "id":"chat topup"
+  },
+
+  {
+    "id": "ethio_chat_topup_data",
+    "deviceuuid":"john43285660john24",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"430000",
+    "credit_accountnumber": "+251911516427"
+  },
+
+  {
+    "id": "ethio_chat_topup_to_non_super_user",
+    "deviceuuid":"john43285660john24",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"430000",
+    "credit_accountnumber": "+251911516429"
+  },
+
+  {
+    "id": "safari_chat_topup_data",
+    "deviceuuid":"john43285660john24",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"430000",
+    "credit_accountnumber": "+251700424112"
+  },
+  {
+    "id": "chat_topup_to_non_super_user",
+    "deviceuuid":"john43285660john24",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"430000",
+    "credit_accountnumber": "+251700424114"
+  },
+
+
+  {
+    "id": "active to other different account status chat send money"
+  },
+
+  {
+    "id": "active_receiver_account_chat_send_money_01",
+    "deviceuuid":"john43285660john24",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"430000",
+    "credit_accountnumber": "5015903528001"
+  },
+  {
+    "id": "frozen_receiver_account_chat_send_money_01",
+    "deviceuuid":"john43285660john24",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"430000",
+    "credit_accountnumber": "5417116996011"
+  },
+  {
+    "id": "no_debit_receiver_account_chat_send_money_01",
+    "deviceuuid":"john43285660john24",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"430000",
+    "credit_accountnumber": "5035907582011"
+  },
+  {
+    "id": "dormant_receiver_account_chat_send_money_01",
+    "deviceuuid":"john43285660john24",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"430000",
+    "credit_accountnumber": "0518343016011"
+  },
+  {
+    "id": "no_credit_receiver_account_chat_send_money_01",
+    "deviceuuid":"john43285660john24",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"430000",
+    "credit_accountnumber": "5047782142002"
+  },
+
+
+  {
+    "id": "frozen to other different account status chat send money"
+  },
+  {
+    "id": "active_receiver_account_chat_send_money_02",
+    "deviceuuid":"frozen43",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"430000",
+    "credit_accountnumber": "5015903528001"
+  },
+  {
+    "id": "no_debit_receiver_account_chat_send_money_02",
+    "deviceuuid":"frozen43",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"430000",
+    "credit_accountnumber": "5035907582011"
+  },
+  {
+    "id": "dormant_receiver_account_chat_send_money_02",
+    "deviceuuid":"frozen43",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"430000",
+    "credit_accountnumber": "0518343016011"
+  },
+  {
+    "id": "no_credit_receiver_account_chat_send_money_02",
+    "deviceuuid":"frozen43",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"430000",
+    "credit_accountnumber": "5047782142002"
+  },
+
+
+  {
+    "id": "no debit to other different account status chat send money"
+  },
+
+  {
+    "id": "active_receiver_account_chat_send_money_03",
+    "deviceuuid":"nodebit43",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"430000",
+    "credit_accountnumber": "5015903528001"
+  },
+
+  {
+    "id": "frozen_receiver_account_chat_send_money_03",
+    "deviceuuid":"nodebit43",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"430000",
+    "credit_accountnumber": "5417116996011"
+  },
+  {
+    "id": "dormant_receiver_account_chat_send_money_03",
+    "deviceuuid":"nodebit43",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"430000",
+    "credit_accountnumber": "0518343016011"
+  },
+
+
+
+
+
+
+  {
+    "id": "money request"
+  },
+
+
+  {
+    "id": "valid_money_request_transaction",
+    "deviceuuid":"michael123",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"430000",
+    "credit_accountnumber": "+251943285660"
+  }
+
+]

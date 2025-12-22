@@ -1,0 +1,184 @@
+[{
+    "id": "ethio_chat_topup",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+  "phone_number": "+251911516427"
+
+},
+  {
+    "id": "frozen_account",
+    "appversion": "1.0.2",
+    "deviceuuid":"frozen43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "phone_number": "+251911516427"
+  },
+  {
+    "id": "no_debit_account",
+    "appversion": "1.0.2",
+    "deviceuuid":"nodebit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "phone_number": "+251911516427"
+  },
+  {
+    "id": "no_credit_account",
+    "appversion": "1.0.2",
+    "deviceuuid":"nocredit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "phone_number": "+251911516427"
+
+  },
+  {
+    "id": "dormant_account",
+    "appversion": "1.0.2",
+    "deviceuuid":"dormant43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "phone_number": "+251911516427"
+  },
+  {
+    "id": "safari_chat_topup",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "phone_number": "+251911516427"
+
+  },
+
+
+
+
+  {
+    "id": "active to other different account status chat send money"
+  },
+
+  {
+    "id": "active_chat_send_money_01",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "phone_number": "+251911516427"
+  },
+  {
+    "id": "frozen_chat_send_money_01",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "phone_number": "+251932948548"
+  }
+,
+  {
+    "id": "no_debit_chat_send_money_01",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "phone_number": "+251972589256"
+  }
+,
+  {
+    "id": "dormant_chat_send_money_01",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "phone_number": "+251953420185"
+  }
+,
+  {
+    "id": "no_credit_chat_send_money_01",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "phone_number": "+251948272126"
+  },
+  {
+    "id": "frozen to  chat other different account status money"
+  },
+  {
+    "id": "active_chat_send_money_02",
+    "appversion": "1.0.2",
+    "deviceuuid":"frozen43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "phone_number": "+251911516427"
+  },
+  {
+  "id": "no_debit_chat_send_money_02",
+  "appversion": "1.0.2",
+  "deviceuuid":"frozen43",
+  "installationdate":"1759934922805",
+  "platform":"ios",
+  "sourceapp":"memberapp",
+  "phone_number": "+251972589256"
+},
+  {
+    "id": "dormant_chat_send_money_02",
+    "appversion": "1.0.2",
+    "deviceuuid":"frozen43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "phone_number": "+251953420185"
+  },
+  {
+  "id": "no_credit_chat_send_money_02",
+  "appversion": "1.0.2",
+  "deviceuuid":"frozen43",
+  "installationdate":"1759934922805",
+  "platform":"ios",
+  "sourceapp":"memberapp",
+  "phone_number": "+251948272126"
+},
+
+  {
+    "id": "frozen to other different account status chat send money"
+  },
+  {
+    "id": "active_chat_send_money_03",
+    "appversion": "1.0.2",
+    "deviceuuid":"nodebit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "phone_number": "+251911516427"
+  },
+  {
+    "id": "frozen_chat_send_money_03",
+    "appversion": "1.0.2",
+    "deviceuuid":"nodebit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "phone_number": "+251932948548"
+  },
+  {
+    "id": "dormant_chat_send_money_03",
+    "appversion": "1.0.2",
+    "deviceuuid":"nodebit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "phone_number": "+251953420185"
+  }
+]

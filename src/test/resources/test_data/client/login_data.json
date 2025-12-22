@@ -12,6 +12,19 @@
 
 },
   {
+    "id": "sender_user_active",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "pincode":"430000",
+    "emailOrPhone": "phone",
+    "account_number": "5001001008007",
+    "email": "yohannesfekadumos@gmail.com"
+
+  },
+  {
     "id": "user_03",
     "appversion": "1.0.2",
     "deviceuuid":"",
@@ -113,5 +126,134 @@
     "account_number": "5001001008007",
     "email": ""
 
+  },
+
+
+  {
+    "id": "user_A",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "pincode":"430000",
+    "emailOrPhone": "phone",
+    "account_number": "5001001008007",
+    "email": "yohannesfekadumos@gmail.com"
+
+  },
+
+  {
+    "id": "user_B",
+    "appversion": "1.0.2",
+    "deviceuuid":"michael123",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "pincode":"191826",
+    "emailOrPhone": "phone",
+    "account_number": "5015903528001",
+    "email": "yohannesfekadumos@gmail.com"
   }
+,
+  {
+    "id": "active_account",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "pincode":"430000",
+    "emailOrPhone": "phone",
+    "account_number": "5001001008007",
+    "email": "yohannesfekadumos@gmail.com"
+
+  },
+
+  {
+    "id": "sender_user_frozen",
+    "appversion": "1.0.2",
+    "deviceuuid":"frozen43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "pincode":"232300",
+    "emailOrPhone": "phone",
+    "account_number": "5015903528001",
+    "email": "yohannesfekadumos@gmail.com"
+  }
+
+,
+
+  {
+    "id": "sender_user_dormant",
+    "appversion": "1.0.2",
+    "deviceuuid":"dormant43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "pincode":"232300",
+    "emailOrPhone": "phone",
+    "account_number": "5015903528001",
+    "email": "yohannesfekadumos@gmail.com"
+  }
+,
+
+  {
+    "id": "Sender_user_no_debit",
+    "appversion": "1.0.2",
+    "deviceuuid":"nodebit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "pincode":"232300",
+    "emailOrPhone": "phone",
+    "account_number": "5015903528001",
+    "email": "yohannesfekadumos@gmail.com"
+  }
+,
+
+  {
+    "id": "sender_user_no_credit",
+    "appversion": "1.0.2",
+    "deviceuuid":"nocredit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "pincode":"232300",
+    "emailOrPhone": "phone",
+    "account_number": "5015903528001",
+    "email": "yohannesfekadumos@gmail.com"
+  },
+
+  {
+    "id": "money request"
+  },
+  {
+    "id": "user_requester",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "pincode":"430000",
+    "emailOrPhone": "phone",
+    "account_number": "5001001008007",
+    "email": "yohannesfekadumos@gmail.com"
+
+  },
+
+  {
+    "id": "user_sender",
+    "appversion": "1.0.2",
+    "deviceuuid":"michael123",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "pincode":"191826",
+    "emailOrPhone": "phone",
+    "account_number": "5015903528001",
+    "email": "yohannesfekadumos@gmail.com"
+  }
+
 ]

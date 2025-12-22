@@ -1,4 +1,7 @@
-Feature: BALANCE ENQUIRY API
+Feature: Balance Enquiry API
+As an authenticated client application
+I want to retrieve the current balance and account details of a linked bank account
+So that I can display accurate wallet or account balance information to the user and enable informed financial decisions
 
   Scenario Outline: Successful balance enquiry for different account states
 

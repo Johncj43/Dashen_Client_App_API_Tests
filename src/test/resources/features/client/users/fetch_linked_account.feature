@@ -1,4 +1,7 @@
-Feature: Linked Account API
+Feature: Fetch Linked Account API
+  As an authenticated client application
+  Users can retrieve details of their linked bank accounts
+  To display available funding sources and enable selection for transactions such as transfers, bill payments, or top-ups
 
   Scenario: Client successfully obtains linked account information
     Given the "user_02" user logs in and obtains an access token

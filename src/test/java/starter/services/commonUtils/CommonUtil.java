@@ -5,11 +5,11 @@ import starter.utils.HttpApiUtils;
 import starter.utils.TestDataLoader;
 import starter.utils.model.requestModel.client.core.AccountLookup;
 import starter.utils.model.requestModel.client.core.RequestAccountLookup;
+import starter.utils.model.requestModel.client.topup.Topup;
 
 import static starter.utils.HelperUtils.convertObjectToJson;
 import static starter.utils.PropertiesReader.getParameterProperties;
-import static starter.utils.TestGlobalVariables.ContextEnum.ACCESS_TOKEN;
-import static starter.utils.TestGlobalVariables.ContextEnum.SESSION_ID;
+import static starter.utils.TestGlobalVariables.ContextEnum.*;
 import static starter.utils.TestGlobalVariables.getContext;
 
 public class CommonUtil {
@@ -33,4 +33,35 @@ public class CommonUtil {
                 convertObjectToJson(requestBody)
         );
 
-}}
+}
+public static void performCommonTransaction(String method,
+                                            String endpoint,
+                                            String id,
+                                            Object body
+                                           ){
+    Topup data= TestDataLoader.getTopupData(id);
+    String installationdate=data.getInstallationdate();
+    String deviceuuid=data.getDeviceuuid();
+    Response response = HttpApiUtils.requestWithHeaders(
+            "POST",
+            getParameterProperties(endpoint),
+            getContext(ACCESS_TOKEN.name()),
+            deviceuuid,
+            installationdate,
+            null,
+            true,
+            getContext(DATA_TOKEN.name()),
+            true,
+            true,
+            getContext(SESSION_ID.name())
+
+
+
+    );
+
+
+}
+
+
+
+}

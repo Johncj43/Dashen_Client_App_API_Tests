@@ -1,6 +1,4 @@
 package starter.step_definitions.client.core;
-
-import io.cucumber.java.PendingException;
 import io.cucumber.java.en.When;
 import starter.services.commonUtils.CommonUtil;
 

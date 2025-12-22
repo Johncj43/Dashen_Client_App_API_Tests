@@ -1,4 +1,7 @@
 Feature: Fetch own user API
+  As an authenticated client application
+  Users can retrieve their own profile information
+  To display accurate and up-to-date personal details, preferences, and account status within the application
 
   Scenario: Client successfully fetches their own user details
     Given the "user_02" user logs in and obtains an access token

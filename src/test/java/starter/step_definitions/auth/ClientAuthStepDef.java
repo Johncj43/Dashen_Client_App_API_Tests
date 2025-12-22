@@ -415,17 +415,19 @@ public class ClientAuthStepDef {
         HeaderData reset=TestDataLoader.getDeviceLookData(id);
         String installationdate=reset.getInstallationdate();
         String deviceuuid=reset.getDeviceuuid();
+        String otpFor= reset.getOtpfor();
         String phoneNumber=reset.getPhonenumber();
 
         Map<String,Object>body=Map.of(
                 "phonenumber",phoneNumber);
-        Response response = HttpApiUtils.requestWithStandardHeadersSimple(
+        Response response = HttpApiUtils.requestWithStandardHeaderst(
                 "POST",
                 null,
                 getParameterProperties(endpoint),
                 deviceuuid,
                 installationdate,
-                convertObjectToJson(body)
+                convertObjectToJson(body),
+                otpFor
         );
         String token=response.jsonPath().getString("data.accessToken");
         String otp = response.jsonPath().getString("data.otpcode");
@@ -442,14 +444,16 @@ public class ClientAuthStepDef {
         HeaderData confirm=TestDataLoader.getDeviceLookData(id);
         String installationdate=confirm.getInstallationdate();
         String deviceuuid=confirm.getDeviceuuid();
+        String otpFor= confirm.getOtpfor();
         Map<String,Object> body=Map.of("otpcode",getContext("OTP"));
-      Response response = HttpApiUtils.requestWithStandardHeadersSimple(
+      Response response = HttpApiUtils.requestWithStandardHeaderst(
               "POST",
               getContext("Token"),
               getParameterProperties(endpoint),
               deviceuuid,
               installationdate,
-              convertObjectToJson(body)
+              convertObjectToJson(body),
+              otpFor
       );
       setContext(HTTP_RESPONSE.name(), response);
       String token=response.jsonPath().getString("data.accessToken");
@@ -483,16 +487,17 @@ public class ClientAuthStepDef {
         HeaderData confirm=TestDataLoader.getDeviceLookData(id);
         String installationdate=confirm.getInstallationdate();
         String deviceuuid=confirm.getDeviceuuid();
+        String otpFor= confirm.getOtpfor();
         Map<String,Object> body=Map.of("otpcode","473837");
-        Response response = HttpApiUtils.requestWithStandardHeadersSimple(
+        Response response = HttpApiUtils.requestWithStandardHeaderst(
                 "POST",
                 getContext("Token"),
                 getParameterProperties(endpoint),
                 deviceuuid,
                 installationdate,
-                convertObjectToJson(body)
+                convertObjectToJson(body),
+                otpFor
         );
-        setContext(HTTP_RESPONSE.name(), response);
     }
 
     @Given("I send a POST request to {string} with a {string} to to set a PIN for the user’s registered phone number")
@@ -549,7 +554,8 @@ public class ClientAuthStepDef {
        String installationdate=user.getInstallationdate();
        String deviceuuid=getContext("DEVICE_UUIDs");
        String otpFor=user.getOtpfor();
-       String pinCode=user.getPincode();
+       String pinCode=HelperUtils.generateRandomPIN();
+//       String pinCode=user.getPincode();
        Map<String,Object>body=Map.of("pincode",pinCode);
        Response response = HttpApiUtils.requestWithStandardHeaderst(
                "POST",

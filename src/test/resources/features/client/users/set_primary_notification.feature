@@ -1,4 +1,7 @@
 Feature: Set Primary notification API
+  As an authenticated client application
+  Users can designate one of their registered notification channels (e.g., phone number or email) as primary
+  To ensure critical transaction alerts, OTPs, and important account notifications are delivered through the preferred and most reliable channel
 
   Scenario: Client successfully sets primary notification through phone
     Given the "user_02" user logs in and obtains an access token

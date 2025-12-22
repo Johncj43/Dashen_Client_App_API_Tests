@@ -263,6 +263,44 @@ public class HttpApiUtils {
                 )
         );
     }
+    public static Response requestHeaders(String method,
+                                              String path,
+                                              String accessToken,
+                                              String deviceUUID,
+                                              String installationDate,
+                                              Object body,
+                                              boolean pinRequired,
+                                              boolean chatSendMoney,
+                                              String dataToken,
+                                              boolean ignoredService,
+                                              boolean transferFlag,
+                                              String requestId) {
+
+        String uuidToUse = (deviceUUID != null) ? deviceUUID : HelperUtils.getDeviceUUID();
+        String installationToUse = (installationDate != null)
+                ? installationDate
+                : EnvConfig.getInstallationDate();
+
+        return sendWithRetry(() ->
+                sendRequest(
+                        method,
+                        path,
+                        buildCoreHeader(
+                                accessToken,
+                                uuidToUse,
+                                installationToUse,
+                                pinRequired,
+                                chatSendMoney,
+                                dataToken,
+                                ignoredService,
+                                transferFlag,
+                                requestId
+                        ),
+                        null,
+                        body
+                )
+        );
+    }
 
     public static Response requestWithCoresHeaders(String method,
                                                   String path,
@@ -637,7 +675,41 @@ public class HttpApiUtils {
 
         return new Headers(headers);
     }
+    private static Headers buildCoreHeader(String accessToken,
+                                            String deviceUUID,
+                                            String installationDate,
+                                            boolean pinRequired,
+                                            boolean chatSendMoney,
+                                            String dataToken,
+                                            boolean ignoredService,
+                                            boolean transferFlag,
+                                            String requestId) {
 
+        List<Header> headers = new ArrayList<>();
+
+        headers.add(new Header("platform", "ios"));
+        headers.add(new Header("appversion", "1.0.2"));
+        headers.add(new Header("deviceuuid", deviceUUID));
+        headers.add(new Header("installationdate", installationDate));
+        headers.add(new Header("sourceapp", "memberapp"));
+        headers.add(new Header("Content-Type", "application/json"));
+
+        // 🔐 Access token
+        headers.add(new Header("Authorization", "Bearer " + accessToken));
+
+        // 🔹 Dynamic headers
+        headers.add(new Header("x-pin-required", String.valueOf(pinRequired)));
+        headers.add(new Header("x-chat-sendmoney",String.valueOf(chatSendMoney)));
+        headers.add(new Header("datatoken", dataToken));
+        headers.add(new Header("x-ignored-service", String.valueOf(ignoredService)));
+        headers.add(new Header("x-transfer-flag", String.valueOf(transferFlag)));
+        headers.add(new Header(
+                "x-request-id",
+                requestId != null ? requestId : UUID.randomUUID().toString()
+        ));
+
+        return new Headers(headers);
+    }
     private static Headers buildStandardHeaderss(String token,
                                                String deviceUUID,
                                                String installationDate,
@@ -772,11 +844,11 @@ public class HttpApiUtils {
             headers.add(new Header("Authorization", "Bearer " + resolveToken(token)));
         }
 
-        headers.add(new Header("platform", EnvConfig.getPlatformType()));
-        headers.add(new Header("appversion", EnvConfig.getAppVersion()));
+        headers.add(new Header("platform", "ios"));
+        headers.add(new Header("appversion","1.0.2"));
         headers.add(new Header("deviceuuid", deviceUUID));
         headers.add(new Header("installationdate", installationDate));
-        headers.add(new Header("sourceapp", EnvConfig.getSourceApp()));
+        headers.add(new Header("sourceapp", "memberapp"));
         headers.add(new Header("otpfor", otpFor));
 
         headers.add(new Header("Content-Type", "application/json"));
