@@ -272,6 +272,10 @@ public void theResponseShouldContainNamedWithTheValue(String filed, String jsonf
         setContext(ACCESS_TOKEN.name(),accessToken);
         String session= response.jsonPath().getString("data.sessionID");
         setContext(SESSION_ID.name(),session);
+        String userCode=response.jsonPath().getString("data.usercode");
+        setContext(USER_CODE.name(),userCode);
+
+
 
     }
 

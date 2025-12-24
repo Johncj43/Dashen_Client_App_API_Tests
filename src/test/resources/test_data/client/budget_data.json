@@ -1,0 +1,202 @@
+[
+  {
+    "id":"Customs",
+    "budget_type": "custom",
+    "amount": 1000,
+    "custom_start_date": "2025-12-01",
+    "custom_end_date": "2025-12-25",
+    "installationdate": "1759934922805",
+    "deviceuuid": "john43285660john24",
+    "appversion": "1.0.2",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "pincode":"430000"
+  },
+  {
+    "id": "user_02",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "pincode":"430000"
+  },
+  {
+    "id":"Customer",
+    "budgetType": "custom",
+    "amount": 1000,
+    "customStartDate": "2025-12-01",
+    "customEndDate": "2025-12-25",
+    "installationdate": "1759934922805",
+    "deviceuuid": ""
+  },
+  {
+    "id":"customamountnegative",
+    "budgetType": "custom",
+    "amount": -1000,
+    "customStartDate": "2025-12-01",
+    "customEndDate": "2025-12-25",
+    "installationdate": "1759934922805",
+    "deviceuuid": "john43285660john24"
+  },
+  {
+    "id":"customzero",
+    "budgetType": "custom",
+    "amount": -1000,
+    "customStartDate": "2025-12-01",
+    "customEndDate": "2025-12-25",
+    "installationdate": "1759934922805",
+    "deviceuuid": "john43285660john24"
+  },
+  {
+    "id":"customstartdate",
+    "budgetType": "custom",
+    "amount": 1000,
+    "customStartDate": "2025-12-25",
+    "customEndDate": "2025-12-01",
+    "installationdate": "1759934922805",
+    "deviceuuid": "john43285660john24"
+  },
+  {
+    "id":"customstring",
+    "budgetType": "custom",
+    "amount": "1000",
+    "customStartDate": "2025-12-01",
+    "customEndDate": "2025-12-25",
+    "installationdate": "1759934922805",
+    "deviceuuid": "john43285660john24"
+  },
+  {
+    "id":"missingBudgetType",
+    "budgetType": "",
+    "amount": "1000",
+    "customStartDate": "2025-12-25",
+    "customEndDate": "2025-12-01",
+    "installationdate": "1759934922805",
+    "deviceuuid": "john43285660john24"
+  },
+  {
+    "id":"invalidBudgetType",
+    "budgetType": "dfrf",
+    "amount": "1000",
+    "customStartDate": "2025-12-25",
+    "customEndDate": "2025-12-01",
+    "installationdate": "1759934922805",
+    "deviceuuid": "john43285660john24"
+  },
+  {
+    "id":"equalDates",
+    "budgetType": "custom",
+    "amount": "1000",
+    "customStartDate": "2025-12-25",
+    "customEndDate": "2025-12-25",
+    "installationdate": "1759934922805",
+    "deviceuuid": "john43285660john24"
+  },
+  {
+    "id":"missingAmount",
+    "budgetType": "custom",
+    "amount": "",
+    "customStartDate": "2025-12-25",
+    "customEndDate": "2025-12-25",
+    "installationdate": "1759934922805",
+    "deviceuuid": "john43285660john24"
+  },
+  {
+    "id":"emptyPayload"
+
+  },
+  {
+    "id": "monthlytype",
+    "budget_type": "monthly",
+    "amount": 1000,
+    "installationdate": "1759934922805",
+    "deviceuuid": "john43285660john24",
+    "appversion": "1.0.2",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "430000"
+  },
+  {
+    "id": "weeklytype",
+    "budget_type": "weekly",
+    "amount": 1000,
+    "installationdate": "1759934922805",
+    "deviceuuid": "john43285660john24",
+    "appversion": "1.0.2",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "430000"
+  },
+  {
+    "id": "yearlytype",
+    "budget_type": "weekly",
+    "amount": 1000,
+    "installationdate": "1759934922805",
+    "deviceuuid": "john43285660john24",
+    "appversion": "1.0.2",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "430000"
+  },
+  {
+    "id":"Customscatagory",
+    "name": "love",
+    "icon": "66e45405ecae83042db5dd4f",
+    "color": "6757f029794d4384c141fa33",
+    "expense_limit": 400,
+    "installationdate": "1759934922805",
+    "deviceuuid": "john43285660john24"
+  },
+  {
+    "id":"emptycatagory",
+    "name": "",
+    "icon": "66e45405ecae83042db5dd4f",
+    "color": "6757f029794d4384c141fa33",
+    "expense_limit": 400,
+    "installationdate": "1759934922805",
+    "deviceuuid": "john43285660john24"
+  },
+  {
+    "id":"CustomExpense",
+    "expense_type": "goo",
+    "amount": 200,
+    "installationdate": "1759934922805",
+    "deviceuuid": "john43285660john24",
+    "appversion": "1.0.2",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "pincode":"430000"
+  },
+  {
+    "id":"EmptyExpense",
+    "expense_type": "",
+    "amount": 200,
+    "installationdate": "1759934922805",
+    "deviceuuid": "john43285660john24",
+    "appversion": "1.0.2",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "pincode":"430000"
+  },
+  {
+    "id":"UpdateExpense",
+    "expense_type": "swa",
+    "amount": 200,
+    "installationdate": "1759934922805",
+    "deviceuuid": "john43285660john24",
+    "appversion": "1.0.2",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "pincode":"430000"
+  },
+  {
+    "id":"updateCustomscatagory",
+    "name": "loveuuuuu",
+    "icon": "66e45405ecae83042db5dd4f",
+    "color": "6757f029794d4384c141fa33",
+    "expense_limit": 400,
+    "installationdate": "1759934922805",
+    "deviceuuid": "john43285660john24"
+  }
+]

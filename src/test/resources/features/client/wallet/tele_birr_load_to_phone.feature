@@ -10,6 +10,7 @@ Feature: Wallet API
     And the client sends a POST request to "TELE_BIRR_LOAD_TO_PHONE_URL" with "tele_birr_load_to_self" to transfer funds from the account to the TeleBirr wallet
     Then the response status code should be 200
     And the response should contain a field named "message" with the value "Transaction completed successfully."
+    And the response should contain a field named "data.type" with the value "WALLET"
     And the response should contain a field named "data.status" with the value "PAID"
 
 

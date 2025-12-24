@@ -35,6 +35,15 @@
     "sourceapp":"memberapp",
     "account_number": "5382159057011"
   },
+  {
+    "id": "No debit Account",
+    "appversion":"1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "5035907582011"
+  },
 
 
 

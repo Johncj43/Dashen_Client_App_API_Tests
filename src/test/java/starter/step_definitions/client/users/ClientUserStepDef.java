@@ -149,8 +149,10 @@ public class ClientUserStepDef {
                 getParameterProperties(endpoint),
                 getContext(ACCESS_TOKEN.name()),
                 profilepic,
+                null,
                 user.getDeviceuuid(),
-                user.getInstallationdate()
+                user.getInstallationdate(),
+                null
         );
     }
     private Response performUploadRequests(String endpoint, String id) {
@@ -162,8 +164,10 @@ public class ClientUserStepDef {
                 getParameterProperties(endpoint),
                 token,
                 profilepic,
+                null,
                 user.getDeviceuuid(),
-                user.getInstallationdate()
+                user.getInstallationdate(),
+                null
         );
     }
     @When("I send a POST request to {string} with a {string} to upload the profile avatar with an invalid access token")

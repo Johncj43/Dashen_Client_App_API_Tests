@@ -12,7 +12,7 @@ Feature: Add email API
       Then the response status code should be 400
       And the response should contain a field named "message" with the value "invalid request"
 
-      Scenario: User fails to add an email with an invalid access token
+   Scenario: User fails to add an email with an invalid access token
         Given the "user_02" user logs in and obtains an access token
         When I send a POST request to "ADD_EMAIL_URL" with "user_04" to add an email with an invalid access token
         Then the response status code should be 401

@@ -180,5 +180,31 @@
     "platform":"ios",
     "sourceapp":"memberapp",
     "phone_number": "+251953420185"
+  },
+
+
+  {
+    "id": "chat fetch phone number"
+  },
+  {
+    "id": "contants_01",
+  "deviceuuid":"john43285660john24",
+  "appversion":"1.0.2",
+  "platform":"ios",
+  "sourceapp":"memberapp",
+  "installationdate":"1759934922805",
+    "phone_number": "+251953420185"
+
+  }
+,
+  {
+    "id": "contants_02",
+    "deviceuuid":"frozen43",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "phone_number": "+251953420185"
+
   }
 ]

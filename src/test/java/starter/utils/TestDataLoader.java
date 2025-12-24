@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import starter.utils.model.requestModel.auth.HeaderData;
 import starter.utils.model.requestModel.auth.PinStrength;
 import starter.utils.model.requestModel.client.*;
+import starter.utils.model.requestModel.client.budget.BudgetData;
 import starter.utils.model.requestModel.client.chat.Chat;
 import starter.utils.model.requestModel.client.chat.ChatMoneyRequest;
 import starter.utils.model.requestModel.client.core.AccountLookup;
@@ -79,6 +80,9 @@ public static Chat getChatData(String id){
 public static ChatMoneyRequest getChatMoneyRequestData(String id){
         return loadTestData("chat_money_request.json",id,ChatMoneyRequest[].class);
 }
+    public static BudgetData getBudgetData(String id){
+        return loadTestData("budget_data.json",id, BudgetData[].class);
+    }
 
 
 

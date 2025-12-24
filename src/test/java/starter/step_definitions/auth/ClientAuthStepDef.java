@@ -466,7 +466,7 @@ public class ClientAuthStepDef {
         HeaderData user=TestDataLoader.getDeviceLookData(id);
         String installationdate=user.getInstallationdate();
         String deviceuuid= user.getDeviceuuid();
-        String pinCode= user.getPincode();
+        String pinCode= HelperUtils.generateRandomPIN();
         String otpFor= user.getOtpfor();
         Map<String,Object> otpBody=Map.of("pincode",pinCode);
         Response response = HttpApiUtils.requestWithStandardHeaderst(

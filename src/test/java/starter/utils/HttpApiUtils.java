@@ -564,8 +564,10 @@ public class HttpApiUtils {
             String path,
             String token,
             File file,
+            File phoneNumbersJson,
             String deviceUUID,
-            String installationDate
+            String installationDate,
+            String xRequestedId
     ) {
 
         return sendWithRetry(() -> {
@@ -573,12 +575,33 @@ public class HttpApiUtils {
             RequestSpecification req = given()
                     .baseUri(BASE_API_URL)
                     .basePath(path)
-                    .headers(buildHeaders(token, deviceUUID, installationDate))
+                    .headers(buildHeaders(token, deviceUUID, installationDate,xRequestedId))
                     .relaxedHTTPSValidation()
                     .contentType(ContentType.MULTIPART);
 
             // file goes into form-data
-            req.multiPart("profilepic", file,"image/png");
+//            req.multiPart("profilepic", file,"image/png");
+//            req.multiPart(
+//                    "phonenumbers",
+//                    phoneNumbersJson,
+//                    "application/json"
+//            );
+            if (file != null) {
+                if (!file.exists()) {
+                    throw new RuntimeException("Profile image not found: " + file.getAbsolutePath());
+                }
+                req.multiPart("profilepic", file, "image/png");
+            }
+
+            if (phoneNumbersJson == null || !phoneNumbersJson.exists()) {
+                throw new RuntimeException("Phone numbers JSON file is missing");
+            }
+
+            req.multiPart(
+                    "phonenumbers",
+                    phoneNumbersJson,
+                    "application/json"
+            );
 
             Response response = switch (method.toUpperCase()) {
                 case "POST" -> req.post();
@@ -592,7 +615,7 @@ public class HttpApiUtils {
     }
 
 
-    private static Headers buildHeaders(String token, String deviceUUID, String installationDate) {
+    private static Headers buildHeaders(String token, String deviceUUID, String installationDate,String xRequestedId) {
         List<Header> headers = new ArrayList<>();
 
         headers.add(new Header("Authorization", "Bearer " + token));
@@ -600,6 +623,7 @@ public class HttpApiUtils {
         headers.add(new Header("appversion", "1.0.2"));
         headers.add(new Header("deviceuuid", deviceUUID));
         headers.add(new Header("installationdate", installationDate));
+        headers.add(new Header("x-request-id",xRequestedId));
 
 
         return new Headers(headers);
