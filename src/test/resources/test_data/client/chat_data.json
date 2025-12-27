@@ -182,6 +182,40 @@
     "phone_number": "+251953420185"
   },
 
+  {
+    "id": "no credit to other different account transfer"
+  },
+  {
+    "id": "active_chat_send_money_04",
+    "appversion": "1.0.2",
+    "deviceuuid":"nocredit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "phone_number": "+251911516427"
+  },
+  {
+    "id": "no_debit_chat_send_money_04",
+    "appversion": "1.0.2",
+    "deviceuuid":"nocredit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "phone_number": "+251972589256"
+  },
+  {
+    "id": "dormant_chat_send_money_04",
+    "appversion": "1.0.2",
+    "deviceuuid":"nocredit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "phone_number": "+251953420185"
+  },
+
+
+
+
 
   {
     "id": "chat fetch phone number"

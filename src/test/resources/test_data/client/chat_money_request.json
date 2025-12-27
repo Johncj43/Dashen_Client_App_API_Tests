@@ -5,34 +5,34 @@
   "appversion": "1.0.2",
   "sourceapp": "memberapp",
   "installationdate": "1759934922805",
-  "phone_number": "+251911516427",
+  "phone_number": "+251965757676",
   "account_number": "5001001008007",
-  "amount": "120",
+  "amount": "10",
   "reason": "good"
 },
   {
     "id": "valid_chat_money_request_data",
-    "deviceuuid":"michael123",
+    "deviceuuid":"gjgj676y",
     "platform": "ios",
     "appversion": "1.0.2",
     "sourceapp": "memberapp",
     "installationdate": "1759934922805",
-    "phone_number": "+251911516427",
+    "phone_number": "+251965757676",
     "account_number": "5001001008007",
-    "amount": "100",
+    "amount": "10",
     "reason": "good"
   },
 
   {
     "id": "reject_money_request",
-    "deviceuuid":"michael123",
+    "deviceuuid":"gjgj676y",
     "platform": "ios",
     "appversion": "1.0.2",
     "sourceapp": "memberapp",
     "installationdate": "1759934922805",
-    "phone_number": "+251911516427",
+    "phone_number": "+251965757676",
     "account_number": "5001001008007",
-    "amount": "100",
+    "amount": "10",
     "reason": "good"
 
   },
@@ -43,10 +43,46 @@
     "appversion": "1.0.2",
     "sourceapp": "memberapp",
     "installationdate": "1759934922805",
-    "phone_number": "+251911516427",
+    "phone_number": "+251965757676",
     "account_number": "5001001008007",
     "amount": "120",
     "reason": "good"
 
+  },
+  {
+    "id": "valid_chat_money_request_data_04",
+    "deviceuuid":"nocredit43",
+    "platform": "ios",
+    "appversion": "1.0.2",
+    "sourceapp": "memberapp",
+    "installationdate": "1759934922805",
+    "phone_number": "+251948272126",
+    "account_number": "5001001008007",
+    "amount": "10",
+    "reason": "good"
+  },
+  {
+    "id": "valid_chat_money_request_O5",
+    "deviceuuid":"frozen43",
+    "platform": "ios",
+    "appversion": "1.0.2",
+    "sourceapp": "memberapp",
+    "installationdate": "1759934922805",
+    "phone_number": "+251943285660",
+    "account_number": "5417116996011",
+    "amount": "10",
+    "reason": "good"
+  },
+  {
+    "id": "valid_chat_money_request_data_05",
+    "deviceuuid":"gjgj676y",
+    "platform": "ios",
+    "appversion": "1.0.2",
+    "sourceapp": "memberapp",
+    "installationdate": "1759934922805",
+    "phone_number": "+251965757676",
+    "account_number": "5417116996011",
+    "amount": "10",
+    "reason": "good"
   }
 ]

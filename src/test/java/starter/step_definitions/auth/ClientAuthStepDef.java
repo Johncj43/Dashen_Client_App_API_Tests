@@ -54,6 +54,7 @@ public class ClientAuthStepDef {
         Map<String, Object> body = new HashMap<>();
         String phoneNumber = HelperUtils.randomPhoneNumber();
         body.put("phonenumber",phoneNumber);
+        setContext(PHONE_NUMBER.name(), phoneNumber);
         Response response = HttpApiUtils.requestWithStandardHeaders(
                 "POST",
                 null,
@@ -105,9 +106,11 @@ public class ClientAuthStepDef {
         HeaderData userData=TestDataLoader.getDeviceLookData(id);
         String installationDate=userData.getInstallationdate();
         String deviceUUID=(String)getContext("DEVICE_UUID");
+        String pinCode=HelperUtils.generateRandomPIN();
+        setContext("PASSWORD",pinCode);
         String otpFor=userData.getOtpfor();
         Map<String, Object>setBody=new HashMap<>();
-        setBody.put("pincode","434353");
+        setBody.put("pincode",pinCode);
         Response response=HttpApiUtils.requestWithStandardHeaderst(
                 "POST",
                 getContext("ACCESS_TOKENNN"),
@@ -136,7 +139,7 @@ public class ClientAuthStepDef {
 
         HeaderData userData = TestDataLoader.getDeviceLookData(id);
         String installationDate = userData.getInstallationdate();
-        String deviceuuid=userData.getDeviceuuid();
+        String deviceuuid=getContext("DEVICE_UUID");
         Map<String, Object> body = new HashMap<>();
         String phoneNumber = HelperUtils.randomPhoneNumber();
         body.put("phonenumber", phoneNumber);
@@ -269,9 +272,9 @@ public class ClientAuthStepDef {
     public void iSendAPOSTRequestToWithAPayload(String endpoint, String id) {
         HeaderData user=TestDataLoader.getDeviceLookData(id);
       String installationDate= user.getInstallationdate();
-      String deviceuuid= user.getDeviceuuid();
+      String deviceuuid= getContext("DEVICE_UUID");
       String newPin=HelperUtils.generatePins(6,"strong");
-      String oldPin="025256";
+      String oldPin=getContext("PASSWORD");
       Map<String,Object> body=new HashMap<>();
         body.put("oldpin", (String)oldPin);  // FIXED: ensure string
         body.put("newpin", (String)newPin);
@@ -297,9 +300,9 @@ public class ClientAuthStepDef {
     public void iSendAPOSTRequestToWithAPayloads(String endpoint, String id) {
         HeaderData user=TestDataLoader.getDeviceLookData(id);
         String installationDate= user.getInstallationdate();
-        String deviceuuid= user.getDeviceuuid();
+        String deviceuuid= getContext("DEVICE_UUID");
         String newPin=HelperUtils.generatePins(6,"repeated");
-        String oldPin=getContext("NEW_PIN");
+        String oldPin=getContext("PINCODE");
         Map<String,Object> body=new HashMap<>();
         body.put("oldpin", (String)oldPin);  // FIXED: ensure string
         body.put("newpin", (String)newPin);
@@ -321,7 +324,7 @@ public class ClientAuthStepDef {
     public void iSendAPOSTRequestToWithAnPayload(String endpoint, String id) {
         HeaderData user=TestDataLoader.getDeviceLookData(id);
         String installationDate= user.getInstallationdate();
-        String deviceuuid= user.getDeviceuuid();
+        String deviceuuid= getContext("DEVICE_UUID");
         String newPin=HelperUtils.generatePins(6,"strong");
         String oldPin="718940";
         Map<String,Object> body=new HashMap<>();
@@ -345,9 +348,9 @@ public class ClientAuthStepDef {
     public void iSendAPOSTRequestToWithPayload(String endpoint, String id) {
         HeaderData user=TestDataLoader.getDeviceLookData(id);
         String installationDate= user.getInstallationdate();
-        String deviceuuid= user.getDeviceuuid();
+        String deviceuuid= getContext("DEVICE_UUID");
         String newPin=HelperUtils.generatePins(6,"strong");
-        String oldPin="718939";
+        String oldPin=getContext("PASSWORD");
         Map<String,Object> body=new HashMap<>();
         body.put("oldpin", (String)oldPin);  // FIXED: ensure string
         body.put("newpin", (String)newPin);
@@ -394,19 +397,23 @@ public class ClientAuthStepDef {
     @And("I send a POST request to {string} using a {string} to verify the PIN strength")
     public void iSendAPOSTRequestToUsingAToVerifyThePINStrength(String endpoint, String id) {
         HeaderData check=TestDataLoader.getDeviceLookData(id);
-        String deviceuuid=check.getDeviceuuid();
+        String deviceuuid=getContext("DEVICE_UUID");
         String installationdate=check.getInstallationdate();
-        String newPin=check.getNewpin();
+        String pinCode=HelperUtils.generateRandomPIN();
+        setContext("PINCODE",pinCode);
         Map<String,Object>body=new HashMap<>();
-        body.put("newpin",newPin);
+        body.put("newpin",pinCode);
         Response response=HttpApiUtils.requestWithStandardHeadersSimple(
                 "POST",
-                getContext("ACCESS_TOKEN"),
+                getContext("ACCESS_TOKENNN"),
                 getParameterProperties(endpoint),
                 deviceuuid,
                 installationdate,
                 convertObjectToJson(body)
         );
+//        String accessToken= response.jsonPath().getString("data.accessToken");
+//        setContext("ACCESS_TOKEN", accessToken);
+
 
     }
 
@@ -414,10 +421,9 @@ public class ClientAuthStepDef {
     public void iSendAPOSTRequestToWithAToLookUpTheUser(String endpoint, String id) {
         HeaderData reset=TestDataLoader.getDeviceLookData(id);
         String installationdate=reset.getInstallationdate();
-        String deviceuuid=reset.getDeviceuuid();
+        String deviceuuid=getContext("DEVICE_UUID");
         String otpFor= reset.getOtpfor();
-        String phoneNumber=reset.getPhonenumber();
-
+        String phoneNumber=getContext(PHONE_NUMBER.name());
         Map<String,Object>body=Map.of(
                 "phonenumber",phoneNumber);
         Response response = HttpApiUtils.requestWithStandardHeaderst(
@@ -443,7 +449,7 @@ public class ClientAuthStepDef {
     public void iSendAPOSTRequestToWithAValidOTPToApproveThePinResetRequest(String endpoint, String id) {
         HeaderData confirm=TestDataLoader.getDeviceLookData(id);
         String installationdate=confirm.getInstallationdate();
-        String deviceuuid=confirm.getDeviceuuid();
+        String deviceuuid=getContext("DEVICE_UUID");
         String otpFor= confirm.getOtpfor();
         Map<String,Object> body=Map.of("otpcode",getContext("OTP"));
       Response response = HttpApiUtils.requestWithStandardHeaderst(
@@ -465,7 +471,7 @@ public class ClientAuthStepDef {
     public void iSendAPOSTRequestToWithAAndNewPassword(String endpoint, String id) {
         HeaderData user=TestDataLoader.getDeviceLookData(id);
         String installationdate=user.getInstallationdate();
-        String deviceuuid= user.getDeviceuuid();
+        String deviceuuid= getContext("DEVICE_UUID");
         String pinCode= HelperUtils.generateRandomPIN();
         String otpFor= user.getOtpfor();
         Map<String,Object> otpBody=Map.of("pincode",pinCode);
@@ -486,7 +492,7 @@ public class ClientAuthStepDef {
     public void iSendAPOSTRequestToWithAToApproveThePinResetRequest(String endpoint, String id) {
         HeaderData confirm=TestDataLoader.getDeviceLookData(id);
         String installationdate=confirm.getInstallationdate();
-        String deviceuuid=confirm.getDeviceuuid();
+        String deviceuuid=getContext("DEVICE_UUID");
         String otpFor= confirm.getOtpfor();
         Map<String,Object> body=Map.of("otpcode","473837");
         Response response = HttpApiUtils.requestWithStandardHeaderst(
@@ -554,7 +560,7 @@ public class ClientAuthStepDef {
        String installationdate=user.getInstallationdate();
        String deviceuuid=getContext("DEVICE_UUIDs");
        String otpFor=user.getOtpfor();
-       String pinCode=HelperUtils.generateRandomPIN();
+       String pinCode=user.getPincode();
 //       String pinCode=user.getPincode();
        Map<String,Object>body=Map.of("pincode",pinCode);
        Response response = HttpApiUtils.requestWithStandardHeaderst(
@@ -616,9 +622,10 @@ public class ClientAuthStepDef {
       HeaderData user=TestDataLoader.getDeviceLookData(id);
       String installationdate =user.getInstallationdate();
       String otpFor= user.getOtpfor();
+      String oldPin=getContext("PASSWORD");
       String newPin=HelperUtils.generateRandomPIN();
       String deviceuuid=getContext("DEVICE_UUID");
-      Map<String,Object>body=Map.of("oldpin","434353",
+      Map<String,Object>body=Map.of("oldpin",oldPin,
                                          "newpin",newPin);
       Response response = HttpApiUtils.requestWithStandardHeaderst(
               "POST",
@@ -637,9 +644,10 @@ public class ClientAuthStepDef {
     public void iSendAPOSTRequestToWithAToChangeExpiredPinWithWeakPassword(String endpoint, String id) {
     HeaderData user=TestDataLoader.getDeviceLookData(id);
     String installationdate =user.getInstallationdate();
-    String otpFor= user.getOtpfor();
+        String oldPin=getContext("PASSWORD");
+        String otpFor= user.getOtpfor();
     String deviceuuid=getContext("DEVICE_UUID");
-        Map<String,Object>body=Map.of("oldpin","434353",
+        Map<String,Object>body=Map.of("oldpin",oldPin,
                 "newpin","123456");
         Response response = HttpApiUtils.requestWithStandardHeaderst(
                 "POST",
@@ -657,10 +665,11 @@ public class ClientAuthStepDef {
     public void iSendAPOSTRequestToWithAToChangeExpiredPinWithEmptyFieldPinSet(String endpoint, String id) {
         HeaderData user=TestDataLoader.getDeviceLookData(id);
         String installationdate=user.getInstallationdate();
+        String oldPin=getContext("PASSWORD");
         String otpFor= user.getOtpfor();
         String deviceuuid=getContext("DEVICE_UUID");
-        Map<String,Object>body=Map.of("oldpin","434353",
-                                       "newpin","");
+        Map<String,Object>body=Map.of("oldpin",oldPin,
+                                       "newpin","2232");
         Response response = HttpApiUtils.requestWithStandardHeaderst(
                 "POST",
                 null,
@@ -714,4 +723,123 @@ public class ClientAuthStepDef {
 
     }
 
+    @And("I send a POST request to {string} with a {string} and new password for pin reset")
+    public void iSendAPOSTRequestToWithAAndNewPasswordForPinReset(String endpoint, String id) {
+        HeaderData user=TestDataLoader.getDeviceLookData(id);
+        String installationdate=user.getInstallationdate();
+        String deviceuuid= getContext("DEVICE_UUID");
+        String pinCode= user.getPincode();
+        String otpFor= user.getOtpfor();
+        Map<String,Object> otpBody=Map.of("pincode",pinCode);
+        Response response = HttpApiUtils.requestWithStandardHeaderst(
+                "POST",
+                getContext("TOKEN"),
+                getParameterProperties(endpoint),
+                deviceuuid,
+                installationdate,
+                convertObjectToJson(otpBody),
+                otpFor
+        );
+    }
+
+    @Given("I send a POST request to {string} with a {string} to look up the users")
+    public void iSendAPOSTRequestToWithAToLookUpTheUsers(String endpoint, String id) {
+        HeaderData reset=TestDataLoader.getDeviceLookData(id);
+        String installationdate=reset.getInstallationdate();
+        String deviceuuid=reset.getDeviceuuid();
+        String otpFor= reset.getOtpfor();
+        String phoneNumber= reset.getPhonenumber();
+        Map<String,Object>body=Map.of(
+                "phonenumber",phoneNumber);
+        Response response = HttpApiUtils.requestWithStandardHeaderst(
+                "POST",
+                null,
+                getParameterProperties(endpoint),
+                deviceuuid,
+                installationdate,
+                convertObjectToJson(body),
+                otpFor
+        );
+    }
+
+    @Given("I send a request to {string} with a {string} to lookup device user")
+    public void iSendARequestToWithAToLookupDeviceUser(String endpoint, String id) {
+        HeaderData userData = TestDataLoader.getDeviceLookData(id);
+        String deviceuuid = userData.getDeviceuuid();
+        String installationdate = userData.getInstallationdate();
+        Response response =HttpApiUtils.requestWithStandardHeaders(
+                "GET",
+                null,
+                getParameterProperties(endpoint),
+                deviceuuid,
+                installationdate,
+                null,
+                null,
+                null
+
+
+        );
+    }
+
+    @When("I send a POST request to {string} with a {string} to check the strength of password")
+    public void iSendAPOSTRequestToWithAToCheckTheStrengthOfPassword(String endpoint, String id) {
+        HeaderData user=TestDataLoader.getDeviceLookData(id);
+        String deviceuuid=getContext("DEVICE_UUID");
+        String installationDate= user.getInstallationdate();
+        String pinCode= getContext("PINCODE");
+        Map<String,Object>body=new HashMap<>();
+        body.put("pincode",(String)pinCode);
+        Response response=HttpApiUtils.requestWithStandardHeadersSimple(
+                "POST",
+                null,
+                getParameterProperties(endpoint),
+                deviceuuid,
+                installationDate,
+                convertObjectToJson(body)
+        );
+        String accessToken= response.jsonPath().getString("data.accessToken");
+        setContext("ACCESS_TOKEN", accessToken);
+
+    }
+
+    @And("I send a request to {string} with a {string} to lookup user's deviceUUID")
+    public void iSendARequestToWithAToLookupUserSDeviceUUID(String endpoint, String id) {
+        HeaderData userData = TestDataLoader.getDeviceLookData(id);
+        String deviceuuid = getContext("DEVICE_UUID");
+        String installationdate = userData.getInstallationdate();
+        Response response =HttpApiUtils.requestWithStandardHeaders(
+                "GET",
+                null,
+                getParameterProperties(endpoint),
+                deviceuuid,
+                installationdate,
+                null,
+                null,
+                null
+
+
+        );
+    }
+
+    @And("I send a POST request to {string} with a {string} to the strength of new password set")
+    public void iSendAPOSTRequestToWithAToTheStrengthOfNewPasswordSet(String endpoint, String id) {
+            HeaderData user=TestDataLoader.getDeviceLookData(id);
+            String installationDate= user.getInstallationdate();
+            String deviceuuid= getContext("DEVICE_UUID");
+            String oldPin=getContext("PASSWORD");
+            Map<String,Object> body=new HashMap<>();
+            body.put("oldpin", (String)oldPin);  // FIXED: ensure string
+            body.put("newpin","123456");
+            Response response=HttpApiUtils.requestWithStandardHeadersSimples(
+                    "POST",
+                    getContext("ACCESS_TOKEN"),
+                    getParameterProperties(endpoint),
+                    deviceuuid,
+                    installationDate,
+                    getContext(SESSION_ID.name()),
+                    convertObjectToJson(body)
+
+
+            );
+    }
 }

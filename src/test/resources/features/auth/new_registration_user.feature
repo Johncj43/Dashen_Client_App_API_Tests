@@ -6,6 +6,7 @@
   Scenario: Successful register with valid data
     Given I send a POST request to "REGISTRATION_URL" with a "valid device uuid" and a valid phone number to register the user
     When I send a POST request to "OTP_VERIFICATION_FOR_REGISTRATION_URL" with a "valid device uuid" valid OTP to approve the signup request
+    And I send a POST request to "CHECK_PIN_STRENGTH" using a "Strong PIN" to verify the PIN strength
     And I send a POST request to "SET_PIN_URL" with a "valid device uuid" and password
     Then the response status code should be 200
     And the response should contain a field named "message" with the value "PIN set successfully."
@@ -19,7 +20,11 @@
     And the response should contain a field named "message" with the value "invalid request"
 
   Scenario:Registration  fails with already registered device uuid
-    When I send a POST request to "REGISTRATION_URL" with a "Already registered device uuid" and a valid phone number to register the client app
+    Given I send a POST request to "REGISTRATION_URL" with a "valid device uuid" and a valid phone number to register the user
+    When I send a POST request to "OTP_VERIFICATION_FOR_REGISTRATION_URL" with a "valid device uuid" valid OTP to approve the signup request
+    And I send a POST request to "CHECK_PIN_STRENGTH" using a "Strong PIN" to verify the PIN strength
+    And I send a POST request to "SET_PIN_URL" with a "valid device uuid" and password
+    And I send a POST request to "REGISTRATION_URL" with a "Already registered device uuid" and a valid phone number to register the client app
     Then the response status code should be 400
     And the response should contain a field named "message" with the value "Member already exists: please use a different phone number, account number"
 

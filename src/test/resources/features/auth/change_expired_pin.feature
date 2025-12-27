@@ -16,21 +16,13 @@ Feature: Change Expired Pin API
     Then the response status code should be 400
     And the response should contain a field named "message" with the value "Weak PIN used: please use a stronger combination."
 
-  Scenario: User fails to change an expired PIN with the new PIN field is empty
+  Scenario: User fails to change an expired PIN with weak password
     Given I send a POST request to "REGISTRATION_URL" with a "valid device uuid" and a valid phone number to register the user
     When I send a POST request to "OTP_VERIFICATION_FOR_REGISTRATION_URL" with a "valid device uuid" valid OTP to approve the signup request
     And I send a POST request to "SET_PIN_URL" with a "valid device uuid" and password
     And I send a POST request to "CHANGE_EXPIRED_PIN_URL" with a "valid header data" to change expired pin with empty field pin set
     Then the response status code should be 400
     And the response should contain a field named "message" with the value "Weak PIN used: please use a stronger combination."
-
-  Scenario: User fails to change an expired PIN with the new PIN field is empty
-    Given I send a POST request to "REGISTRATION_URL" with a "valid device uuid" and a valid phone number to register the user
-    When I send a POST request to "OTP_VERIFICATION_FOR_REGISTRATION_URL" with a "valid device uuid" valid OTP to approve the signup request
-    And I send a POST request to "SET_PIN_URL" with a "valid device uuid" and password
-    And I send a POST request to "CHANGE_EXPIRED_PIN_URL" with a "valid header data" to change expired pin with empty field pin set
-
-
 
 
 

@@ -340,6 +340,51 @@
     "credit_accountnumber": "0518343016011"
   },
 
+  {
+    "id": "no credit to other different account status transfer"
+  },
+  {
+    "id": "active_receiver_account_chat_send_money_04",
+    "deviceuuid":"nocredit43",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"430000",
+    "credit_accountnumber": "5001001008007"
+  },
+  {
+    "id": "frozen_receiver_account_chat_send_money_04",
+    "deviceuuid":"nocredit43",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"430000",
+    "credit_accountnumber": "5417116996011"
+  },
+
+  {
+    "id": "no_debit_receiver_account_chat_send_money_04",
+    "deviceuuid":"nocredit43",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"430000",
+    "credit_accountnumber": "5035907582011"
+  },
+
+  {
+    "id": "dormant_receiver_account_chat_send_money_04",
+    "deviceuuid":"nocredit43",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"430000",
+    "credit_accountnumber": "0518343016011"
+  },
 
 
 
@@ -351,14 +396,52 @@
 
 
   {
-    "id": "valid_money_request_transaction",
-    "deviceuuid":"michael123",
+    "id": "valid_money_request_transaction_01",
+    "deviceuuid":"gjgj676y",
     "sourceapp":"memberapp",
     "installationdate":"1759934922805",
     "appversion":"1.0.2",
     "platform":"ios",
     "pincode":"430000",
     "credit_accountnumber": "+251943285660"
-  }
+  },
 
+  {
+    "id": "valid_money_request_transaction_04",
+    "deviceuuid":"nocredit43",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"430000",
+    "credit_accountnumber": "+251943285660"
+  },
+  {
+    "id": "correct_pin_04",
+    "deviceuuid":"nocredit43",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "appversion":"1.0.2",
+    "platform":"ios",
+    "pincode":"232300"
+  },  {
+  "id": "valid_money_request_transaction_05",
+  "deviceuuid":"gjgj676y",
+  "sourceapp":"memberapp",
+  "installationdate":"1759934922805",
+  "appversion":"1.0.2",
+  "platform":"ios",
+  "pincode":"430000",
+  "credit_accountnumber": "+251932948548"
+}
+,  {
+  "id": "valid_money_request_transaction_06",
+  "deviceuuid":"frozen43",
+  "sourceapp":"memberapp",
+  "installationdate":"1759934922805",
+  "appversion":"1.0.2",
+  "platform":"ios",
+  "pincode":"430000",
+  "credit_accountnumber": "+251932948548"
+}
 ]

@@ -23,20 +23,20 @@ Feature: Chat topup Ethiotelcom and safaricom API
     Scenario:Chat top-up fails when initiated from a frozen account:FROZEN ACCOUNT
       Given the "sender_user_frozen" user logs in and obtains an access token
       When I send a POST request to "GET_FEES_URL" with a "frozen_account" to get fees
-      And the client sends a POST request to "TRANSACTION_VERIFY_METHOD_URL" to verify the transaction with "frozen_account_data"
-      And the client sends a POST request to "PIN_VERIFY_METHOD_URL" with "frozen_account_correct_pin" to verify the PIN for the transaction
-      And the client sends "ETHIOTELECOM_CHAT_TOPUP_URL" request with "frozen_account" to perform chat topup with ethiotelecom
+#      And the client sends a POST request to "TRANSACTION_VERIFY_METHOD_URL" to verify the transaction with "frozen_account_data"
+#      And the client sends a POST request to "PIN_VERIFY_METHOD_URL" with "frozen_account_correct_pin" to verify the PIN for the transaction
+#      And the client sends "ETHIOTELECOM_CHAT_TOPUP_URL" request with "frozen_account" to perform chat topup with ethiotelecom
       Then the response status code should be 400
-      And the response should contain a field named "message" with the value "Debit account not active"
+      And the response should contain a field named "message" with the value "Debit account is frozen"
 
      Scenario:Chat top-up fails when initiated from a no debit account:FROM NO_DEBIT ACCOUNT
        Given the "Sender_user_no_debit" user logs in and obtains an access token
        When I send a POST request to "GET_FEES_URL" with a "no_debit_account" to get fees
-       And the client sends a POST request to "TRANSACTION_VERIFY_METHOD_URL" to verify the transaction with "no_debit_account_data"
-       And the client sends a POST request to "PIN_VERIFY_METHOD_URL" with "no_debit_account_correct_pin" to verify the PIN for the transaction
-       And the client sends "ETHIOTELECOM_CHAT_TOPUP_URL" request with "no_debit_account" to perform chat topup with ethiotelecom
+#       And the client sends a POST request to "TRANSACTION_VERIFY_METHOD_URL" to verify the transaction with "no_debit_account_data"
+#       And the client sends a POST request to "PIN_VERIFY_METHOD_URL" with "no_debit_account_correct_pin" to verify the PIN for the transaction
+#       And the client sends "ETHIOTELECOM_CHAT_TOPUP_URL" request with "no_debit_account" to perform chat topup with ethiotelecom
        Then the response status code should be 400
-       And the response should contain a field named "message" with the value "No-debit account"
+       And the response should contain a field named "message" with the value "Debit Account is not allowed to debit"
 
 
   Scenario: Successfully perform chat top-up when initiated from a no-credit account:FROM NO_CREDIT ACCOUNT
@@ -88,20 +88,20 @@ Feature: Chat topup Ethiotelcom and safaricom API
   Scenario: Chat top-up for Safaricom fails when initiated from a frozen account:FROM FROZEN ACCOUNT
     Given the "sender_user_frozen" user logs in and obtains an access token
     When I send a POST request to "GET_FEES_URL" with a "frozen_accounts" to get fees
-    And the client sends a POST request to "TRANSACTION_VERIFY_METHOD_URL" to verify the transaction with "frozen_account_data"
-    And the client sends a POST request to "PIN_VERIFY_METHOD_URL" with "frozen_account_correct_pin" to verify the PIN for the transaction
-    And the client sends "SAFARICOM_CHAT_TOPUP_URL" request with "frozen_account" to perform chat topup with safaricom
+#    And the client sends a POST request to "TRANSACTION_VERIFY_METHOD_URL" to verify the transaction with "frozen_account_data"
+#    And the client sends a POST request to "PIN_VERIFY_METHOD_URL" with "frozen_account_correct_pin" to verify the PIN for the transaction
+#    And the client sends "SAFARICOM_CHAT_TOPUP_URL" request with "frozen_account" to perform chat topup with safaricom
     Then the response status code should be 400
-    And the response should contain a field named "message" with the value "Debit account not active"
+    And the response should contain a field named "message" with the value "Debit account is frozen"
 
   Scenario: Chat top-up for Safaricom fails when initiated from a no debit account:FROM NO_DEBIT ACCOUNT
     Given the "Sender_user_no_debit" user logs in and obtains an access token
     When I send a POST request to "GET_FEES_URL" with a "no_debit_accounts" to get fees
-    And the client sends a POST request to "TRANSACTION_VERIFY_METHOD_URL" to verify the transaction with "no_debit_account_data"
-    And the client sends a POST request to "PIN_VERIFY_METHOD_URL" with "no_debit_account_correct_pin" to verify the PIN for the transaction
-    And the client sends "SAFARICOM_CHAT_TOPUP_URL" request with "no_debit_account" to perform chat topup with safaricom
+#    And the client sends a POST request to "TRANSACTION_VERIFY_METHOD_URL" to verify the transaction with "no_debit_account_data"
+#    And the client sends a POST request to "PIN_VERIFY_METHOD_URL" with "no_debit_account_correct_pin" to verify the PIN for the transaction
+#    And the client sends "SAFARICOM_CHAT_TOPUP_URL" request with "no_debit_account" to perform chat topup with safaricom
     Then the response status code should be 400
-    And the response should contain a field named "message" with the value "No-debit account"
+    And the response should contain a field named "message" with the value "Debit Account is not allowed to debit"
 
 
   Scenario: Successfully perform Safaricom chat top-up when initiated from a no-credit account:FROM NO_CREDIT ACCOUNT

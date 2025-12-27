@@ -133,7 +133,7 @@
     "installationdate":"1759934922805",
     "platform":"ios",
     "sourceapp":"memberapp",
-    "amount": 100,
+    "amount": 10,
     "service_name": "EthioTelecom Topup",
     "debit_accountnumber": "",
     "credit_accountnumber": "+251943285660"
@@ -147,7 +147,7 @@
     "installationdate":"1759934922805",
     "platform":"ios",
     "sourceapp":"memberapp",
-    "amount": 100,
+    "amount": 10,
     "service_name": "EthioTelecom Topup",
     "debit_accountnumber": "5001001008007",
     "credit_accountnumber": ""
@@ -161,7 +161,7 @@
     "installationdate":"1759934922805",
     "platform":"ios",
     "sourceapp":"memberapp",
-    "amount": 100,
+    "amount": 10,
     "service_name": "",
     "debit_accountnumber": "5001001008007",
     "credit_accountnumber": "+251943285660"
@@ -304,7 +304,7 @@
     "installationdate":"1759934922805",
     "platform":"ios",
     "sourceapp":"memberapp",
-    "amount": 100,
+    "amount": 10,
     "service_name": "Transfer to dashen",
     "debit_accountnumber": "5001001008007",
     "credit_accountnumber": "+251911516427"
@@ -316,7 +316,7 @@
     "installationdate":"1759934922805",
     "platform":"ios",
     "sourceapp":"memberapp",
-    "amount": 100,
+    "amount": 10,
     "service_name": "Transfer to dashen",
     "debit_accountnumber": "5001001008007",
     "credit_accountnumber": "+251932948548"
@@ -329,7 +329,7 @@
     "installationdate":"1759934922805",
     "platform":"ios",
     "sourceapp":"memberapp",
-    "amount": 100,
+    "amount": 10,
     "service_name": "Transfer to dashen",
     "debit_accountnumber": "5001001008007",
     "credit_accountnumber": "+251972589256"
@@ -341,7 +341,7 @@
     "installationdate":"1759934922805",
     "platform":"ios",
     "sourceapp":"memberapp",
-    "amount": 100,
+    "amount": 10,
     "service_name": "Transfer to dashen",
     "debit_accountnumber": "5001001008007",
     "credit_accountnumber": "+251953420185"
@@ -353,7 +353,7 @@
     "installationdate":"1759934922805",
     "platform":"ios",
     "sourceapp":"memberapp",
-    "amount": 100,
+    "amount": 10,
     "service_name": "Transfer to dashen",
     "debit_accountnumber": "5001001008007",
     "credit_accountnumber": "+251948272126"
@@ -369,7 +369,7 @@
     "installationdate":"1759934922805",
     "platform":"ios",
     "sourceapp":"memberapp",
-    "amount": 100,
+    "amount": 10,
     "service_name": "Transfer to dashen",
     "debit_accountnumber": "5417116996011",
     "credit_accountnumber": "+251911516427"
@@ -381,7 +381,7 @@
     "installationdate":"1759934922805",
     "platform":"ios",
     "sourceapp":"memberapp",
-    "amount": 100,
+    "amount": 10,
     "service_name": "Transfer to dashen",
     "debit_accountnumber": "5417116996011",
     "credit_accountnumber": "+251972589256"
@@ -394,7 +394,7 @@
     "installationdate":"1759934922805",
     "platform":"ios",
     "sourceapp":"memberapp",
-    "amount": 100,
+    "amount": 10,
     "service_name": "Transfer to dashen",
     "debit_accountnumber": "5417116996011",
     "credit_accountnumber": "+251953420185"
@@ -406,7 +406,7 @@
     "installationdate":"1759934922805",
     "platform":"ios",
     "sourceapp":"memberapp",
-    "amount": 100,
+    "amount": 10,
     "service_name": "Transfer to dashen",
     "debit_accountnumber": "5417116996011",
     "credit_accountnumber": "+251948272126"
@@ -415,7 +415,7 @@
 
   {
     "id": "no debit to other account status chat send money"
-  },
+   },
   {
     "id": "no_debit_to_active_account_chat_send_money",
     "appversion": "1.0.2",
@@ -423,7 +423,7 @@
     "installationdate":"1759934922805",
     "platform":"ios",
     "sourceapp":"memberapp",
-    "amount": 100,
+    "amount": 10,
     "service_name": "Transfer to dashen",
     "debit_accountnumber": "5035907582011",
     "credit_accountnumber": "+251911516427"
@@ -435,7 +435,7 @@
     "installationdate":"1759934922805",
     "platform":"ios",
     "sourceapp":"memberapp",
-    "amount": 100,
+    "amount": 10,
     "service_name": "Transfer to dashen",
     "debit_accountnumber": "5035907582011",
     "credit_accountnumber": "+251932948548"
@@ -447,11 +447,130 @@
     "installationdate":"1759934922805",
     "platform":"ios",
     "sourceapp":"memberapp",
-    "amount": 100,
+    "amount": 10,
     "service_name": "Transfer to dashen",
     "debit_accountnumber": "5035907582011",
     "credit_accountnumber": "+251953420185"
   },
+  {
+    "id": "no_debit_to_no_credit_account_chat_send_money",
+    "appversion": "1.0.2",
+    "deviceuuid":"nodebit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5035907582011",
+    "credit_accountnumber": "+251948272126"
+  },
+             {
+               "id": "No credit to another different account status transfer"
+             },
+  {
+    "id": "no_credit_to_active_account_chat_send_money",
+    "appversion": "1.0.2",
+    "deviceuuid":"nocredit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5047782142002",
+    "credit_accountnumber": "+251911516427"
+  },
+
+  {
+    "id": "no_credit_to_frozen_account_chat_send_money",
+    "appversion": "1.0.2",
+    "deviceuuid":"nocredit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5047782142002",
+    "credit_accountnumber": "+251932948548"
+  },
+  {
+    "id": "no_credit_to_no_debit_account_chat_send_money",
+    "appversion": "1.0.2",
+    "deviceuuid":"nocredit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5047782142002",
+    "credit_accountnumber": "+251972589256"
+  },
+  {
+    "id": "no_credit_to_dormant_account_chat_send_money",
+    "appversion": "1.0.2",
+    "deviceuuid":"nocredit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5047782142002",
+    "credit_accountnumber": "+251953420185"
+  },
+
+
+  {
+    "id": "dormant to other different account status trnasfer"
+  },
+  {
+    "id": "dormant_to_active_account_chat_send_money",
+    "appversion": "1.0.2",
+    "deviceuuid":"dormant43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "0518343016011",
+    "credit_accountnumber": "+251911516427"
+  },
+  {
+    "id": "dormant_to_frozen_account_chat_send_money",
+    "appversion": "1.0.2",
+    "deviceuuid":"dormant43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "0518343016011",
+    "credit_accountnumber": "+251932948548"
+  },
+  {
+    "id": "dormant_to_no_debit_account_chat_send_money",
+    "appversion": "1.0.2",
+    "deviceuuid":"dormant43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "0518343016011",
+    "credit_accountnumber": "+251972589256"
+  },
+  {
+    "id": "dormant_to_no_credit_account_chat_send_money",
+    "appversion": "1.0.2",
+    "deviceuuid":"dormant43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "0518343016011",
+    "credit_accountnumber": "+251948272126"
+  },
+
+
 
 
 
@@ -470,14 +589,80 @@
   {
     "id": "accept_valid_money_request",
     "appversion": "1.0.2",
-    "deviceuuid":"michael123",
+    "deviceuuid":"gjgj676y",
     "installationdate":"1759934922805",
     "platform":"ios",
     "sourceapp":"memberapp",
-    "amount": 100,
+    "amount": 10,
     "service_name": "Transfer to dashen",
-    "debit_accountnumber": "5015903528001",
+    "debit_accountnumber": "5444482284011",
     "credit_accountnumber": "5344395"
   }
 
-]
+,
+  {
+    "id": "accept_valid_money_request_01",
+    "appversion": "1.0.2",
+    "deviceuuid":"frozen43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5417116996011",
+    "credit_accountnumber": "5344395"
+  },
+  {
+    "id": "accept_valid_money_request_02",
+    "appversion": "1.0.2",
+    "deviceuuid":"dormant43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "0518343016011",
+    "credit_accountnumber": "+251972589256"
+  }
+
+,
+  {
+    "id": "accept_valid_money_request_04",
+    "appversion": "1.0.2",
+    "deviceuuid":"nocredit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5047782142002",
+    "credit_accountnumber": "+"
+  }
+,
+  {
+    "id": "accept_valid_money_request_06",
+    "appversion": "1.0.2",
+    "deviceuuid":"frozen43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5417116996011",
+    "credit_accountnumber": "5344395"
+  }
+,
+  {
+    "id": "accept_valid_money_request_07",
+    "appversion": "1.0.2",
+    "deviceuuid":"dormant43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "0518343016011",
+    "credit_accountnumber": "5344395"
+}
+
+    ]
