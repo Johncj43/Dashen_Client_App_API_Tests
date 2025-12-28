@@ -1,4 +1,13 @@
 Feature:Chat send_money API
+  This feature tests the functionality of the Chat Send Money API in the Dashen Client App.
+  It covers various scenarios for sending money between users with different account statuses,
+  including Active, Frozen, No Debit, No Credit, and Dormant accounts.
+  The scenarios verify:
+  - Successful transactions between valid accounts
+  - Failed transactions due to account restrictions such as frozen or dormant status
+  - Proper calculation and application of fees
+  - PIN and transaction verification steps
+  - Correct response messages and payment status values
 
   @ACTIVE_TO_OTHER_DIFFERENT_ACCOUNT_STATUS_TRANSFER
   Scenario: Successful chat send money from active to active account

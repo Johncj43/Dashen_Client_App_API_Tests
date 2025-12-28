@@ -1,4 +1,12 @@
 Feature:  Get My Chat API
+  This feature tests the retrieval of chat conversation history in the Dashen Super App.
+  It covers scenarios for fetching chat history between Super App users and handling cases where no previous conversation exists.
+
+  The scenarios verify:
+  - Successful retrieval of chat conversation history with another registered Super App user
+  - Handling of non-registered contacts or users with no chat history
+  - Correct response structure, including message values and chat start indicators
+  - Proper HTTP status codes for successful retrieval
 
   Scenario: Successfully retrieve chat conversation history with another Super App user
     Given the "user_02" user logs in and obtains an access token

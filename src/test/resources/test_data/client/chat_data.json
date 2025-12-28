@@ -63,8 +63,7 @@
     "id": "active to other different account status chat send money"
   },
 
-  {
-    "id": "active_chat_send_money_01",
+  {"id": "active_chat_send_money_01",
     "appversion": "1.0.2",
     "deviceuuid":"john43285660john24",
     "installationdate":"1759934922805",
@@ -112,7 +111,7 @@
     "phone_number": "+251948272126"
   },
   {
-    "id": "frozen to  chat other different account status money"
+    "id":"frozen to  chat other different account status money"
   },
   {
     "id": "active_chat_send_money_02",
@@ -152,7 +151,7 @@
 },
 
   {
-    "id": "frozen to other different account status chat send money"
+    "id":"frozen to other different account status chat send money"
   },
   {
     "id": "active_chat_send_money_03",
@@ -183,7 +182,7 @@
   },
 
   {
-    "id": "no credit to other different account transfer"
+    "id":"no credit to other different account transfer"
   },
   {
     "id": "active_chat_send_money_04",
@@ -218,8 +217,9 @@
 
 
   {
-    "id": "chat fetch phone number"
+    "id":"chat fetch phone number"
   },
+
   {
     "id": "contants_01",
   "deviceuuid":"john43285660john24",

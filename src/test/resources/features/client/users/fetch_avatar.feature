@@ -1,4 +1,11 @@
 Feature: Fetch Avatar API
+  This feature tests the functionality of retrieving a user's avatar in the Dashen Super App.
+  It ensures that users can successfully fetch their avatar while enforcing device and access validations.
+
+  The scenarios verify:
+  - Successful retrieval of an uploaded avatar for a registered and authenticated user
+  - Proper error handling when the device UUID is missing or unregistered
+  - Correct HTTP status codes and response messages indicating success or failure
 
   Scenario: Client successfully get upload avatar
     Given the "user_02" user logs in and obtains an access token

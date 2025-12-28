@@ -1,4 +1,12 @@
 Feature: Transaction Verification API
+  This feature tests the transaction verification functionality in the Dashen Super App.
+  It ensures that users can verify transactions before finalizing them, providing security and integrity for financial operations such as transfers, bill payments, and top-ups.
+
+  The scenarios verify:
+  - Successful transaction verification when valid data and access tokens are provided
+  - Proper error handling and messages when an invalid transaction token is used
+  - Correct HTTP status codes and messages when an invalid or expired access token is used
+  - Confirmation messages returned in the response indicating whether the transaction verification succeeded or failed
   Background:
     Given the "user_02" user logs in and obtains an access token
 

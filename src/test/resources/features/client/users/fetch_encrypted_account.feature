@@ -1,4 +1,13 @@
 Feature: Fetch Encrypted Account API
+  This feature tests the functionality of retrieving an encrypted account number in the Dashen Super App.
+  It ensures that users can successfully fetch encrypted account numbers while enforcing proper validations for account fields, device UUID, and access tokens.
+
+  The scenarios verify:
+  - Successful retrieval of an encrypted account number for a registered and authenticated user
+  - Proper error handling when the account number field is empty
+  - Rejection of requests without a registered device UUID
+  - Rejection of requests with an invalid or missing access token
+  - Correct HTTP status codes and response messages indicating success or failure
 
   Scenario: successfully fetch encrypted account
     Given the "user_02" user logs in and obtains an access token

@@ -1,4 +1,9 @@
 Feature: Budget API
+  This feature validates the creation, retrieval, update, and deletion of budgets
+  in the client app. It ensures that budgets can be managed successfully with
+  proper validations for budget amounts, dates, types, and error handling for
+  invalid requests.
+
   Scenario: Client successfully creates budget
     Given the "user_02" user logs in and obtains an access token
     When I send a POST request to "CREATE_BUDGET_URL" with "Customs" to create a budget on app

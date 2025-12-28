@@ -1,8 +1,13 @@
 Feature: PIN Verification during Transaction Flow API
-  As an authenticated client application
-  Users must verify their PIN before authorizing sensitive transactions (e.g., transfers, bill payments, airtime top-ups)
-  To ensure transaction security and prevent unauthorized operations
+  This feature tests the PIN verification functionality in the Dashen Super App.
+  It ensures that users must verify their PIN before authorizing sensitive transactions, including transfers, bill payments, and airtime top-ups, to maintain transaction security and prevent unauthorized operations.
 
+  The scenarios verify:
+  - Successful PIN verification when the correct PIN is provided
+  - Proper handling and error messages when an incorrect PIN is entered
+  - Validation of required fields, including handling of empty PIN inputs
+  - Accurate HTTP status codes for each scenario
+  - Confirmation messages returned in the response indicating whether the PIN verification succeeded or failed
   Scenario: Successfully verify PIN for a transaction by entering the correct PIN
     Given the "user_02" user logs in and obtains an access token
     When I send a POST request to "GET_FEES_URL" with a "linked account" to create get fees

@@ -1,4 +1,8 @@
 Feature: Remove device tokenization API
+  This feature validates the device token removal functionality in the client app.
+  It ensures that users can successfully unsubscribe a device, and that the system
+  handles unauthorized or invalid requests correctly. The scenarios verify proper
+  response codes and messages for both successful and failed removal attempts.
 
   Scenario: User successfully remove the device tokenization
     Given I send a POST request to "REGISTRATION_URL" with a "valid device uuid" and a valid phone number to register the user

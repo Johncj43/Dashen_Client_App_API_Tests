@@ -1,7 +1,12 @@
 Feature: Balance Enquiry API
-As an authenticated client application
-I want to retrieve the current balance and account details of a linked bank account
-So that I can display accurate wallet or account balance information to the user and enable informed financial decisions
+  This feature tests the balance enquiry functionality in the Dashen Super App.
+  It covers scenarios for retrieving account balances across different account states, including Active, Frozen, and Dormant accounts.
+
+  The scenarios verify:
+  - Successful balance retrieval for active accounts
+  - Correct handling and error messages for frozen and dormant accounts
+  - Accurate reporting of account attributes, including debit_allowed, credit_allowed, account_dormant, and account_frozen flags
+  - Proper HTTP status codes for each scenario
 
   Scenario Outline: Successful balance enquiry for different account states
 

@@ -1,4 +1,7 @@
 Feature: Change Expired Pin API
+  This feature verifies the Change Expired PIN functionality in the Dashen Client
+  Application. It ensures that users can successfully update an expired PIN and
+  that the system enforces PIN strength and validation rules.
 
   Scenario: User successfully changes an expired PIN
     Given I send a POST request to "REGISTRATION_URL" with a "valid device uuid" and a valid phone number to register the user

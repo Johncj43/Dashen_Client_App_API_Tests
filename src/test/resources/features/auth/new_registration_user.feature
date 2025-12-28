@@ -1,8 +1,9 @@
  Feature: Registration API
-  The purpose of this feature is to validate the end-to-end behavior, data integrity, and error-handling mechanisms of the /registration endpoint.
-  It includes test scenarios that verify successful user registration using valid input data, enforcement of mandatory field validations, handling of duplicate or already-registered users, and system responses to malformed or incomplete requests.
-  This feature ensures that the Registration API adheres to business rules, maintains consistent response structures, prevents invalid data entry, and reliably supports the user onboarding workflow across various edge cases and operational conditions.
-
+   This feature validates the end-to-end behavior, data integrity, and error-handling
+   mechanisms of the Registration API. It ensures that users can successfully complete
+   the registration process using valid input data, while enforcing mandatory field
+   validations, preventing duplicate registrations, and handling invalid or incomplete
+   requests.
   Scenario: Successful register with valid data
     Given I send a POST request to "REGISTRATION_URL" with a "valid device uuid" and a valid phone number to register the user
     When I send a POST request to "OTP_VERIFICATION_FOR_REGISTRATION_URL" with a "valid device uuid" valid OTP to approve the signup request

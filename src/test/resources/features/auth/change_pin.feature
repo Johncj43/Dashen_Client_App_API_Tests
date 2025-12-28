@@ -1,4 +1,7 @@
 Feature: Change PIN API
+  This feature verifies the Change PIN functionality in the Dashen Client Application.
+  It ensures that users can successfully update their PIN and that the system enforces
+  validation rules, authentication requirements, and security constraints.
 
   Scenario: User successfully changes new PIN
     Given I send a POST request to "REGISTRATION_URL" with a "valid device uuid" and a valid phone number to register the user

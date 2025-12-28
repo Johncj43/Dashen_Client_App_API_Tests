@@ -1,4 +1,15 @@
 Feature: Chat topup Ethiotelcom and safaricom API
+  This feature tests the Chat Top-Up functionality in the Dashen Super App for both Ethiotelecom and Safaricom users.
+  It covers various scenarios of sending airtime/top-up between users with different account statuses,
+  including Active, Frozen, No Debit, No Credit, and Dormant accounts.
+
+  The scenarios verify:
+  - Successful chat top-up transactions between valid Super App users
+  - Failure scenarios when the recipient is not a registered Super App user
+  - Transactions initiated from accounts with restricted statuses (Frozen, No Debit, Dormant)
+  - Proper calculation and retrieval of transaction fees
+  - Verification of transactions and PINs before performing the top-up
+  - Correct response messages and status codes for each scenario
 
 
     # ======================ETHIOTELECOM CHAT TOP-UP ======================

@@ -1,5 +1,10 @@
 Feature: Chat Fetch Phone Number API
 
+  This feature validates the functionality of fetching phone number details of contacts
+  registered in the Super App. It ensures correct identification of registered,
+  unregistered, and empty contact lists, and verifies that the system returns
+  accurate and consistent responses.
+
   Scenario: Successfully fetch details for phone numbers of contacts registered in the Super App
     Given the "user_02" user logs in and obtains an access token
     When the client sends a POST request to "FETCH_PHONE_NUMBER_URL" using test data "contants_01" to lookup a contact registered in the Super App

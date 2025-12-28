@@ -1,4 +1,8 @@
 Feature: Login API
+  This feature verifies the PIN-based login functionality of the Dashen Client
+  Application. It ensures that users can successfully authenticate using a
+  registered device and valid PIN, and that the system correctly handles
+  invalid login attempts and request validation errors.
 
   Scenario: User successfully logs in with valid credentials
     Given I send a request to "DEVICE_LOOKUP_URL" with a "registered device uuid and PIN" to lookup user's device

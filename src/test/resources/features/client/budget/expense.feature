@@ -1,4 +1,8 @@
 Feature: Expense API
+  This feature validates the creation, retrieval, updating, and deletion of expenses
+  within the client app. It ensures proper handling of expense data, input validation,
+  and association with budgets and categories, while verifying system responses under
+  normal and error conditions.
 
   Scenario: Client successfully creates an expense
     Given the "user_02" user logs in and obtains an access token

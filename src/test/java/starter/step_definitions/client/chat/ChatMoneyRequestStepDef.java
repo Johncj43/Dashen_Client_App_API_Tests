@@ -46,9 +46,10 @@ public class ChatMoneyRequestStepDef {
 
 
         );
-        String request= response.jsonPath().getString("data.request_id");
-        if (request!= null) {
-            setContext(REQUEST_ID.name(), request);
+        String requestId= response.jsonPath().getString("data.request_id");
+        if (requestId!= null) {
+            setContext(REQUEST_ID.name(), requestId);
+            System.out.println("✅ Request ID: " + requestId);
         } else {
             System.out.println("⚠️ dataToken is null – negative test case, skipping context storage");
         }

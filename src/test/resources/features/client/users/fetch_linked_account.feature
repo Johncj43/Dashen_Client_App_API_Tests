@@ -1,7 +1,12 @@
 Feature: Fetch Linked Account API
-  As an authenticated client application
-  Users can retrieve details of their linked bank accounts
-  To display available funding sources and enable selection for transactions such as transfers, bill payments, or top-ups
+  This feature tests the functionality of retrieving linked account information in the Dashen Super App.
+  It ensures that authenticated users can access their linked accounts while enforcing proper validations for device UUID and access token.
+
+  The scenarios verify:
+  - Successful retrieval of linked account details for a registered and authenticated user
+  - Proper error handling when the device UUID is missing or unregistered
+  - Rejection of requests with an invalid or missing access token
+  - Correct HTTP status codes and response messages indicating success or failure
 
   Scenario: Client successfully obtains linked account information
     Given the "user_02" user logs in and obtains an access token

@@ -1,7 +1,13 @@
 Feature: Service API
-  As an authenticated client application
-  Users can retrieve a list of available services (e.g., airtime top-up, bill payments, transfers)
-  To display supported services and enable selection for performing transactions
+  As an authenticated client application,
+  users can retrieve a list of available services (e.g., airtime top-up, bill payments, transfers)
+  to display supported services and enable selection for performing transactions.
+
+  This feature tests the "Get Fees" functionality of the Service API, covering scenarios for:
+  - Successfully fetching fees with a valid access token
+  - Handling invalid or expired access tokens
+  - Validating required fields and returning proper error messages
+  - Ensuring correct HTTP status codes are returned for each scenario
 
   Scenario: User create successfully get fees with access token
     Given the "user_02" user logs in and obtains an access token

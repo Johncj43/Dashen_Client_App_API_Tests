@@ -1,4 +1,8 @@
 Feature: Set Pin API
+  This feature validates the Set PIN functionality, ensuring that users can securely
+  create a PIN for a newly linked device using OTP verification. It verifies successful
+  PIN creation as well as proper handling of invalid OTPs, weak PINs, and authorization
+  errors during the PIN setup process.
 
   Scenario: Client successfully set the PIN
     Given I send a POST request to "PIN_SET_REQUEST_URL" with a "New deviceUUID" to to set a PIN for the user’s registered phone number

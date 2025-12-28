@@ -1,7 +1,8 @@
 Feature: Device Lookup API
-  This feature verifies the functionality, error handling, and data validations of the /device/lookup endpoint.
-  It covers scenarios such as successful device lookup with valid UUID, lookup with missing or invalid UUID, and handling of newly registered devices,
-  ensuring the device lookup system behaves correctly under different conditions and returns accurate, consistent responses.
+  This feature validates the Device Lookup functionality of the Dashen Client
+  Application. It ensures that the /device/lookup endpoint correctly retrieves
+  device information, enforces request validations, and handles different device
+  states accurately.
 
   Scenario: Successfully perform device lookup with valid data
     Given I send a POST request to "REGISTRATION_URL" with a "valid device uuid" and a valid phone number to register the user

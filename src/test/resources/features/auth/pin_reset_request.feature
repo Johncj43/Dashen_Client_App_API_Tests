@@ -1,4 +1,8 @@
 Feature: PIN Reset API
+  This feature validates the PIN reset functionality, ensuring that registered users
+  can securely reset their PIN using OTP verification. It verifies correct handling
+  of successful PIN resets, invalid OTP submissions, weak PIN validations, and
+  enforcement of security rules throughout the reset process.
 
   Scenario: Client successfully resets the PIN
     Given I send a POST request to "REGISTRATION_URL" with a "valid device uuid" and a valid phone number to register the user

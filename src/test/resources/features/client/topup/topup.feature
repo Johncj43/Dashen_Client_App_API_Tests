@@ -1,8 +1,12 @@
 Feature: EthioTelecom and Safaricom Airtime Top-up API
-  As an authenticated client application
-  Users can purchase airtime top-ups for Ethio Telecom and Safaricom mobile numbers
-  To enable convenient recharging of prepaid balances for themselves or beneficiaries directly within the application
+  This feature tests the airtime top-up functionality for EthioTelecom and Safaricom through the Dashen Super App.
+  It covers scenarios for initiating top-ups from different account states, including Active, No Credit, Frozen, No Debit, and Dormant accounts.
 
+  The scenarios verify:
+  - Successful airtime top-up for active and no-credit accounts
+  - Proper handling and error messages for frozen, dormant, and no-debit accounts
+  - Accurate HTTP status codes returned for each scenario
+  - Correct reporting of transaction status in the response, including "PAID" for successful top-ups
 
   # ======================ETHIOTELECOM TOP-UP ======================
 

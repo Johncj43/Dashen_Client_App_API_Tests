@@ -9,6 +9,8 @@ import starter.utils.TestDataLoader;
 import starter.utils.model.requestModel.client.services.GetFees;
 import starter.utils.model.requestModel.client.services.GetFeesRequest;
 
+import java.util.Map;
+
 import static starter.utils.HelperUtils.convertObjectToJson;
 import static starter.utils.HelperUtils.extractJsonValue;
 import static starter.utils.PropertiesReader.getParameterProperties;
@@ -166,17 +168,22 @@ public class GetFeesStepDef {
         requestBody.setAmount(data.getAmount());
         requestBody.setService_name(data.getService_name());
         requestBody.setDebit_accountnumber(data.getDebit_accountnumber());
-        requestBody.setCredit_accountnumber(getContext(REQUEST_ID.name()));
-        String jsonBody = convertObjectToJson(requestBody);
+        String requestID=getContext(REQUEST_ID.name());
+        requestBody.setCredit_accountnumber(requestID);
+////        String jsonBody = convertObjectToJson(requestBody);
+//        Map<String,Object> requestBody = Map.of(  "amount",data.getAmount(),
+//                                                  "service_name",data.getService_name(),
+//                                                  "debit_accountnumber",data.getDebit_accountnumber(),
+//                                                  "credit_accountnumber",getContext(REQUEST_ID.name()));
         Response response = HttpApiUtils.requestHeaders(
                 "POST",
                 getParameterProperties(endpoint),
                 getContext(ACCESS_TOKEN.name()),
                 data.getDeviceuuid(),
                 data.getInstallationdate(),
-                jsonBody,
+                convertObjectToJson(requestBody),
                 false,
-                true,
+                false,
                 null,
                 true,
                 false,

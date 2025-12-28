@@ -1,4 +1,9 @@
 Feature: Category API
+  This feature validates the creation, retrieval, update, and deletion of categories
+  within the client app. It ensures proper handling of category data, input validation,
+  and associated budget relationships, while verifying system responses under normal
+  and erroneous conditions.
+
   Scenario: Client successfully creates category
     Given the "user_02" user logs in and obtains an access token
     When I send a POST request to "CREATE_BUDGET_URL" with "Customs" to create a budget on app
