@@ -1,6 +1,8 @@
 package starter.step_definitions.client.chat;
 
+import io.cucumber.java.PendingException;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import lombok.Data;
 import starter.utils.HttpApiUtils;
@@ -32,7 +34,8 @@ public class ChatSendMoneyStepDef {
                 getContext(DATA_TOKEN.name()),
                 false,
                 true,
-                getContext(SESSION_ID.name())
+                getContext(SESSION_ID.name()),
+                false
 
         );
 

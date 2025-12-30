@@ -135,7 +135,8 @@ public class TransactionVerifyMethodStepDef {
                 getContext(DATA_TOKEN.name()),
                 false,
                 false,
-                getContext(SESSION_ID.name())
+                getContext(SESSION_ID.name()),
+                false
         );
         String dataToken= response.jsonPath().getString("data.datatoken");
         if (dataToken != null) {

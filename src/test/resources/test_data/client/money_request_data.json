@@ -1,0 +1,197 @@
+[
+
+  {
+    "id": " request money"
+  },
+  {
+  "id": "money_request_01",
+  "deviceuuid":"john43285660john24",
+  "platform":"ios",
+  "appversion":"1.0.2",
+  "sourceapp":"memberapp",
+  "installationdate":"1759934922805",
+  "request_sender_account": "5001001008007",
+  "amount": "10"
+},
+  {
+    "id": "money_request_02",
+    "deviceuuid":"john43285660john24",
+    "platform":"ios",
+    "appversion":"1.0.2",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "request_sender_account": "5001001008007",
+    "amount": "10"
+  },
+  {
+    "id": "money_request_03",
+    "deviceuuid":"john43285660john24",
+    "platform":"ios",
+    "appversion":"1.0.2",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "request_sender_account": "5001001008007",
+    "amount": "10"
+  },
+  {
+    "id": "money_request_04",
+    "deviceuuid":"john43285660john24",
+    "platform":"ios",
+    "appversion":"1.0.2",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "request_sender_account": "5001001008007",
+    "amount": "10"
+  },
+  {
+    "id": "money_request_05",
+    "deviceuuid":"john43285660john24",
+    "platform":"ios",
+    "appversion":"1.0.2",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "request_sender_account": "5001001008007",
+    "amount": "50"
+  },
+  {
+    "id": "money_request_06",
+    "deviceuuid":"frozen43",
+    "platform":"ios",
+    "appversion":"1.0.2",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "request_sender_account": "5417116996011",
+    "amount": "10"
+  },
+  {
+    "id": "money_request_07",
+    "deviceuuid":"frozen43",
+    "platform":"ios",
+    "appversion":"1.0.2",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "request_sender_account": "5417116996011",
+    "amount": "10"
+  },
+  {
+    "id": "money_request_08",
+    "deviceuuid":"dormant43",
+    "platform":"ios",
+    "appversion":"1.0.2",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "request_sender_account": "0518343016011",
+    "amount": "10"
+  },
+  {
+    "id": "money_request_09",
+    "deviceuuid":"nodebit43",
+    "platform":"ios",
+    "appversion":"1.0.2",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "request_sender_account": "5035907582011",
+    "amount": "50"
+  },
+  {
+    "id": "money_request_10",
+    "deviceuuid":"nocredit43",
+    "platform":"ios",
+    "appversion":"1.0.2",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "request_sender_account": "5047782142002",
+    "amount": "50"
+  },
+
+
+  {
+    "id": "Cancel request money"
+  },
+
+  {
+    "id": "cancel_money_request_data_01",
+    "deviceuuid":"john43285660john24",
+    "platform":"ios",
+    "appversion":"1.0.2",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805"
+  },
+  {
+    "id": "reject request money"
+  },
+  {
+    "id": "reject_request_money_01",
+    "deviceuuid":"gjgj676y",
+    "platform":"ios",
+    "appversion":"1.0.2",
+    "sourceapp":"memberapp",
+    "reason":"successful rejects"
+  },
+
+  {
+    "id": "fetch beneficiaries"
+  },
+  {
+    "id": "fetch_beneficiaries_01",
+    "deviceuuid":"john43285660john24",
+    "platform":"ios",
+    "appversion":"1.0.2",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805"
+  },
+  {
+    "id": "requests_01",
+    "deviceuuid":"john43285660john24",
+    "platform":"ios",
+    "appversion":"1.0.2",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805"
+  },
+
+  {
+    "id": "accept request data"
+  },
+  {
+    "id": "accept_money_request_data_01",
+    "deviceuuid":"gjgj676y",
+    "platform":"ios",
+    "appversion":"1.0.2",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "request_sender_account": "5001001008007",
+    "amount": "10"
+  }
+,
+  {
+    "id": "accept_money_request_data_02",
+    "deviceuuid":"nocredit43",
+    "platform":"ios",
+    "appversion":"1.0.2",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "request_sender_account": "5001001008007",
+    "amount": "10"
+  },
+  {
+    "id": "accept_money_request_data_03",
+    "deviceuuid":"john43285660john24",
+    "platform":"ios",
+    "appversion":"1.0.2",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "request_sender_account": "5001001008007",
+    "amount": "10"
+  },
+  {
+    "id": "accept_money_request_data_04",
+    "deviceuuid":"nocredit43",
+    "platform":"ios",
+    "appversion":"1.0.2",
+    "sourceapp":"memberapp",
+    "installationdate":"1759934922805",
+    "request_sender_account": "5001001008007",
+    "amount": "10"
+  }
+
+]

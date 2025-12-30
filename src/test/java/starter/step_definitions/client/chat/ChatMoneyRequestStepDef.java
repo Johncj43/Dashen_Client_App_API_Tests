@@ -42,7 +42,8 @@ public class ChatMoneyRequestStepDef {
                 null,
                 false,
                 false,
-                getContext(SESSION_ID.name())
+                getContext(SESSION_ID.name()),
+                false
 
 
         );
@@ -74,7 +75,8 @@ public class ChatMoneyRequestStepDef {
                 getContext(DATA_TOKEN.name()),
                 false,
                 true,
-                getContext(SESSION_ID.name())
+                getContext(SESSION_ID.name()),
+                false
 
 
         );
@@ -98,7 +100,8 @@ public class ChatMoneyRequestStepDef {
                 null,
                 false,
                 false,
-                getContext(SESSION_ID.name())
+                getContext(SESSION_ID.name()),
+                false
         );
 
 
@@ -122,7 +125,8 @@ public class ChatMoneyRequestStepDef {
                 null,
                 false,
                 false,
-                getContext(SESSION_ID.name())
+                getContext(SESSION_ID.name()),
+                false
         );
 
     }

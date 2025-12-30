@@ -81,5 +81,228 @@
     "platform":"ios",
     "sourceapp":"memberapp",
     "account_number": "0002770250011"
+  },
+  {
+    "id": "core money request data"
+  },
+
+  {
+    "id": "account_01",
+    "appversion":"1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "5444482284011"
+  }, {
+  "id": "account_02",
+  "appversion":"1.0.2",
+  "deviceuuid":"john43285660john24",
+  "installationdate":"1759934922805",
+  "platform":"ios",
+  "sourceapp":"memberapp",
+  "account_number": "5417116996011"
+},
+  {
+    "id": "account_03",
+    "appversion":"1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "0518343016011"
+  },
+  {
+    "id": "account_04",
+    "appversion":"1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "5035907582011"
+  },
+  {
+    "id": "account_05",
+    "appversion":"1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "5047782142002"
+  }
+,
+  {
+    "id": "account_06",
+    "appversion":"1.0.2",
+    "deviceuuid":"frozen43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "5001001008007"
+  },
+  {
+    "id": "account_07",
+    "appversion":"1.0.2",
+    "deviceuuid":"frozen43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "5417116996011"
+  },
+  {
+    "id": "account_08",
+    "appversion":"1.0.2",
+    "deviceuuid":"frozen43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "0518343016011"
+  },{
+  "id": "account_09",
+  "appversion":"1.0.2",
+  "deviceuuid":"frozen43",
+  "installationdate":"1759934922805",
+  "platform":"ios",
+  "sourceapp":"memberapp",
+  "account_number": "5035907582011"
+},
+  {
+    "id": "account_10",
+    "appversion":"1.0.2",
+    "deviceuuid":"frozen43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "5035907582011"
+  },
+  {
+    "id": "account_11",
+    "appversion":"1.0.2",
+    "deviceuuid":"dormant43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "5001001008007"
+  },
+  {
+    "id": "account_12",
+    "appversion":"1.0.2",
+    "deviceuuid":"dormant43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "5417116996011"
+  },
+  {
+    "id": "account_13",
+    "appversion":"1.0.2",
+    "deviceuuid":"dormant43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "5035907582011"
+  },
+  {
+    "id": "account_14",
+    "appversion":"1.0.2",
+    "deviceuuid":"dormant43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "5047782142002"
+  },
+  {
+    "id": "account_15",
+    "appversion":"1.0.2",
+    "deviceuuid":"nodebit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "5001001008007"
+  },
+  {
+    "id": "account_16",
+    "appversion":"1.0.2",
+    "deviceuuid":"nodebit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "5417116996011"
+  }
+,
+  {
+    "id": "account_17",
+    "appversion":"1.0.2",
+    "deviceuuid":"nodebit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "0518343016011"
+  },
+  {
+    "id": "account_18",
+    "appversion":"1.0.2",
+    "deviceuuid":"nodebit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "5035907582011"
+  },
+  {
+    "id": "account_19",
+    "appversion":"1.0.2",
+    "deviceuuid":"nodebit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "5047782142002"
+  }
+,
+  {
+    "id": "account_20",
+    "appversion":"1.0.2",
+    "deviceuuid":"nocredit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "5001001008007"
+  }
+,
+  {
+    "id": "account_21",
+    "appversion":"1.0.2",
+    "deviceuuid":"nocredit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "5417116996011"
+  }
+,
+  {
+    "id": "account_22",
+    "appversion":"1.0.2",
+    "deviceuuid":"nocredit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "5035907582011"
+  },
+  {
+    "id": "account_23",
+    "appversion":"1.0.2",
+    "deviceuuid":"nocredit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "0518343016011"
+  },
+  {
+    "id": "account_24",
+    "appversion":"1.0.2",
+    "deviceuuid":"nocredit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "account_number": "5047782142002"
   }
 ]

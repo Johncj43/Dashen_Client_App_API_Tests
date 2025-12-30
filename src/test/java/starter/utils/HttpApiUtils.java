@@ -274,7 +274,8 @@ public class HttpApiUtils {
                                               String dataToken,
                                               boolean ignoredService,
                                               boolean transferFlag,
-                                              String requestId) {
+                                              String requestId,
+                                          boolean requestFlow) {
 
         String uuidToUse = (deviceUUID != null) ? deviceUUID : HelperUtils.getDeviceUUID();
         String installationToUse = (installationDate != null)
@@ -294,7 +295,8 @@ public class HttpApiUtils {
                                 dataToken,
                                 ignoredService,
                                 transferFlag,
-                                requestId
+                                requestId,
+                                requestFlow
                         ),
                         null,
                         body
@@ -395,6 +397,33 @@ public class HttpApiUtils {
                 sendRequest(method, finalResolvedPath, buildStandardHeaders(token, uuidToUse, installationToUse), queryParams, body)
         );
     }
+    public static Response requestwithCoreTransaction(String method,
+                                                      String token,
+                                                      String path,
+                                                      String deviceUUID,
+                                                      String installationDate,
+                                                      Map<String, String> pathParams,
+                                                      Map<String, Object> queryParams,
+                                                      Object body,
+                                                      String requestId) {
+        String uuidToUse = (deviceUUID != null) ? deviceUUID : HelperUtils.getDeviceUUID();
+        String installationToUse = (installationDate != null)
+                ? installationDate
+                : EnvConfig.getInstallationDate();
+        // Resolve placeholders in the path template
+        String resolvedPath = path;
+        if (pathParams != null) {
+            for (Map.Entry<String, String> entry : pathParams.entrySet()) {
+                resolvedPath = resolvedPath.replace("{" + entry.getKey() + "}", entry.getValue());
+            }
+        }
+
+        String finalResolvedPath = resolvedPath;
+        return sendWithRetry(() ->
+                sendRequest(method, finalResolvedPath, buildHeader(token, uuidToUse, installationToUse,requestId), queryParams, body)
+        );
+    }
+
     public static Response requestWithStandardHeadersSimple(String method,
                                                             String token,
                                                             String path,
@@ -707,7 +736,8 @@ public class HttpApiUtils {
                                             String dataToken,
                                             boolean ignoredService,
                                             boolean transferFlag,
-                                            String requestId) {
+                                            String requestId,
+                                           boolean requestFlow) {
 
         List<Header> headers = new ArrayList<>();
 
@@ -727,6 +757,7 @@ public class HttpApiUtils {
         headers.add(new Header("datatoken", dataToken));
         headers.add(new Header("x-ignored-service", String.valueOf(ignoredService)));
         headers.add(new Header("x-transfer-flag", String.valueOf(transferFlag)));
+        headers.add(new Header("x-request-flow", String.valueOf(requestFlow)));
         headers.add(new Header(
                 "x-request-id",
                 requestId != null ? requestId : UUID.randomUUID().toString()
@@ -857,6 +888,26 @@ public class HttpApiUtils {
 
         return new Headers(headers);
     }
+    private static Headers buildHeader(String token, String deviceUUID, String installationDate,String requestId) {
+        // Simply use the provided deviceUUID without generating it here
+        List<Header> headers = new ArrayList<>();
+
+        if (token != null) {
+            headers.add(new Header("Authorization", "Bearer " + resolveToken(token)));
+        }
+
+        headers.add(new Header("platform", "ios"));
+        headers.add(new Header("appversion", "1.0.2"));
+        headers.add(new Header("deviceuuid", deviceUUID));
+        headers.add(new Header("installationdate", installationDate));
+        headers.add(new Header("sourceapp","memberapp"));
+        headers.add(new Header("x-request-id",requestId));
+        headers.add(new Header("Content-Type", "application/json"));
+
+
+        return new Headers(headers);
+    }
+
     private static Headers buildStandardHeaderst(String token,
                                                 String deviceUUID,
                                                 String installationDate,

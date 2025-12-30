@@ -115,7 +115,8 @@ public class GetFeesStepDef {
                 null,
                 false,
                 false,
-                getContext(SESSION_ID.name())
+                getContext(SESSION_ID.name()),
+                false
 
 
         );
@@ -149,7 +150,8 @@ public class GetFeesStepDef {
                 null,
                 false,
                 false,
-                getContext(SESSION_ID.name())
+                getContext(SESSION_ID.name()),
+                false
         );
         String dataToken = response.jsonPath().getString("data.datatoken");
         if (dataToken != null) {
@@ -187,7 +189,8 @@ public class GetFeesStepDef {
                 null,
                 true,
                 false,
-                getContext(SESSION_ID.name())
+                getContext(SESSION_ID.name()),
+                false
         );
         String dataToken = response.jsonPath().getString("data.datatoken");
         if (dataToken != null) {

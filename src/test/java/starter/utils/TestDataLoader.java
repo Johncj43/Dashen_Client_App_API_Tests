@@ -8,6 +8,7 @@ import starter.utils.model.requestModel.client.budget.BudgetData;
 import starter.utils.model.requestModel.client.chat.Chat;
 import starter.utils.model.requestModel.client.chat.ChatMoneyRequest;
 import starter.utils.model.requestModel.client.core.AccountLookup;
+import starter.utils.model.requestModel.client.core_money_request.MoneyRequest;
 import starter.utils.model.requestModel.client.services.GetFees;
 import starter.utils.model.requestModel.client.topup.Topup;
 import starter.utils.model.requestModel.client.transaction.VerifyTransaction;
@@ -82,6 +83,9 @@ public static ChatMoneyRequest getChatMoneyRequestData(String id){
 }
     public static BudgetData getBudgetData(String id){
         return loadTestData("budget_data.json",id, BudgetData[].class);
+    }
+    public static MoneyRequest getMoneyRequestData(String id){
+        return loadTestData("money_request_data.json",id, MoneyRequest[].class);
     }
 
 

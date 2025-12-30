@@ -700,7 +700,103 @@
     "debit_accountnumber": "5047782142002",
     "credit_accountnumber": "5344395"
   },
+
+
+
+
   {
-    "id": "under dormant scenario"
+    "id": "core money request"
+  },
+  {
+    "id": "accept_money_request_01",
+    "appversion": "1.0.2",
+    "deviceuuid":"gjgj676y",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5444482284011",
+    "credit_accountnumber": "5344395"
   }
+,
+  {
+    "id": "accept_money_request_02",
+    "appversion": "1.0.2",
+    "deviceuuid":"frozen43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5417116996011",
+    "credit_accountnumber": "5344395"
+  }
+,
+  {
+    "id": "accept_money_request_03",
+    "appversion": "1.0.2",
+    "deviceuuid":"dormant43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "0518343016011",
+    "credit_accountnumber": "5344395"
+  }
+,
+  {
+    "id": "accept_money_request_04",
+    "appversion": "1.0.2",
+    "deviceuuid":"nodebit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 10,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5035907582011",
+    "credit_accountnumber": "5344395"
+  }
+,
+  {
+    "id": "accept_money_request_05",
+    "appversion": "1.0.2",
+    "deviceuuid":"nocredit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 50,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5047782142002",
+    "credit_accountnumber": "5344395"
+  }
+,
+  {
+    "id": "accept_money_request_06",
+    "appversion": "1.0.2",
+    "deviceuuid":"john43285660john24",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 50,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5001001008007",
+    "credit_accountnumber": "5344395"
+  },
+  {
+    "id": "accept_money_request_07",
+    "appversion": "1.0.2",
+    "deviceuuid":"nocredit43",
+    "installationdate":"1759934922805",
+    "platform":"ios",
+    "sourceapp":"memberapp",
+    "amount": 50,
+    "service_name": "Transfer to dashen",
+    "debit_accountnumber": "5047782142002",
+    "credit_accountnumber": "5344395"
+  }
+
+
+
 ]
