@@ -7,11 +7,14 @@ import starter.utils.model.requestModel.client.*;
 import starter.utils.model.requestModel.client.budget.BudgetData;
 import starter.utils.model.requestModel.client.chat.Chat;
 import starter.utils.model.requestModel.client.chat.ChatMoneyRequest;
-import starter.utils.model.requestModel.client.core.AccountLookup;
+import starter.utils.model.requestModel.client.core.*;
 import starter.utils.model.requestModel.client.core_money_request.MoneyRequest;
 import starter.utils.model.requestModel.client.services.GetFees;
 import starter.utils.model.requestModel.client.topup.Topup;
+import starter.utils.model.requestModel.client.transaction.FetchMethod;
+import starter.utils.model.requestModel.client.transaction.PinVerify;
 import starter.utils.model.requestModel.client.transaction.VerifyTransaction;
+import starter.utils.model.requestModel.client.transaction.WithInDashenTransfer;
 import starter.utils.model.requestModel.client.users.LoginData;
 import starter.utils.model.requestModel.client.wallet.Wallet;
 
@@ -87,6 +90,43 @@ public static ChatMoneyRequest getChatMoneyRequestData(String id){
     public static MoneyRequest getMoneyRequestData(String id){
         return loadTestData("money_request_data.json",id, MoneyRequest[].class);
     }
+    public static MinistatementData getMiniStatementData(String id) {
+        return loadTestData("mini_statement_data.json", id, MinistatementData[].class);
+    }
+    public static LinkOwnAccount getLinkOwnAccountData(String id) {
+        return loadTestData("link_own_account_data.json", id, LinkOwnAccount[].class);
+    }
+
+    public static GetIpsAccountList getGetIpsAccountListData(String id) {
+        return loadTestData("get_ips_bank_list_data.json", id, GetIpsAccountList[].class);
+    }
+    public static EncryptedAccount getEncryptedAccountData(String id) {
+        return loadTestData("encrypted_account_data.json", id, EncryptedAccount[].class);
+    }
+    public static InputValidationData getInputValidationData(String id) {
+        return loadTestData("input_validation_data.json", id, InputValidationData[].class);
+    }
+
+    public static PaginateAdvertData getPaginateAdvertData(String id) {
+        return loadTestData("paginate_advert_data.json", id, PaginateAdvertData[].class);
+    }
+    public static AccountLookupp getAccountLookuppData(String id) {
+        return loadTestData("account_lookupp_data.json", id, AccountLookupp[].class);
+    }
+
+    public static GetFee getGetFeeData(String id) {
+        return loadTestData("get_fee_data.json", id, GetFee[].class);
+    }
+    public static WithInDashenTransfer getTransferData(String id) {
+        return loadTestData("with_in _dashen_transfer_data.json", id, WithInDashenTransfer[].class);
+    }
+    public static FetchMethod getTransactionData(String id) {
+        return loadTestData("fetch_methods_data.json", id, FetchMethod[].class);
+    }
+    public static PinVerify getPinVerifyData(String id) {
+        return loadTestData("pin_verify_data.json", id, PinVerify[].class);
+    }
+
 
 
 

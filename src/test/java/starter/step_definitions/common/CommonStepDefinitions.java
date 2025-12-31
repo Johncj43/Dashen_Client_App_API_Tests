@@ -274,6 +274,9 @@ public void theResponseShouldContainNamedWithTheValue(String filed, String jsonf
         setContext(SESSION_ID.name(),session);
         String userCode=response.jsonPath().getString("data.usercode");
         setContext(USER_CODE.name(),userCode);
+        String mainAccount = response.jsonPath().getString("data.mainaccountnumber");
+        setContext("mainaccountnumber", mainAccount);
+
 
 
 

@@ -303,6 +303,91 @@ public class HttpApiUtils {
                 )
         );
     }
+    public static Response requestWithCoresHeaders3(String method,
+                                                    String path,
+                                                    String deviceUUID,
+                                                    String token,
+                                                    String installationDate,
+                                                    String sessionId,
+                                                    Boolean xTransfer,
+                                                    Object body) {
+
+
+        String uuidToUse = (deviceUUID != null) ? deviceUUID : HelperUtils.getDeviceUUID();
+        String installationToUse = (installationDate != null)
+                ? installationDate
+                : EnvConfig.getInstallationDate();
+
+        return sendWithRetry(() ->
+                sendRequest(
+                        method,
+                        path,
+                        buildCoreHeaders3(uuidToUse, installationToUse, token, sessionId, xTransfer),
+                        null,      // No query params
+                        body
+                )
+        );
+    }
+
+    public static Response requestWithCoresHeaders33(String method,
+                                                    String path,
+                                                    String deviceUUID,
+                                                    String token,
+                                                    String installationDate,
+                                                    String sessionId,
+                                                    Boolean xTransfer,
+                                                    Map<String, Object> queryParams) {
+
+        String uuidToUse = (deviceUUID != null) ? deviceUUID : HelperUtils.getDeviceUUID();
+        String installationToUse = (installationDate != null)
+                ? installationDate
+                : EnvConfig.getInstallationDate();
+
+        boolean xTransferValue = (xTransfer != null) && xTransfer;
+
+        return sendWithRetry(() ->
+                sendRequest(
+                        method,
+                        path,
+                        buildCoreHeaders33(
+                                uuidToUse,
+                                installationToUse,
+                                token,
+                                sessionId,
+                                xTransferValue
+                        ),
+                        queryParams,
+                        null
+                )
+        );
+    }
+    public static Response dataToken(String method,
+                                     String path,
+                                     String deviceUUID,
+                                     String token,
+                                     String installationDate,
+                                     String sessionId,
+                                     String dataToken,
+                                     Boolean xTransfer,
+                                     Object body) {
+
+
+        String uuidToUse = (deviceUUID != null) ? deviceUUID : HelperUtils.getDeviceUUID();
+        String installationToUse = (installationDate != null)
+                ? installationDate
+                : EnvConfig.getInstallationDate();
+
+        return sendWithRetry(() ->
+                sendRequest(
+                        method,
+                        path,
+                        dataToken(uuidToUse, installationToUse, token, sessionId, xTransfer, dataToken),
+                        null,      // No query params
+                        body
+                )
+        );
+    }
+
 
     public static Response requestWithCoresHeaders(String method,
                                                   String path,
@@ -728,6 +813,29 @@ public class HttpApiUtils {
 
         return new Headers(headers);
     }
+    private static Headers dataToken(String deviceUUID,
+                                     String installationDate,
+                                     String token,
+                                     String sessionId,
+                                     boolean xTransfer,
+                                     String dataToken) {
+
+        List<Header> headers = new ArrayList<>();
+
+        headers.add(new Header("platform", "ios"));
+        headers.add(new Header("appversion", "1.0.2"));
+        headers.add(new Header("deviceuuid", deviceUUID));
+        headers.add(new Header("installationdate", installationDate));
+        headers.add(new Header("sourceapp", "memberapp"));
+        headers.add(new Header("Content-Type", "application/json"));
+        headers.add(new Header("x-request-id", sessionId));
+        headers.add(new Header("x-transfer-flag", String.valueOf(xTransfer)));  // use the parameter
+        headers.add(new Header("Authorization", "Bearer " + token));  // added token
+        headers.add(new Header("datatoken", dataToken));
+
+        return new Headers(headers);
+    }
+
     private static Headers buildCoreHeader(String accessToken,
                                             String deviceUUID,
                                             String installationDate,
@@ -765,6 +873,7 @@ public class HttpApiUtils {
 
         return new Headers(headers);
     }
+
     private static Headers buildStandardHeaderss(String token,
                                                String deviceUUID,
                                                String installationDate,
@@ -792,7 +901,26 @@ public class HttpApiUtils {
         return new Headers(headers);
     }
 
+    private static Headers buildCoreHeaders33(String deviceUUID,
+                                             String installationDate,
+                                             String token,
+                                             String sessionId,
+                                             boolean xTransfer) {
 
+        List<Header> headers = new ArrayList<>();
+
+        headers.add(new Header("platform", "ios"));
+        headers.add(new Header("appversion", "1.0.2"));
+        headers.add(new Header("deviceuuid", deviceUUID));
+        headers.add(new Header("installationdate", installationDate));
+        headers.add(new Header("sourceapp", "memberapp"));
+        headers.add(new Header("Content-Type", "application/json"));
+        headers.add(new Header("x-request-id", sessionId));
+        headers.add(new Header("x-transfer-flag", String.valueOf(xTransfer)));  // use the parameter
+        headers.add(new Header("Authorization", "Bearer " + token));  // added token
+
+        return new Headers(headers);
+    }
     private static Headers buildHeaders(String token, String deviceUUID) {
         // Simply use the provided deviceUUID without generating it here
         List<Header> headers = new ArrayList<>();
@@ -868,7 +996,27 @@ public class HttpApiUtils {
         headers.add(new Header("installationdate", EnvConfig.getInstallationDate()));
         headers.add(new Header("Content-Type", "application/json"));
         return new Headers(headers);
+    }    private static Headers buildCoreHeaders3(String deviceUUID,
+                                                  String installationDate,
+                                                  String token,
+                                                  String sessionId,
+                                                  boolean xTransfer) {
+
+        List<Header> headers = new ArrayList<>();
+
+        headers.add(new Header("platform", "ios"));
+        headers.add(new Header("appversion", "1.0.2"));
+        headers.add(new Header("deviceuuid", deviceUUID));
+        headers.add(new Header("installationdate", installationDate));
+        headers.add(new Header("sourceapp", "memberapp"));
+        headers.add(new Header("Content-Type", "application/json"));
+        headers.add(new Header("x-request-id", sessionId));
+        headers.add(new Header("x-transfer-flag", String.valueOf(xTransfer)));  // use the parameter
+        headers.add(new Header("Authorization", "Bearer " + token));  // added token
+
+        return new Headers(headers);
     }
+
     private static Headers buildStandardHeaders(String token, String deviceUUID, String installationDate) {
         // Simply use the provided deviceUUID without generating it here
         List<Header> headers = new ArrayList<>();

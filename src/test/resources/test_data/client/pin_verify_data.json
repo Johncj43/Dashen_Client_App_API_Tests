@@ -1,0 +1,98 @@
+[
+  {
+    "id": "user_02",
+    "appversion": "1.0.2",
+    "deviceuuid": "john43285660john24",
+    "installationdate": "1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "430000",
+    "emailOrPhone": "phone",
+    "account_number": "5001001008011",
+    "email": "yohannesfekadumos@gmail.com"
+  },
+  {
+    "id": "account_02",
+    "appversion": "1.0.2",
+    "deviceuuid": "gjgj676y",
+    "installationdate": "1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "191827",
+    "emailOrPhone": "phone",
+    "account_number": "5015903528001",
+    "email": "yohannesfekadumos@gmail.com"
+  },
+  {
+    "id": "verify-pin",
+    "appversion": "1.0.2",
+    "deviceuuid": "gjgj676y",
+    "installationdate": "1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "191823",
+    "emailOrPhone": "phone",
+    "account_number": "5015903528001",
+    "email": "yohannesfekadumos@gmail.com"
+  },
+  {
+    "id": "frozen",
+    "appversion": "1.0.2",
+    "deviceuuid": "frozen43",
+    "installationdate": "1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "232300",
+    "emailOrPhone": "phone",
+    "account_number": "5417116996011",
+    "email": "yohannesfekadumos@gmail.com"
+  },
+  {
+    "id": "dormant",
+    "appversion": "1.0.2",
+    "deviceuuid": "dormant43",
+    "installationdate": "1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "232300",
+    "emailOrPhone": "phone",
+    "account_number": "0518343016011",
+    "email": "yohannesfekadumos@gmail.com"
+  },
+  {
+    "id": "no-credit",
+    "appversion": "1.0.2",
+    "deviceuuid": "nocredit43",
+    "installationdate": "1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "232300",
+    "emailOrPhone": "phone",
+    "account_number": "5047782142002",
+    "email": "yohannesfekadumos@gmail.com"
+  },
+  {
+    "id": "no-debit",
+    "appversion": "1.0.2",
+    "deviceuuid": "nodebit43",
+    "installationdate": "1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "232300",
+    "emailOrPhone": "phone",
+    "account_number": "5035907582011",
+    "email": "yohannesfekadumos@gmail.com"
+  },
+  {
+    "id": "account_03",
+    "appversion": "1.0.2",
+    "deviceuuid": "michael123",
+    "installationdate": "1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "191826",
+    "emailOrPhone": "phone",
+    "account_number": "5015903528001",
+    "email": "yohannesfekadumos@gmail.com"
+  }
+]
