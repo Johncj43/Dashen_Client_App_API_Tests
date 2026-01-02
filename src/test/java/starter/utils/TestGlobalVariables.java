@@ -96,6 +96,7 @@ public class TestGlobalVariables {
         ACTION_CODE,
         DEVICE_UUI,
         PIN,
+        AMOUNT,
         NEW_PIN,
         MAKER_ACCESS_TOKEN,
         CHECKER_ACCESS_TOKEN,

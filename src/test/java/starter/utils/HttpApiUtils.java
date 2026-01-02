@@ -361,6 +361,43 @@ public class HttpApiUtils {
                 )
         );
     }
+
+    public static Response requestWithCoresHeaders4(String method,
+                                                    String path,
+                                                    String deviceUUID,
+                                                    String token,
+                                                    String installationDate,
+                                                    String sessionId,
+                                                    String dataToken,
+                                                    Boolean xTransfer,
+                                                    Integer xStudentIndex,
+                                                    Map<String, Object> queryParams) {
+
+        String uuidToUse = (deviceUUID != null) ? deviceUUID : HelperUtils.getDeviceUUID();
+        String installationToUse = (installationDate != null)
+                ? installationDate
+                : EnvConfig.getInstallationDate();
+
+        boolean xTransferValue = (xTransfer != null) && xTransfer;
+
+        return sendWithRetry(() ->
+                sendRequest(
+                        method,
+                        path,
+                        buildCoreHeaders4(
+                                uuidToUse,
+                                installationToUse,
+                                token,
+                                sessionId,
+                                xTransferValue,
+                                dataToken,
+                                xStudentIndex
+                        ),
+                        queryParams,
+                        null
+                )
+        );
+    }
     public static Response dataToken(String method,
                                      String path,
                                      String deviceUUID,
@@ -707,16 +744,18 @@ public class HttpApiUtils {
                 req.multiPart("profilepic", file, "image/png");
             }
 
-            if (phoneNumbersJson == null || !phoneNumbersJson.exists()) {
-                throw new RuntimeException("Phone numbers JSON file is missing");
+            if (phoneNumbersJson != null) {
+                if (!phoneNumbersJson.exists()) {
+                    throw new RuntimeException(
+                            "Phone numbers JSON not found: " + phoneNumbersJson.getAbsolutePath()
+                    );
+                }
+                req.multiPart(
+                        "phonenumbers",
+                        phoneNumbersJson,
+                        "application/json"
+                );
             }
-
-            req.multiPart(
-                    "phonenumbers",
-                    phoneNumbersJson,
-                    "application/json"
-            );
-
             Response response = switch (method.toUpperCase()) {
                 case "POST" -> req.post();
                 case "PUT"  -> req.put();
@@ -972,6 +1011,29 @@ public class HttpApiUtils {
 
         return new Headers(headers);
     }
+    private static Headers buildCoreHeaders4(String deviceUUID,
+                                                  String installationDate,
+                                                  String token,
+                                                  String sessionId,
+                                                  boolean xTransfer, String dataToken, int xStudentIndex) {
+
+        List<Header> headers = new ArrayList<>();
+
+        headers.add(new Header("platform", "ios"));
+        headers.add(new Header("appversion", "1.0.2"));
+        headers.add(new Header("deviceuuid", deviceUUID));
+        headers.add(new Header("installationdate", installationDate));
+        headers.add(new Header("sourceapp", "memberapp"));
+        headers.add(new Header("Content-Type", "application/json"));
+
+        headers.add(new Header("x-request-id", sessionId));
+        headers.add(new Header("x-student-index", String.valueOf(xStudentIndex)));
+        headers.add(new Header("x-transfer-flag", String.valueOf(xTransfer)));  // use the parameter
+        headers.add(new Header("Authorization", "Bearer " + token));  // added token
+        headers.add(new Header("datatoken", dataToken));
+        return new Headers(headers);
+    }
+
 
 
     private static Headers buildHeaders(String token, boolean generateNewUUID) {

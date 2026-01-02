@@ -5,7 +5,7 @@ Feature: HQ API
 
   Scenario: Successfully perform HQ operation for a valid ACTIVE account
     Given the "account_02" user logs in and obtains an access token
-    When device user "account_031" sends "ACCOUNT_LOOKUP_URL" for account lookup check
+    When device user "account_030" sends "ACCOUNT_LOOKUP_URL" for account lookup check
     When device user "account_02" sends "HQ_URL" request for HQ
     Then the response status code should be 200
     And the response should contain a field named "message" with the value "Service fetched sucessfully.."

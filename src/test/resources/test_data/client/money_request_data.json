@@ -11,7 +11,7 @@
   "sourceapp":"memberapp",
   "installationdate":"1759934922805",
   "request_sender_account": "5001001008007",
-  "amount": "10"
+  "amount": "50"
 },
   {
     "id": "money_request_02",
@@ -21,7 +21,7 @@
     "sourceapp":"memberapp",
     "installationdate":"1759934922805",
     "request_sender_account": "5001001008007",
-    "amount": "10"
+    "amount": "50"
   },
   {
     "id": "money_request_03",
@@ -31,7 +31,7 @@
     "sourceapp":"memberapp",
     "installationdate":"1759934922805",
     "request_sender_account": "5001001008007",
-    "amount": "10"
+    "amount": "50"
   },
   {
     "id": "money_request_04",
@@ -41,7 +41,7 @@
     "sourceapp":"memberapp",
     "installationdate":"1759934922805",
     "request_sender_account": "5001001008007",
-    "amount": "10"
+    "amount": "50"
   },
   {
     "id": "money_request_05",
@@ -61,7 +61,7 @@
     "sourceapp":"memberapp",
     "installationdate":"1759934922805",
     "request_sender_account": "5417116996011",
-    "amount": "10"
+    "amount": "50"
   },
   {
     "id": "money_request_07",
@@ -71,7 +71,7 @@
     "sourceapp":"memberapp",
     "installationdate":"1759934922805",
     "request_sender_account": "5417116996011",
-    "amount": "10"
+    "amount": "50"
   },
   {
     "id": "money_request_08",
@@ -81,7 +81,7 @@
     "sourceapp":"memberapp",
     "installationdate":"1759934922805",
     "request_sender_account": "0518343016011",
-    "amount": "10"
+    "amount": "50"
   },
   {
     "id": "money_request_09",

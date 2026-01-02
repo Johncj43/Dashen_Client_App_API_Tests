@@ -12,6 +12,18 @@
     "email": "yohannesfekadumos@gmail.com"
   },
   {
+    "id": "own_account",
+    "appversion": "1.0.2",
+    "deviceuuid": "gjgj676y",
+    "installationdate": "1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "191826",
+    "emailOrPhone": "phone",
+    "account_number": "5001525859031",
+    "email": "yohannesfekadumos@gmail.com"
+  },
+  {
     "id": "account_02",
     "appversion": "1.0.2",
     "deviceuuid": "gjgj676y",
@@ -20,7 +32,7 @@
     "sourceapp": "memberapp",
     "pincode": "191827",
     "emailOrPhone": "phone",
-    "account_number": "5444482284011",
+    "account_number": "5001525859009",
     "email": "yohannesfekadumos@gmail.com"
   },
   {
@@ -67,6 +79,18 @@
     "platform": "ios",
     "sourceapp": "memberapp",
     "pincode": "191826",
+    "emailOrPhone": "phone",
+    "account_number": "5154101750021",
+    "email": "yohannesfekadumos@gmail.com"
+  },
+  {
+    "id": "account_030",
+    "appversion": "1.0.2",
+    "deviceuuid": "gjgj676y",
+    "installationdate": "1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "191827",
     "emailOrPhone": "phone",
     "account_number": "5154101750021",
     "email": "yohannesfekadumos@gmail.com"

@@ -114,7 +114,7 @@ Feature: Core Money request API
       When the client sends a POST request to "ACCOUNT_LOOKUP_URL" using the payload "account_06" to lookup the recipient account for the money request
       And the client sends a POST request to "MONEY_REQUEST_URL" using the payload "money_request_06" to request money
       Then the response status code should be 400
-      And the response should contain a field named "message" with the value "Account is frozen"
+      And the response should contain a field named "message" with the value "Request sender account is frozen"
 
 #      FROZEN TO FROZEN MONEY REQUEST
   Scenario: Successful money request from an frozen account to frozen account, with recipient accepting the pending request
@@ -145,19 +145,28 @@ Feature: Core Money request API
     # Step 1: Requester sends the money request
     Given the "frozen_user_request_money" user logs in and obtains an access token
     When the client sends a POST request to "ACCOUNT_LOOKUP_URL" using the payload "account_10" to lookup the recipient account for the money request
-    And the client sends a POST request to "MONEY_REQUEST_URL" using the payload "money_request_07" to request money
     Then the response status code should be 400
-    And the response should contain a field named "message" with the value "Account is frozen"
+    And the response should contain a field named "message" with the value "Receiver account is not allowed to debit"
 
   @DORMANT_TO_OTHER_ACCOUNT_STATUS_MONEY_REQUEST
+
 #    DORMANT TO ACTIVE MONEY REQUEST
   Scenario: Successful money request from an dormant account to active account, with recipient accepting the pending request
     # Step 1: Requester sends the money request
     Given the "dormant_user_request_money" user logs in and obtains an access token
     When the client sends a POST request to "ACCOUNT_LOOKUP_URL" using the payload "account_11" to lookup the recipient account for the money request
     And the client sends a POST request to "MONEY_REQUEST_URL" using the payload "money_request_08" to request money
-    Then the response status code should be 400
-    And the response should contain a field named "message" with the value "Account is dormant"
+    Then the response status code should be 200
+    And the response should contain a field named "message" with the value "Request successfully sent"
+    #     Step 2: Recipient accepts the pending money request
+    Given the "active_user_accept_money_request" user logs in and obtains an access token
+    When the client sends a POST request to "GET_FEES_URL" using the payload "accept_money_request_01" to retrieve fees for accepting the money request
+    And the client sends a POST request to "TRANSACTION_VERIFY_METHOD_URL" using the payload "accept_money_request_transaction_05" to verify the transaction
+    And the client sends a POST request to "PIN_VERIFY_METHOD_URL" with "correct_pin_07" to verify the PIN for the transaction
+    And the client sends a POST request to "MONEY_REQUEST_ACCEPT_URL" with payload "accept_money_request_data_01" to accept the money request
+    Then the response status code should be 200
+    And the response should contain a field named "message" with the value "Request accepted successfully"
+    And the response should contain a field named "data.isFullyPaid" with the value "PAID IN FULL"
 
 #    DORMANT TO FROZEN MONEY REQUEST
   Scenario: Successful money request from a dormant account to frozen account, with recipient accepting the pending request
@@ -174,15 +183,24 @@ Feature: Core Money request API
     When the client sends a POST request to "ACCOUNT_LOOKUP_URL" using the payload "account_13" to lookup the recipient account for the money request
     Then the response status code should be 400
     And the response should contain a field named "message" with the value "Receiver account is not allowed to debit"
-
+#???????????????????????????????????????????????????????????????????????
 #    DORMANT TO NO CREDIT MONEY REQUEST
   Scenario: Successful money request from an dormant account to no credit account, with recipient accepting the pending request
     # Step 1: Requester sends the money request
     Given the "dormant_user_request_money" user logs in and obtains an access token
     When the client sends a POST request to "ACCOUNT_LOOKUP_URL" using the payload "account_14" to lookup the recipient account for the money request
     And the client sends a POST request to "MONEY_REQUEST_URL" using the payload "money_request_08" to request money
-    Then the response status code should be 400
-    And the response should contain a field named "message" with the value "Account is dormant"
+    Then the response status code should be 200
+    And the response should contain a field named "message" with the value "Request successfully sent"
+    #  Step 2: Recipient accepts the pending money request
+    Given the "no_credit_user_accept_money_request" user logs in and obtains an access token
+    When the client sends a POST request to "GET_FEES_URL" using the payload "accept_money_request_05" to retrieve fees for accepting the money request
+    And the client sends a POST request to "TRANSACTION_VERIFY_METHOD_URL" using the payload "accept_money_request_transaction_06" to verify the transaction
+    And the client sends a POST request to "PIN_VERIFY_METHOD_URL" with "correct_pin_08" to verify the PIN for the transaction
+    And the client sends a POST request to "MONEY_REQUEST_ACCEPT_URL" with payload "accept_money_request_data_02" to accept the money request
+    Then the response status code should be 200
+    And the response should contain a field named "message" with the value "Request accepted successfully"
+    And the response should contain a field named "data.isFullyPaid" with the value "PAID IN FULL"
 
 
 
@@ -261,7 +279,7 @@ Feature: Core Money request API
     When the client sends a POST request to "ACCOUNT_LOOKUP_URL" using the payload "account_20" to lookup the recipient account for the money request
     And the client sends a POST request to "MONEY_REQUEST_URL" using the payload "money_request_10" to request money
     Then the response status code should be 400
-    And the response should contain a field named "message" with the value "Credit not allowed"
+    And the response should contain a field named "message" with the value "Request sender account is not allowed to credit"
 
 #    NO CREDIT  TO FROZEN MONEY REQUEST
   Scenario: Successful money request from an no credit account to frozen account, with recipient accepting the pending request

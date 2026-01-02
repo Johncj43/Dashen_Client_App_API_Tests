@@ -1,0 +1,26 @@
+[
+  {
+    "id": "user_02",
+    "deviceuuid": "john43285660john24",
+    "installationdate": "1759934922805",
+    "student_id": "STU000067578"
+  },
+  {
+    "id": "account_03",
+    "deviceuuid": "gjgj676y",
+    "installationdate": "1759934922805",
+    "student_id": "STU006"
+  },
+  {
+    "id": "account_04",
+    "deviceuuid": "gjgj676y",
+    "installationdate": "1759934922805",
+    "student_id": ""
+  },
+  {
+    "id": "account_02",
+    "deviceuuid": "gjgj676y",
+    "installationdate": "1759934922805",
+    "student_id": "STU000067578"
+  }
+]

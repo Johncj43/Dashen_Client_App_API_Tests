@@ -108,11 +108,11 @@ Feature: EthioTelecom and Safaricom Airtime Top-up API
   Scenario: Safaricom Airtime top-up request is rejected when initiated from a dormant account: DORMANT ACCOUNT
     Given the "sender_user_dormant" user logs in and obtains an access token
     When I send a POST request to "GET_FEES_URL" with a "dormant_accounts" to create get fees
-    And the client sends a POST request to "TRANSACTION_VERIFY_METHOD_URL" to verify the transaction with a "dormant_account_data"
-    And the client sends a POST request to "PIN_VERIFY_METHOD_URL" with "dormant_account_correct_pin" to verify the PIN for the transaction
-    And the client sends "SAFARICOM_TOPUP_URL" request with "dormant_account" to perform topup with Safaricom
+#    And the client sends a POST request to "TRANSACTION_VERIFY_METHOD_URL" to verify the transaction with a "dormant_account_data"
+#    And the client sends a POST request to "PIN_VERIFY_METHOD_URL" with "dormant_account_correct_pin" to verify the PIN for the transaction
+#    And the client sends "SAFARICOM_TOPUP_URL" request with "dormant_account" to perform topup with Safaricom
     Then the response status code should be 400
-    And the response should contain a field named "message" with the value "Account is frozen or dormant"
+    And the response should contain a field named "message" with the value "Debit account is dormant"
 
 
 

@@ -16,6 +16,11 @@ Feature: Account Lookup API
       | "Dormant Account"           | 200       |"Account Enquiry successful for dormant account"|
       | "Frozen Account"            | 400       |"Credit Account is frozen"                |
       | "Frozen and Dormant Account"| 400       |  "Credit Account is frozen"     |
+      | "No debit Account"          | 200       | "Account Enquiry successful"    |
+      | "No credit Account"          | 400       | "Credit Account is not allowed to credit"    |
+      | "for an existent Account"          | 400       | "Invalid Account Number"    |
+
+
 
     #  Scenario: Successful validation of an account number via account lookup:ACTIVE ACCOUNT
 #    Given the "user_02" user logs in and obtains an access token

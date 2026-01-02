@@ -11,11 +11,9 @@ import starter.utils.model.requestModel.client.core.*;
 import starter.utils.model.requestModel.client.core_money_request.MoneyRequest;
 import starter.utils.model.requestModel.client.services.GetFees;
 import starter.utils.model.requestModel.client.topup.Topup;
-import starter.utils.model.requestModel.client.transaction.FetchMethod;
-import starter.utils.model.requestModel.client.transaction.PinVerify;
-import starter.utils.model.requestModel.client.transaction.VerifyTransaction;
-import starter.utils.model.requestModel.client.transaction.WithInDashenTransfer;
+import starter.utils.model.requestModel.client.transaction.*;
 import starter.utils.model.requestModel.client.users.LoginData;
+import starter.utils.model.requestModel.client.utilities.*;
 import starter.utils.model.requestModel.client.wallet.Wallet;
 
 import java.io.File;
@@ -126,172 +124,42 @@ public static ChatMoneyRequest getChatMoneyRequestData(String id){
     public static PinVerify getPinVerifyData(String id) {
         return loadTestData("pin_verify_data.json", id, PinVerify[].class);
     }
+    public static VerifyQrData getVerifyQrData(String id) {
+        return loadTestData("verify_qr_data.json", id, VerifyQrData[].class);
+    }
+    public static FetchTransaction getFetchTransaction(String id) {
+        return loadTestData("fetch_transactions_data.json", id, FetchTransaction[].class);
+    }
+    public static FetchCbsTransaction getFetchCbsTransactionData(String id) {
+        return loadTestData("fetch_cbs_transactions_data.json", id, FetchCbsTransaction[].class);
+    }
+    public static Beneficiaries getBeneficiariesData(String id) {
+        return loadTestData("dashen_get_beneficiaries_data.json", id, Beneficiaries[].class);
+    }
+    public static FeedbackRequest getFeedbackRequestData(String id) {
+        return loadTestData("send_feed_back_data.json", id, FeedbackRequest[].class);
+    }
+
+    public static QueryStudentData getQueryStudentData(String id) {
+        return loadTestData("query_student_data.json", id, QueryStudentData[].class);
+    }
+    public static FetchStudentUnpaidDetailsData getFetchStudentUnpaidDetailsData(String id) {
+        return loadTestData("student_unpaid_query_payment_details_data.json", id, FetchStudentUnpaidDetailsData[].class);
+    }
+    public static FetchStudentPaidDetailsData getFetchStudentPaidDetailsData(String id) {
+        return loadTestData("student_paid_query_payment_details_data.json", id, FetchStudentPaidDetailsData[].class);
+    }
+    public static FlyGateData getFlyGateDataData(String id) {
+        return loadTestData("fly_gate_data.json", id, FlyGateData[].class);
+    }
+
+    public static PaybillsData getPaybillsData(String id) {
+        return loadTestData("pay_bills_data.json", id, PaybillsData[].class);
+    }
 
 
 
 
-
-
-//    public static LoginTestData getLoginTestData(String id) {
-//        return loadTestData("login_test_data.json", id, LoginTestData[].class);
-//    }
-//
-//    public static LoginTestData getLoginTestData(String id, String dataFile) {
-//        return loadTestData(dataFile, id, LoginTestData[].class);
-//    }
-//
-//    public static Login getLoginData(String id) {
-//        return loadTestData("login_data.json", id, Login[].class);
-//    }
-//
-//    public static ActionTestData getActionTestData(String id) {
-//        return loadTestData("actions_data.json", id, ActionTestData[].class);
-//    }
-//
-//    public static ActionTestData getActionTestData(String id, String dataFile) {
-//        return loadTestData(dataFile, id, ActionTestData[].class);
-//    }
-//
-//    public static UserCodeData getEnableDisableUserCode(String id) {
-//        return loadTestData("enable_disable_user.json", id, UserCodeData[].class);
-//    }
-//
-//    public static UserCodeData getChangeEmailUserCode(String id) {
-//        return loadTestData("change_email_data.json", id, UserCodeData[].class);
-//    }
-//
-//    public static LinkUnlinkTestData getLinkUnlinkTestData(String id) {
-//        return loadTestData("link_unlink_account.json", id, LinkUnlinkTestData[].class);
-//    }
-//
-//    public static MinCoreData getAccountDetailFromCore(String id) {
-//        return loadTestData("core_data.json", id, MinCoreData[].class);
-//    }
-//
-//    public static Voucher getVoucherData(String id) {
-//        return loadTestData("voucher_data.json", id, Voucher[].class);
-//    }
-//
-//    public static VoucherSession getVoucherSessionData(String id) {
-//        return loadTestData("voucher_session_data.json", id, VoucherSession[].class);
-//    }
-//
-//    public static Fayda getFaydaData(String id) {
-//        return loadTestData("fayda_data.json", id, Fayda[].class);
-//    }
-//
-//    public static CBEToWalletLookup getCBEToWalletLookupData(String id) {
-//        return loadTestData("cbe_to_wallet_lookup_data.json", id, CBEToWalletLookup[].class);
-//    }
-//
-//    public static TopUp getTopUpData(String sessionId) {
-////        System.out.println("Looking for session ID: " + sessionId);
-//        return loadTestData("topup_data.json", sessionId, TopUp[].class);
-//    }
-//
-//    public static TopupData getTopupData(String id) {
-//        return loadTestData("topupdata.json", id, TopupData[].class);
-//    }
-//
-//    public static UserLoginData getUserLoginData(String id) {
-//        return loadTestData("user_login_data.json", id, UserLoginData[].class);
-//    }
-//
-//    public static CBEToWallet getCBEToWalletSessionData(String sessionId) {
-//        return loadTestData("cbe_to_wallet_session_data.json", sessionId, CBEToWallet[].class);
-//    }
-//
-//    public static CBEToWalletSelfTransaction getCBEToWalletSelfTransactionData(String wallet_id) {
-//        return loadTestData("cbe_to_wallet_data.json", wallet_id, CBEToWalletSelfTransaction[].class);
-//    }
-//
-//    public static CBEToWalletOtherTransaction getCBEToWalletOtherTransactionData(String wallet_id) {
-//        return loadTestData("cbe_to_wallet_other_txn_data.json", wallet_id, CBEToWalletOtherTransaction[].class);
-//    }
-//
-//    public static CBEToWalletAgentTxn getCBEToWalletAgentTxnData(String wallet_id) {
-//        return loadTestData("cbe_to_wallet_agent_txn_data.json", wallet_id, CBEToWalletAgentTxn[].class);
-//    }
-//
-//
-//    public static ChatMoneyRequest getChatMoneyRequestData(String id) {
-//        return loadTestData("chat_money_request_data.json", id, ChatMoneyRequest[].class);
-//    }
-//
-//    public static TopUpRequest getTopUpRequestData(String id) {
-//        return loadTestData("chat_topup_data.json", id, TopUpRequest[].class);
-//    }
-//
-//    public static MoneyRequestDataWithSession getMoneyRequestDataWithSession(String id) {
-//        return loadTestData("money_request_session_data.json", id, MoneyRequestDataWithSession[].class);
-//    }
-//
-//    public static ChatMoneyRequestSession getChatMoneyRequestSessionData(String id) {
-//        return loadTestData("chat_money_request_session_data.json", id, ChatMoneyRequestSession[].class);
-//    }
-//
-//    public static MoneyRequestByBeneficiaryID getMoneyRequestByBeneficiaryID(String id) {
-//        return loadTestData("money_request_by_beneficiary_data.json", id, MoneyRequestByBeneficiaryID[].class);
-//    }
-//
-//    public static DonationTransaction getDonationTransactionData(String session_id) {
-//        return loadTestData("donation_transaction_data.json", session_id, DonationTransaction[].class);
-//    }
-//
-//    public static CBEToCBEFTDataWithSession getCBEToCBEFTDataWithSession(String session_id) {
-//        return loadTestData("cbe_to_cbe_ft_session_data.json", session_id, CBEToCBEFTDataWithSession[].class);
-//    }
-//
-//    public static CBEToOtherBanks getCBEToOtherBanksData(String session_id) {
-//        return loadTestData("cbe_to_other_banks_data.json", session_id, CBEToOtherBanks[].class);
-//    }
-//
-//    public static Equb getEqubData(String id) {
-//        return loadTestData("equb_data.json", id, Equb[].class);
-//    }
-//
-//    public static EqubMember getEqubMemberData(String id) {
-//        return loadTestData("equbmembers_data.json", id, EqubMember[].class);
-//    }
-//
-//    public static EqubPayment getEqubPaymentData(String id) {
-//        return loadTestData("equb_payment_data.json", id, EqubPayment[].class);
-//    }
-//
-//    public static EqubAmountBasedVerification getEqubAmountBasedVerificationData(String id) {
-//        return loadTestData("equb_amount_based_verification_data.json", id, EqubAmountBasedVerification[].class);
-//    }
-//
-//    public static ChatUser getChatUserData(String id) {
-//        return loadTestData("chat_user_data.json", id, ChatUser[].class);
-//    }
-//
-//    public static ChatUser getChatInitiationData(String id) {
-//        return loadTestData("chat_initiation_data.json", id, ChatUser[].class);
-//    }
-//
-//    public static BudgetCategories getBudgetCategoriesData(String id) {
-//        return loadTestData("budget_categories_data.json", id, BudgetCategories[].class);
-//    }
-//
-//    public static CBEToCBEFundTransferAccount getCBEToCBEFundTransferAccountData(String id) {
-//        return loadTestData("cbe_2_cbe_fund_transfer_accounts.json", id, CBEToCBEFundTransferAccount[].class);
-//    }
-//
-//    public static DeviceLoginTestData getLoginDeviceLoginTestData(String id) {
-//        return loadTestData("auth/login_data.json", id, DeviceLoginTestData[].class);
-//    }
-//
-//    public static AddAccount getAddAccountData(String id) {
-//        return loadTestData("add_account.json", id, AddAccount[].class);
-//    }
-//
-//    public static Beneficiary getBeneficiaryData(String id) {
-//        return loadTestData("beneficiary_data.json", id, Beneficiary[].class);
-//    }
-//    public static UserHeader getHeaderData(String id){
-//        return loadTestData("header_data.json",id,UserHeader[].class);
-//    }
 
 
 

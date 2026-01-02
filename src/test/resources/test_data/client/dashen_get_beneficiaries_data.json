@@ -1,0 +1,28 @@
+[
+  {
+    "id": "user_02",
+    "appversion": "1.0.2",
+    "deviceuuid": "john43285660john24",
+    "installationdate": "1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "430000",
+    "emailOrPhone": "phone",
+    "account_number": "5001001008011",
+    "email": "yohannesfekadumos@gmail.com",
+    "qr_value": "superappaccount_bb2690e8185f3df3cf23a65438.03ce21aaf43846a0fa91b694d1c39838"
+  },
+  {
+    "id": "account_02",
+    "appversion": "1.0.2",
+    "deviceuuid": "gjgj676y",
+    "installationdate": "1759934922805",
+    "platform": "ios",
+    "sourceapp": "memberapp",
+    "pincode": "191826",
+    "emailOrPhone": "phone",
+    "account_number": "5001525859009",
+    "email": "yohannesfekadumos@gmail.com",
+    "qr_value": "superappaccount_bb2690e8185f3df3cf23a65438.03ce21aaf43846a0fa91b694d1c39838"
+  }
+]

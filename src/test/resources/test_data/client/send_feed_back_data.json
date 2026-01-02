@@ -1,0 +1,86 @@
+[
+  {
+    "id": "user_02",
+    "deviceuuid": "john43285660john24",
+    "installationdate": "1759934922805",
+    "username": "mike",
+    "feedback": "good",
+    "rating": 5,
+    "survey_response": [
+      {
+        "question": "How was the service?",
+        "answer": "nice"
+      }
+    ]
+  },
+  {
+    "id": "account_03",
+    "deviceuuid": "gjgj676y",
+    "installationdate": "1759934922805",
+    "username": "mike",
+    "feedback": "good",
+    "rating": 5,
+    "survey_response": [
+      {
+        "question": "How was the service?",
+        "answer": "nice"
+      }
+    ]
+  },
+  {
+    "id": "account_04",
+    "deviceuuid": "gjgj676y",
+    "installationdate": "1759934922805",
+    "username": "mike",
+    "feedback": "good",
+    "rating": null,
+    "survey_response": [
+      {
+        "question": "How was the service?",
+        "answer": "nice"
+      }
+    ]
+  },
+  {
+    "id": "account_06",
+    "deviceuuid": "gjgj676y",
+    "installationdate": "1759934922805",
+    "username": "mike",
+    "feedback": "",
+    "rating": 0.1,
+    "survey_response": [
+      {
+        "question": "How was the service?",
+        "answer": "nice"
+      }
+    ]
+  },
+  {
+    "id": "account_07",
+    "deviceuuid": "gjgj676y",
+    "installationdate": "1759934922805",
+    "username": "",
+    "feedback": "mike",
+    "rating": 5,
+    "survey_response": [
+      {
+        "question": "How was the service?",
+        "answer": "nice"
+      }
+    ]
+  },
+  {
+    "id": "account_02",
+    "deviceuuid": "gjgj676y",
+    "installationdate": "1759934922805",
+    "username": "mike",
+    "feedback": "good",
+    "rating": 5,
+    "survey_response": [
+      {
+        "question": "How was the service?",
+        "answer": "nice"
+      }
+    ]
+  }
+]

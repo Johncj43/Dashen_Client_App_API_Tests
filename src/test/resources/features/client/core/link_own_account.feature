@@ -5,9 +5,9 @@ Feature: Link Own Account
 
   Scenario: Successfully link own account
     Given the "account_02" user logs in and obtains an access token
-    When device user "account_02" sends "LINK_OWN_ACCOUNT" for linking own account
+    When device user "account_05" sends "LINK_OWN_ACCOUNT" for linking own account
     Then the response status code should be 200
-    And the response should contain a field named "message" with the value "Account already linked Successfully"
+    And the response should contain a field named "message" with the value "Account linked successfully"
 
   Scenario:  Attempt to link an already linked account
     Given the "account_02" user logs in and obtains an access token
