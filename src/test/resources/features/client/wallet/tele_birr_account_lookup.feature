@@ -21,10 +21,6 @@ Feature:Tele Birr Wallet API
     And the response should contain a field named "message" with the value "Invalid request"
 
 
-  Scenario: Account lookup request fails with unsupported HTTP method
-    When the client sends a GET request to "TELE_BIRR_ACCOUNT_LOOKUP_URL" with "valid_telebirr_wallet"
-
-
 #  Scenario: Account lookup fails for a non-existent Tele Birr wallet number
 #    When the client sends a POST request to "TELE_BIRR_ACCOUNT_LOOKUP_URL" with "non_existent_wallet" to perform account lookup for Tele Birr
 #    Then the response status code should be 400

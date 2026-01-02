@@ -398,6 +398,33 @@ public class HttpApiUtils {
                 )
         );
     }
+    public static Response requestWithCoresHeaders333(String method,
+                                                    String path,
+                                                    String deviceUUID,
+                                                    String token,
+                                                    String installationDate,
+                                                    String sessionId,
+                                                    Boolean xTransfer,
+                                                    Boolean xOwnTransfer,
+                                                    Object body) {
+
+
+        String uuidToUse = (deviceUUID != null) ? deviceUUID : HelperUtils.getDeviceUUID();
+        String installationToUse = (installationDate != null)
+                ? installationDate
+                : EnvConfig.getInstallationDate();
+
+        return sendWithRetry(() ->
+                sendRequest(
+                        method,
+                        path,
+                        buildCoreHeadersOwn(uuidToUse, installationToUse, token, sessionId, xTransfer, xOwnTransfer),
+                        null,      // No query params
+                        body
+                )
+        );
+    }
+
     public static Response dataToken(String method,
                                      String path,
                                      String deviceUUID,
@@ -778,6 +805,28 @@ public class HttpApiUtils {
         headers.add(new Header("installationdate", installationDate));
         headers.add(new Header("x-request-id",xRequestedId));
 
+
+        return new Headers(headers);
+    }
+    private static Headers buildCoreHeadersOwn(String deviceUUID,
+                                               String installationDate,
+                                               String token,
+                                               String sessionId,
+                                               boolean xTransfer,
+                                               boolean xOwnTransfer) {
+
+        List<Header> headers = new ArrayList<>();
+
+        headers.add(new Header("platform", "ios"));
+        headers.add(new Header("appversion", "1.0.2"));
+        headers.add(new Header("deviceuuid", deviceUUID));
+        headers.add(new Header("installationdate", installationDate));
+        headers.add(new Header("sourceapp", "memberapp"));
+        headers.add(new Header("Content-Type", "application/json"));
+        headers.add(new Header("x-request-id", sessionId));
+        headers.add(new Header("x-transfer-flag", String.valueOf(xTransfer)));
+        headers.add(new Header("x-own-transfer", String.valueOf(xOwnTransfer)));  //// use the parameter
+        headers.add(new Header("Authorization", "Bearer " + token));  // added token
 
         return new Headers(headers);
     }

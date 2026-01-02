@@ -157,6 +157,21 @@ public static ChatMoneyRequest getChatMoneyRequestData(String id){
         return loadTestData("pay_bills_data.json", id, PaybillsData[].class);
     }
 
+    public static FetchDstvData getFetchDstvData(String id) {
+        return loadTestData("fetch_dstv_data.json", id, FetchDstvData[].class);
+    }
+    public static DsTvData getDstvDataData(String id) {
+        return loadTestData("dstv_lookup_data.json", id, DsTvData[].class);
+    }
+    public static OwnTransfer getOwnTransferData(String id) {
+        return loadTestData("own_account_data.json", id, OwnTransfer[].class);
+    }
+
+    public static DstvUpgradePaymentData getDstvUpgradePaymentData(String id) {
+        return loadTestData("dstv_upgrade_payment_data.json", id, DstvUpgradePaymentData[].class);
+    }
+
+
 
 
 
