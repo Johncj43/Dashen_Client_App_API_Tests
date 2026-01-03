@@ -1,5 +1,26 @@
 Feature: Core Money request API
 
+  This feature validates the Dashen Client App Money Request APIs,
+  ensuring that money requests between different types of accounts
+  comply with business rules, account restrictions, and system workflows.
+
+  The scenarios cover the following account statuses:
+  - ACTIVE
+  - FROZEN
+  - DORMANT
+  - NO-DEBIT
+  - NO-CREDIT
+  The feature ensures that:
+  - Requesters can successfully send money requests to eligible accounts.
+  - Recipients can accept or reject pending money requests according to account rules.
+  - Requesters can cancel pending money requests when allowed.
+  - Requests are blocked for accounts with restrictions (frozen, dormant, no-debit, or no-credit).
+  - Proper HTTP response codes and messages are returned for each scenario.
+  - Fees, PIN verification, and transaction validations are performed correctly.
+
+  This comprehensive test suite guarantees reliability, compliance, and correct
+  behavior of money request operations in the Dashen Client App.
+
   @ACTIVE_TO_OTHER_ACCOUNT_STATUS_MONEY_REQUEST_TRANSFER
 #   ACTIVE TO ACTIVE M0NEY REQUEST
   Scenario: Successful money request from an active account to another active account, with recipient accepting the pending request
@@ -183,7 +204,7 @@ Feature: Core Money request API
     When the client sends a POST request to "ACCOUNT_LOOKUP_URL" using the payload "account_13" to lookup the recipient account for the money request
     Then the response status code should be 400
     And the response should contain a field named "message" with the value "Receiver account is not allowed to debit"
-#???????????????????????????????????????????????????????????????????????
+
 #    DORMANT TO NO CREDIT MONEY REQUEST
   Scenario: Successful money request from an dormant account to no credit account, with recipient accepting the pending request
     # Step 1: Requester sends the money request

@@ -155,7 +155,6 @@ Feature: Fetch methods and transfer validation
 
 
 
-
   #
   # DORMANT → NO-CREDIT
   #
