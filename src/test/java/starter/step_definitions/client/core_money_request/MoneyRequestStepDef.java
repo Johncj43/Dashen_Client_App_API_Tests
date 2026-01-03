@@ -46,6 +46,8 @@ public class MoneyRequestStepDef {
                 getContext(SESSION_ID.name()),
                 true
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
         String dataToken = response.jsonPath().getString("data.datatoken");
         if (dataToken != null) {
             setContext(DATA_TOKEN.name(), dataToken);
@@ -80,6 +82,8 @@ public class MoneyRequestStepDef {
 
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
         String requestId= response.jsonPath().getString("data.requestId");
         if (requestId!= null) {
             setContext(REQUEST_ID.name(), requestId);
@@ -119,6 +123,8 @@ public class MoneyRequestStepDef {
 
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
         String dataToken = response.jsonPath().getString("data.datatoken");
         if (dataToken != null) {
             setContext(DATA_TOKEN.name(), dataToken);
@@ -146,6 +152,8 @@ public class MoneyRequestStepDef {
                 false,
                 getContext(SESSION_ID.name())
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
         String dataToken= response.jsonPath().getString("data.datatoken");
         if (dataToken != null) {
             setContext(DATA_TOKEN.name(), dataToken);
@@ -171,6 +179,8 @@ public class MoneyRequestStepDef {
                 false,
                 getContext(SESSION_ID.name())
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
 
 
     }
@@ -192,6 +202,8 @@ public class MoneyRequestStepDef {
                 false,
                 getContext(SESSION_ID.name())
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
 
     }
 
@@ -214,6 +226,8 @@ public class MoneyRequestStepDef {
                 false,
                 getContext(SESSION_ID.name())
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
 
     }
 
@@ -234,6 +248,8 @@ public class MoneyRequestStepDef {
                 getContext(SESSION_ID.name())
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
     }
 
     @And("the client sends a GET request to {string} with test data {string} to get the list of sent requests")
@@ -251,6 +267,8 @@ public class MoneyRequestStepDef {
                 getContext(SESSION_ID.name())
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
 
     }
 
@@ -269,5 +287,7 @@ public class MoneyRequestStepDef {
                 getContext(SESSION_ID.name())
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
     }
 }

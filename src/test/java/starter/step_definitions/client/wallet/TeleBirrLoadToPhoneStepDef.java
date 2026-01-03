@@ -10,6 +10,7 @@ import starter.utils.model.requestModel.client.wallet.Wallet;
 import static starter.utils.PropertiesReader.getParameterProperties;
 import static starter.utils.TestGlobalVariables.ContextEnum.*;
 import static starter.utils.TestGlobalVariables.getContext;
+import static starter.utils.TestGlobalVariables.setContext;
 
 public class TeleBirrLoadToPhoneStepDef {
     @And("the client sends a POST request to {string} with {string} to transfer funds from the account to the TeleBirr wallet")
@@ -29,6 +30,8 @@ public class TeleBirrLoadToPhoneStepDef {
                 getContext(SESSION_ID.name())
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
 
 
     }

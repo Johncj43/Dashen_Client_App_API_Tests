@@ -49,6 +49,7 @@ public class CategoryStepDef {
                 null
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
 
         String categoryId = response.jsonPath().getString("data._id");
         if(categoryId!=null) {
@@ -76,6 +77,7 @@ public class CategoryStepDef {
                 null,   // body for DELETE usually null
                 null
         );
+        setContext(HTTP_RESPONSE.name(), response);
 
         // store response in context if needed
     }
@@ -135,6 +137,8 @@ public class CategoryStepDef {
                 null
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
 
 
     }
@@ -159,6 +163,7 @@ public class CategoryStepDef {
                 null,
                 null
         );
+        setContext(HTTP_RESPONSE.name(), response);
 
     }
 
@@ -193,6 +198,7 @@ public class CategoryStepDef {
                 convertObjectToJson(body),
                 null
         );
+        setContext(HTTP_RESPONSE.name(), response);
     }
 
     @When("I send a GET request to {string} with {string} to fetch colors of created categories")
@@ -200,8 +206,6 @@ public class CategoryStepDef {
         LoginData data=TestDataLoader.getLoginData(id);
         String deviceuuid=data.getDeviceuuid();
         String installationdate= data.getInstallationdate();
-//        String categoryId = getContext(CATEGORY_ID.name());
-//        String url = getParameterProperties(endpoint) + "/" + categoryId;
         Response response = HttpApiUtils.requestWithStandardHeaderst(
                 "GET",
                 getContext(ACCESS_TOKEN.name()),
@@ -211,6 +215,7 @@ public class CategoryStepDef {
                 null,
                 null
         );
+        setContext(HTTP_RESPONSE.name(), response);
     }
 }
 

@@ -14,6 +14,7 @@ import static starter.utils.HelperUtils.convertObjectToJson;
 import static starter.utils.PropertiesReader.getParameterProperties;
 import static starter.utils.TestGlobalVariables.ContextEnum.*;
 import static starter.utils.TestGlobalVariables.getContext;
+import static starter.utils.TestGlobalVariables.setContext;
 
 @Data
 public class ChatSendMoneyStepDef {
@@ -38,6 +39,8 @@ public class ChatSendMoneyStepDef {
                 false
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
 
     }
 }

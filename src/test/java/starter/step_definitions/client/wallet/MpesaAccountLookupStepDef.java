@@ -11,9 +11,9 @@ import starter.utils.model.requestModel.client.wallet.Wallet;
 
 import static starter.utils.HelperUtils.convertObjectToJson;
 import static starter.utils.PropertiesReader.getParameterProperties;
-import static starter.utils.TestGlobalVariables.ContextEnum.ACCESS_TOKEN;
-import static starter.utils.TestGlobalVariables.ContextEnum.SESSION_ID;
+import static starter.utils.TestGlobalVariables.ContextEnum.*;
 import static starter.utils.TestGlobalVariables.getContext;
+import static starter.utils.TestGlobalVariables.setContext;
 
 public class MpesaAccountLookupStepDef {
     @When("the client sends a POST request to {string} with {string} to perform account lookup for Mpesa wallet")
@@ -35,6 +35,8 @@ public class MpesaAccountLookupStepDef {
                 getContext(SESSION_ID.name())
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
 
     }
 

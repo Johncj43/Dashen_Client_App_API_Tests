@@ -35,6 +35,8 @@ public class PinVerifyMethodStepDef {
 
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
         String dataToken= response.jsonPath().getString("data.datatoken");
         if (dataToken != null) {
             setContext(DATA_TOKEN.name(), dataToken);

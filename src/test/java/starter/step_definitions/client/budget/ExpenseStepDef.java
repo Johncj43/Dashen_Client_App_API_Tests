@@ -45,7 +45,7 @@ public class ExpenseStepDef {
                 null
 
         );
-
+        setContext(HTTP_RESPONSE.name(), response);
         String expenseId = response.jsonPath().getString("data._id");
         assertNotNull(expenseId, "expense ID is null");
 
@@ -72,6 +72,8 @@ public class ExpenseStepDef {
                 null,
                 null
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
     }
 
     @When("I send a POST request to {string} with {string} to create an expense on app without category id")
@@ -97,6 +99,8 @@ public class ExpenseStepDef {
                 convertObjectToJson(body),
                 null
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
 
 
     }
@@ -155,6 +159,7 @@ public class ExpenseStepDef {
                 convertObjectToJson(body),
                 null
         );
+        setContext(HTTP_RESPONSE.name(), response);
 
 
 

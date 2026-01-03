@@ -11,6 +11,7 @@ import static starter.utils.HelperUtils.convertObjectToJson;
 import static starter.utils.PropertiesReader.getParameterProperties;
 import static starter.utils.TestGlobalVariables.ContextEnum.*;
 import static starter.utils.TestGlobalVariables.getContext;
+import static starter.utils.TestGlobalVariables.setContext;
 
 public class CommonUtil {
 
@@ -32,8 +33,10 @@ public class CommonUtil {
                 getContext(SESSION_ID.name()),
                 convertObjectToJson(requestBody)
         );
+        setContext(HTTP_RESPONSE.name(), response);
 
-}
+
+    }
 public static void performCommonTransaction(String method,
                                             String endpoint,
                                             String id,
@@ -58,6 +61,8 @@ public static void performCommonTransaction(String method,
 
 
     );
+    setContext(HTTP_RESPONSE.name(), response);
+
 
 
 }

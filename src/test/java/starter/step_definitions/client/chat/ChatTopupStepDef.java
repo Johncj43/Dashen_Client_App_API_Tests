@@ -11,6 +11,7 @@ import starter.utils.model.requestModel.client.chat.Chat;
 import static starter.utils.PropertiesReader.getParameterProperties;
 import static starter.utils.TestGlobalVariables.ContextEnum.*;
 import static starter.utils.TestGlobalVariables.getContext;
+import static starter.utils.TestGlobalVariables.setContext;
 
 public class ChatTopupStepDef {
     @And("the client sends {string} request with {string} to perform chat topup with ethiotelecom")
@@ -30,6 +31,7 @@ public class ChatTopupStepDef {
                 getContext(SESSION_ID.name())
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
 
     }
 
@@ -50,6 +52,8 @@ public class ChatTopupStepDef {
                 getContext(SESSION_ID.name())
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
     }
 
 }

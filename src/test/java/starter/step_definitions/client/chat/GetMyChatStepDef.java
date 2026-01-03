@@ -9,9 +9,9 @@ import starter.utils.TestDataLoader;
 import starter.utils.model.requestModel.client.chat.Chat;
 
 import static starter.utils.PropertiesReader.getParameterProperties;
-import static starter.utils.TestGlobalVariables.ContextEnum.ACCESS_TOKEN;
-import static starter.utils.TestGlobalVariables.ContextEnum.SESSION_ID;
+import static starter.utils.TestGlobalVariables.ContextEnum.*;
 import static starter.utils.TestGlobalVariables.getContext;
+import static starter.utils.TestGlobalVariables.setContext;
 
 public class GetMyChatStepDef {
     @When("I send a GET request to {string} with {string} to get my chat")
@@ -26,6 +26,8 @@ public class GetMyChatStepDef {
                 getContext(SESSION_ID.name()),
                 null
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
 
     }
 

@@ -47,6 +47,7 @@ public class ChatMoneyRequestStepDef {
 
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
         String requestId= response.jsonPath().getString("data.request_id");
         if (requestId!= null) {
             setContext(REQUEST_ID.name(), requestId);
@@ -80,6 +81,7 @@ public class ChatMoneyRequestStepDef {
 
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
 
     }
 
@@ -103,6 +105,7 @@ public class ChatMoneyRequestStepDef {
                 getContext(SESSION_ID.name()),
                 false
         );
+        setContext(HTTP_RESPONSE.name(), response);
 
 
 
@@ -128,6 +131,7 @@ public class ChatMoneyRequestStepDef {
                 getContext(SESSION_ID.name()),
                 false
         );
+        setContext(HTTP_RESPONSE.name(), response);
 
     }
 }

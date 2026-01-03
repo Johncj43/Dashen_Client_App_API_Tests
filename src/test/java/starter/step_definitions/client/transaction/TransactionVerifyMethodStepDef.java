@@ -20,6 +20,7 @@ public class TransactionVerifyMethodStepDef {
     @When("the client sends a POST request to {string} to verify the transaction with a {string}")
     public void theClientSendsAPOSTRequestToToVerifyTheTransactionWithA(String endpoint, String id) {
         Response response = sendVerifyRequest(endpoint, id, getContext(ACCESS_TOKEN.name()), getContext(DATA_TOKEN.name()));
+        setContext(HTTP_RESPONSE.name(), response);
         String dataToken = response.jsonPath().getString("data.datatoken");
         if (dataToken != null) {
             setContext(DATA_TOKEN.name(), dataToken);

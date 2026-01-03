@@ -13,6 +13,7 @@ import static starter.utils.HelperUtils.convertObjectToJson;
 import static starter.utils.PropertiesReader.getParameterProperties;
 import static starter.utils.TestGlobalVariables.ContextEnum.*;
 import static starter.utils.TestGlobalVariables.getContext;
+import static starter.utils.TestGlobalVariables.setContext;
 
 public class StartedConversationStepDef {
     @When("the user start to conversation through {string} with {string} to chat each other through super app")
@@ -29,6 +30,8 @@ public class StartedConversationStepDef {
                 convertObjectToJson(body)
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
 
     }
 }

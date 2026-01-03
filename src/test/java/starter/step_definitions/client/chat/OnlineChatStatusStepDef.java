@@ -13,6 +13,7 @@ import static starter.utils.HelperUtils.convertObjectToJson;
 import static starter.utils.PropertiesReader.getParameterProperties;
 import static starter.utils.TestGlobalVariables.ContextEnum.*;
 import static starter.utils.TestGlobalVariables.getContext;
+import static starter.utils.TestGlobalVariables.setContext;
 
 public class OnlineChatStatusStepDef {
     @When("the user start to check online status through {string} with {string} to check active status")
@@ -29,6 +30,8 @@ public class OnlineChatStatusStepDef {
                 convertObjectToJson(body)
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
 
 
     }
@@ -47,6 +50,8 @@ public class OnlineChatStatusStepDef {
                 convertObjectToJson(body)
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
 
     }
 }

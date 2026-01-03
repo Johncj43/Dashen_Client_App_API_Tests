@@ -20,6 +20,8 @@ public class TeleBirrAccountLookupStepDef {
     @When("the client sends a POST request to {string} with {string} to perform account lookup for Tele Birr")
     public void theClientSendsAPOSTRequestToWithToPerformAccountLookupForTeleBirr(String endpoint, String id) {
         Response response = sendRequest("POST", endpoint, id, true);
+        setContext(HTTP_RESPONSE.name(), response);
+
         String dataToken = response.jsonPath().getString("data.datatoken");
         if (dataToken != null) {
             setContext(DATA_TOKEN.name(), dataToken);
@@ -32,11 +34,15 @@ public class TeleBirrAccountLookupStepDef {
     @When("the client sends a POST request to {string} with {string} without a valid access token")
     public void theClientSendsAPOSTRequestToWithWithoutAValidAccessToken(String endpoint, String id) {
         Response response = sendRequest("POST", endpoint, id, false);
+        setContext(HTTP_RESPONSE.name(), response);
+
     }
 
     @When("the client sends a GET request to {string} with {string}")
     public void theClientSendsAPATCHRequestToWith(String endpoint, String id) {
         Response response = sendRequest("GET", endpoint, id, true);
+        setContext(HTTP_RESPONSE.name(), response);
+
     }
 
     private Response sendRequest(String method, String endpoint, String id, boolean useValidToken) {

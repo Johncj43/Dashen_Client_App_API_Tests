@@ -44,6 +44,7 @@ public class BudgetStepDef {
                 null
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
         String budgetId = response.jsonPath().getString("data.budget_id");
         if(budgetId!=null) {
 
@@ -77,6 +78,7 @@ public class BudgetStepDef {
                 convertObjectToJson(body),
                 null
         );
+        setContext(HTTP_RESPONSE.name(), response);
 
         System.out.println("Updated Budget Response: " + response.getBody().asString());
     }
@@ -107,6 +109,7 @@ public class BudgetStepDef {
                 null
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
         String budgetId = response.jsonPath().getString("data.budget_id");
         if(budgetId!=null) {
 
@@ -136,6 +139,7 @@ public class BudgetStepDef {
                 null,
                 null
         );
+        setContext(HTTP_RESPONSE.name(), response);
 
     }
 
@@ -158,6 +162,7 @@ public class BudgetStepDef {
                 null,
                 null
         );
+        setContext(HTTP_RESPONSE.name(), response);
 
     }
 
@@ -178,6 +183,7 @@ public class BudgetStepDef {
                 null,
                 null
         );
+        setContext(HTTP_RESPONSE.name(), response);
 
     }
 
@@ -195,6 +201,7 @@ public class BudgetStepDef {
                 null,
                 null
         );
+        setContext(HTTP_RESPONSE.name(), response);
     }
 
     @When("I send a GET request to {string} with {string} to get the history of created budget")
@@ -211,6 +218,7 @@ public class BudgetStepDef {
                 null,
                 null
         );
+        setContext(HTTP_RESPONSE.name(), response);
     }
 
     @When("I send a GET request to {string} with {string} to fetch icons of categories")
@@ -227,6 +235,7 @@ public class BudgetStepDef {
                 null,
                 null
         );
+        setContext(HTTP_RESPONSE.name(), response);
 
     }
 

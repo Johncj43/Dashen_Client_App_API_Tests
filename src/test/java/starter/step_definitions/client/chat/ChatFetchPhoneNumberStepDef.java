@@ -10,9 +10,9 @@ import starter.utils.model.requestModel.client.chat.Chat;
 import java.io.File;
 
 import static starter.utils.PropertiesReader.getParameterProperties;
-import static starter.utils.TestGlobalVariables.ContextEnum.ACCESS_TOKEN;
-import static starter.utils.TestGlobalVariables.ContextEnum.SESSION_ID;
+import static starter.utils.TestGlobalVariables.ContextEnum.*;
 import static starter.utils.TestGlobalVariables.getContext;
+import static starter.utils.TestGlobalVariables.setContext;
 
 public class ChatFetchPhoneNumberStepDef {
 
@@ -30,6 +30,8 @@ public class ChatFetchPhoneNumberStepDef {
                 data.getInstallationdate(),
                 getContext(SESSION_ID.name())
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
 
 
 
@@ -50,6 +52,7 @@ public class ChatFetchPhoneNumberStepDef {
                 data.getInstallationdate(),
                 getContext(SESSION_ID.name())
         );
+        setContext(HTTP_RESPONSE.name(), response);
 
     }
 
@@ -67,6 +70,7 @@ public class ChatFetchPhoneNumberStepDef {
                 data.getInstallationdate(),
                 getContext(SESSION_ID.name())
         );
+        setContext(HTTP_RESPONSE.name(), response);
 
     }
 }

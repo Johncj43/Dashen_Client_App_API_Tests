@@ -96,6 +96,8 @@ public class ClientAuthStepDef {
         );
         String accesstoken = response.jsonPath().getString("data.accessToken");
         setContext("ACCESS_TOKENNN", accesstoken);
+        setContext(HTTP_RESPONSE.name(), response);
+
 
 
 
@@ -155,6 +157,8 @@ public class ClientAuthStepDef {
                 null,
                 convertObjectToJson(body)
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
 
 
     }
@@ -179,6 +183,8 @@ public class ClientAuthStepDef {
                 null,
                 convertObjectToJson(body)
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
     }
 
     @When("I send a POST request to {string} with a {string} valid OTP to approve the signup request of user")
@@ -200,6 +206,8 @@ public class ClientAuthStepDef {
                 convertObjectToJson(body)
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
 
     }
 
@@ -222,6 +230,8 @@ public class ClientAuthStepDef {
                     convertObjectToJson(body)
 
             );
+        setContext(HTTP_RESPONSE.name(), response);
+
 
     }
 
@@ -243,6 +253,8 @@ public class ClientAuthStepDef {
                 convertObjectToJson(setBody)
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
 
     }
 
@@ -262,6 +274,7 @@ public class ClientAuthStepDef {
                 installationDate,
                 convertObjectToJson(body)
         );
+        setContext(HTTP_RESPONSE.name(), response);
         String accessToken= response.jsonPath().getString("data.accessToken");
         String sessionID= response.jsonPath().getString("data.sessionID");
         if (accessToken != null) setContext("ACCESS_TOKEN", accessToken);
@@ -289,6 +302,7 @@ public class ClientAuthStepDef {
 
 
       );
+        setContext(HTTP_RESPONSE.name(), response);
         System.out.println("PIN changed successfully! Old PIN: " + oldPin + " → New PIN: " + newPin);
         setContext("NEW_PIN",newPin);
 
@@ -317,6 +331,7 @@ public class ClientAuthStepDef {
 
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
 
     }
 
@@ -341,6 +356,8 @@ public class ClientAuthStepDef {
 
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
 
     }
 
@@ -365,6 +382,7 @@ public class ClientAuthStepDef {
 
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
 
     }
 
@@ -390,6 +408,7 @@ public class ClientAuthStepDef {
 
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
 
 
     }
@@ -411,6 +430,8 @@ public class ClientAuthStepDef {
                 installationdate,
                 convertObjectToJson(body)
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
 //        String accessToken= response.jsonPath().getString("data.accessToken");
 //        setContext("ACCESS_TOKEN", accessToken);
 
@@ -484,7 +505,7 @@ public class ClientAuthStepDef {
                 convertObjectToJson(otpBody),
                 otpFor
         );
-
+        setContext(HTTP_RESPONSE.name(), response);
 
     }
 
@@ -504,6 +525,9 @@ public class ClientAuthStepDef {
                 convertObjectToJson(body),
                 otpFor
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
+
     }
 
     @Given("I send a POST request to {string} with a {string} to to set a PIN for the user’s registered phone number")
@@ -524,7 +548,9 @@ public class ClientAuthStepDef {
 
 
        );
-       String accessToekn=response.jsonPath().getString("data.accessToken");
+        setContext(HTTP_RESPONSE.name(), response);
+
+        String accessToekn=response.jsonPath().getString("data.accessToken");
        String otpCode=response.jsonPath().getString("data.otpcode");
        setContext("TOKEN",accessToekn);
        setContext("OTP",otpCode);
@@ -549,7 +575,8 @@ public class ClientAuthStepDef {
                otpFor
 
        );
-       String accessToken= response.jsonPath().getString("data.accessToken");
+        setContext(HTTP_RESPONSE.name(), response);
+        String accessToken= response.jsonPath().getString("data.accessToken");
        setContext("ACCESS_TOKEN",accessToken);
 
     }
@@ -573,6 +600,7 @@ public class ClientAuthStepDef {
                otpFor
 
        );
+        setContext(HTTP_RESPONSE.name(), response);
 
 
     }
@@ -593,6 +621,7 @@ public class ClientAuthStepDef {
                convertObjectToJson(body),
                otpFor
        );
+        setContext(HTTP_RESPONSE.name(), response);
     }
 
     @And("I send a POST request to {string} with a {string} and new password with new device UUIDs")
@@ -614,6 +643,7 @@ public class ClientAuthStepDef {
                 otpFor
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
 
     }
 
@@ -636,6 +666,7 @@ public class ClientAuthStepDef {
               convertObjectToJson(body),
               otpFor
       );
+        setContext(HTTP_RESPONSE.name(), response);
 
 
     }
@@ -658,6 +689,7 @@ public class ClientAuthStepDef {
                 convertObjectToJson(body),
                 otpFor
         );
+        setContext(HTTP_RESPONSE.name(), response);
 
 
     }
@@ -679,6 +711,8 @@ public class ClientAuthStepDef {
                 convertObjectToJson(body),
                 otpFor
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
 
 
 
@@ -701,6 +735,7 @@ public class ClientAuthStepDef {
                 convertObjectToJson(body),
                 otpFor
         );
+        setContext(HTTP_RESPONSE.name(), response);
     }
 
     @And("I send a POST request to {string} with a {string} with access token")
@@ -720,6 +755,7 @@ public class ClientAuthStepDef {
                 xRequestId,
                 null
         );
+        setContext(HTTP_RESPONSE.name(), response);
 
     }
 
@@ -740,6 +776,7 @@ public class ClientAuthStepDef {
                 convertObjectToJson(otpBody),
                 otpFor
         );
+        setContext(HTTP_RESPONSE.name(), response);
     }
 
     @Given("I send a POST request to {string} with a {string} to look up the users")
@@ -760,6 +797,8 @@ public class ClientAuthStepDef {
                 convertObjectToJson(body),
                 otpFor
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
     }
 
     @Given("I send a request to {string} with a {string} to lookup device user")
@@ -779,6 +818,7 @@ public class ClientAuthStepDef {
 
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
     }
 
     @When("I send a POST request to {string} with a {string} to check the strength of password")
@@ -797,6 +837,7 @@ public class ClientAuthStepDef {
                 installationDate,
                 convertObjectToJson(body)
         );
+        setContext(HTTP_RESPONSE.name(), response);
         String accessToken= response.jsonPath().getString("data.accessToken");
         setContext("ACCESS_TOKEN", accessToken);
 
@@ -819,6 +860,7 @@ public class ClientAuthStepDef {
 
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
     }
 
     @And("I send a POST request to {string} with a {string} to the strength of new password set")
@@ -841,5 +883,6 @@ public class ClientAuthStepDef {
 
 
             );
+        setContext(HTTP_RESPONSE.name(), response);
     }
 }

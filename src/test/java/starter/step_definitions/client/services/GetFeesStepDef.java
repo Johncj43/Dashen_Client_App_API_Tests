@@ -24,6 +24,7 @@ public class GetFeesStepDef {
     @When("I send a POST request to {string} with a {string} to create get fees")
     public void iSendAPOSTRequestToWithAToCreateGetFees(String endpoint, String id) {
         Response response = sendGetFeesRequest("POST", endpoint, id, getContext(ACCESS_TOKEN.name()), getContext(SESSION_ID.name()));
+        setContext(HTTP_RESPONSE.name(), response);
         String dataToken = response.jsonPath().getString("data.datatoken");
         if (dataToken != null) {
             setContext(DATA_TOKEN.name(), dataToken);
@@ -35,11 +36,14 @@ public class GetFeesStepDef {
     @When("I send a POST request to {string} with a {string} to get fees with an invalid access token")
     public void iSendAPOSTRequestToWithAToGetFeesWithAnInvalidAccessToken(String endpoint, String id) {
         Response response = sendGetFeesRequest("POST", endpoint, id, null,getContext(SESSION_ID.name()));
+        setContext(HTTP_RESPONSE.name(), response);
 
     }
     @When("I send a POST request to {string} with a {string} to get fees with expired session id")
     public void iSendAPOSTRequestToWithAToGetFeesWithExpiredSessionId(String enpoint, String id) {
         Response response = sendGetFeesRequest("POST",enpoint,id,getContext(ACCESS_TOKEN.name()),null);
+        setContext(HTTP_RESPONSE.name(), response);
+
     }
 
     private Response sendGetFeesRequest(String httpMethod, String endpointKey, String id, String accessToken, String sessionId) {
@@ -62,6 +66,7 @@ public class GetFeesStepDef {
                 sessionId,
                 jsonBody
         );
+
     }
 
 
@@ -85,10 +90,12 @@ public class GetFeesStepDef {
                 false,
                 getContext(DATA_TOKEN.name()),
                 false,
-        false,
+                false,
                 getContext(SESSION_ID.name())
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
 
 
     }
@@ -120,6 +127,8 @@ public class GetFeesStepDef {
 
 
         );
+        setContext(HTTP_RESPONSE.name(), response);
+
         String dataToken = response.jsonPath().getString("data.datatoken");
         if (dataToken != null) {
             setContext(DATA_TOKEN.name(), dataToken);
@@ -172,11 +181,6 @@ public class GetFeesStepDef {
         requestBody.setDebit_accountnumber(data.getDebit_accountnumber());
         String requestID=getContext(REQUEST_ID.name());
         requestBody.setCredit_accountnumber(requestID);
-////        String jsonBody = convertObjectToJson(requestBody);
-//        Map<String,Object> requestBody = Map.of(  "amount",data.getAmount(),
-//                                                  "service_name",data.getService_name(),
-//                                                  "debit_accountnumber",data.getDebit_accountnumber(),
-//                                                  "credit_accountnumber",getContext(REQUEST_ID.name()));
         Response response = HttpApiUtils.requestHeaders(
                 "POST",
                 getParameterProperties(endpoint),
