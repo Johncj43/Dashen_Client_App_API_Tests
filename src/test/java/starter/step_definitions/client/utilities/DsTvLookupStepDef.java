@@ -19,9 +19,6 @@ public class DsTvLookupStepDef {
     @When("device user {string} sends {string} for DSTV ticket lookup")
     public void device_user_sends_for_dstv_ticket_lookup(String id, String endpoint) {
 
-        String accessToken = getContext(ACCESS_TOKEN.name());
-        String sessionId = getContext("SESSION_ID");
-
         DsTvData dstvData = TestDataLoader.getDstvDataData(id);
 
         String deviceUuid = dstvData.getDeviceuuid();
@@ -35,9 +32,9 @@ public class DsTvLookupStepDef {
                 "POST",
                 getParameterProperties(endpoint),
                 deviceUuid,
-                accessToken,
+                getContext(ACCESS_TOKEN.name()),
                 installation,
-                sessionId,
+                getContext(SESSION_ID.name()),
                 true,
                 convertObjectToJson(requestBody)
 
@@ -54,9 +51,6 @@ public class DsTvLookupStepDef {
     @When("device user {string} sends {string} for DSTV product lookup with invalid card")
     public void device_user_sends_for_DSTV_product_lookup_invalid_card(String id, String endpoint) {
 
-        String accessToken = getContext(ACCESS_TOKEN.name());
-        String sessionId = getContext("SESSION_ID");
-
         DsTvData dstvData = TestDataLoader.getDstvDataData(id);
 
         String deviceUuid = dstvData.getDeviceuuid();
@@ -70,9 +64,9 @@ public class DsTvLookupStepDef {
                 "POST",
                 getParameterProperties(endpoint),
                 deviceUuid,
-                accessToken,
+                getContext(ACCESS_TOKEN.name()),
                 installation,
-                sessionId,
+                getContext(SESSION_ID.name()),
                 true,
                 convertObjectToJson(requestBody)
 

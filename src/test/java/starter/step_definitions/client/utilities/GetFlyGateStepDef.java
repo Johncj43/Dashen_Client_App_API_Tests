@@ -18,8 +18,6 @@ public class GetFlyGateStepDef {
     @When("device user {string} sends {string} for flyGate ticket lookup")
     public void deviceUserSendsForFlyGateTicketLookup(String id, String endpoint) {
 
-        String accessToken = getContext(ACCESS_TOKEN.name());
-        String sessionId = getContext("SESSION_ID");
 
         FlyGateData flyGateData = TestDataLoader.getFlyGateDataData(id);
 
@@ -34,9 +32,9 @@ public class GetFlyGateStepDef {
                 "GET",
                 getParameterProperties(endpoint),
                 deviceUuid,
-                accessToken,
+                getContext(ACCESS_TOKEN.name()),
                 installation,
-                sessionId,
+                getContext(SESSION_ID.name()),
                 true,
                 queryParams
         );

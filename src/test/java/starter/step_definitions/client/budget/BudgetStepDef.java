@@ -1,6 +1,5 @@
 package starter.step_definitions.client.budget;
 
-import io.cucumber.java.PendingException;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import starter.utils.HttpApiUtils;
@@ -91,8 +90,6 @@ public class BudgetStepDef {
         String installation=user.getInstallationdate();
         String deviceuuid= user.getDeviceuuid();
         String budgetType=user.getBudget_type();
-//        String customStartDate=user.getCustom_start_date();
-//        String customEndDate=user.getCustom_end_date();
         int amount= user.getAmount();
         Map<String, Object>body=Map.of("budget_type",budgetType,
                 "amount",amount
@@ -121,33 +118,6 @@ public class BudgetStepDef {
 
 
     }
-
-
-
-//    @When("I send a DELETE request to {string} with a {string} to delete a budget")
-//    public void iSendADELETERequestToWithAToDeleteABudget(String endpoint, String id) {
-//        LoginData data=TestDataLoader.getLoginData(id);
-//        String deviceuuid=data.getDeviceuuid();
-//        String installationdate= data.getInstallationdate();
-//        String budgetId = getContext(BUDGET_ID.name());
-//
-//        if (budgetId == null) {
-//            throw new RuntimeException("budgetId is null! Make sure you created a budget before DELETE.");
-//        }
-//        String url = getParameterProperties(endpoint)+"/" + budgetId;
-//        System.out.println("DELETE URL = " + url);
-//        Response response = HttpApiUtils.requestWithStandardHeaderst(
-//                "DELETE",
-//                getContext(ACCESS_TOKEN.name()),
-//                url,
-//                deviceuuid,   // deviceuuid if required
-//                installationdate,   // installation if required
-//                null,   // body for DELETE usually null
-//                null
-//        );
-//        System.out.println("DELETE Response: " + response.getBody().asString());
-//        // store response in context if needed
-//    }
 
     @When("I send a DELETE request to {string} with a {string} to delete a budget")
     public void iSendADELETERequestToWithAToDeleteABudget(String endpoint, String id) {
@@ -216,8 +186,6 @@ public class BudgetStepDef {
         LoginData data=TestDataLoader.getLoginData(id);
         String deviceuuid=data.getDeviceuuid();
         String installationdate= data.getInstallationdate();
-//        String categoryId = getContext(CATEGORY_ID.name());
-//       String url = getParameterProperties(endpoint) + "/" + categoryId;
         Response response = HttpApiUtils.requestWithStandardHeaderst(
                 "GET",
                 getContext(ACCESS_TOKEN.name()),
@@ -234,8 +202,6 @@ public class BudgetStepDef {
         LoginData data=TestDataLoader.getLoginData(id);
         String deviceuuid=data.getDeviceuuid();
         String installationdate= data.getInstallationdate();
-//        String categoryId = getContext(CATEGORY_ID.name());
-//        String url = getParameterProperties(endpoint) + "/" + categoryId;
         Response response = HttpApiUtils.requestWithStandardHeaderst(
                 "GET",
                 getContext(ACCESS_TOKEN.name()),
@@ -252,8 +218,6 @@ public class BudgetStepDef {
         LoginData data=TestDataLoader.getLoginData(id);
         String deviceuuid=data.getDeviceuuid();
         String installationdate= data.getInstallationdate();
-//        String categoryId = getContext(CATEGORY_ID.name());
-//        String url = getParameterProperties(endpoint) + "/" + categoryId;
         Response response = HttpApiUtils.requestWithStandardHeaderst(
                 "GET",
                 getContext(ACCESS_TOKEN.name()),
